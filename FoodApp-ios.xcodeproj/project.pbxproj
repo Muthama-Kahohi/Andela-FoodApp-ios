@@ -77,7 +77,9 @@
 		CDB134E12003939E00952413 = {
 			isa = PBXGroup;
 			children = (
-				CDB134EC2003939E00952413 /* FoodApp-ios */,
+				CDB1352B2003E04E00952413 /* Resources */,
+				CDB1352A2003E04000952413 /* Scripts */,
+				CDB134EC2003939E00952413 /* Source */,
 				CDB135012003939F00952413 /* FoodApp-iosTests */,
 				CDB1350C2003939F00952413 /* FoodApp-iosUITests */,
 				CDB134EB2003939E00952413 /* Products */,
@@ -94,17 +96,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CDB134EC2003939E00952413 /* FoodApp-ios */ = {
+		CDB134EC2003939E00952413 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CDB134ED2003939E00952413 /* AppDelegate.swift */,
-				CDB134EF2003939E00952413 /* ViewController.swift */,
-				CDB134F12003939E00952413 /* Main.storyboard */,
-				CDB134F42003939E00952413 /* Assets.xcassets */,
-				CDB134F62003939E00952413 /* LaunchScreen.storyboard */,
-				CDB134F92003939E00952413 /* Info.plist */,
+				CDB1351D2003DE9400952413 /* Data */,
+				CDB1351C2003DE8500952413 /* Core */,
+				CDB1351B2003DE5A00952413 /* App */,
 			);
-			path = "FoodApp-ios";
+			path = Source;
 			sourceTree = "<group>";
 		};
 		CDB135012003939F00952413 /* FoodApp-iosTests */ = {
@@ -123,6 +122,143 @@
 				CDB1350F2003939F00952413 /* Info.plist */,
 			);
 			path = "FoodApp-iosUITests";
+			sourceTree = "<group>";
+		};
+		CDB1351B2003DE5A00952413 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CDB135202003DEC100952413 /* Utility */,
+				CDB1351F2003DEB900952413 /* UI */,
+				CDB1351E2003DEAB00952413 /* Global */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CDB1351C2003DE8500952413 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CDB135252003DFCB00952413 /* ViewModel */,
+				CDB135242003DFC300952413 /* Utility */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CDB1351D2003DE9400952413 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CDB135292003E00700952413 /* Utility */,
+				CDB135282003DFFF00952413 /* Store */,
+				CDB135272003DFEF00952413 /* Service */,
+				CDB135262003DFE400952413 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDB1351E2003DEAB00952413 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CDB134ED2003939E00952413 /* AppDelegate.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CDB1351F2003DEB900952413 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CDB135232003DF2500952413 /* Other */,
+				CDB134F62003939E00952413 /* LaunchScreen.storyboard */,
+				CDB134F12003939E00952413 /* Main.storyboard */,
+				CDB135222003DF1300952413 /* Common */,
+				CDB135212003DF0B00952413 /* Base */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CDB135202003DEC100952413 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CDB135212003DF0B00952413 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CDB134EF2003939E00952413 /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CDB135222003DF1300952413 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CDB135232003DF2500952413 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CDB135242003DFC300952413 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CDB135252003DFCB00952413 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDB135262003DFE400952413 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDB135272003DFEF00952413 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDB135282003DFFF00952413 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		CDB135292003E00700952413 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CDB1352A2003E04000952413 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		CDB1352B2003E04E00952413 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDB134F42003939E00952413 /* Assets.xcassets */,
+				CDB134F92003939E00952413 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AZW6937TU;
-				INFOPLIST_FILE = "FoodApp-ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +579,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AZW6937TU;
-				INFOPLIST_FILE = "FoodApp-ios/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
