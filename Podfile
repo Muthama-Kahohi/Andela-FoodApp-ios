@@ -6,6 +6,7 @@ target 'FoodApp-ios' do
   use_frameworks!
 
   # Pods for FoodApp-ios
+  pod 'GoogleSignIn'
 
   target 'FoodApp-iosTests' do
     inherit! :search_paths

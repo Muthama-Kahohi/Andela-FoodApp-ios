@@ -1,5 +1,5 @@
 language: swift
 osx_image: xcode9.2
-xcode_project: /Users/paulkahohi/Documents/projects/FoodApp-ios/FoodApp-ios.xcodeproj
+xcode_workspace: /Users/paulkahohi/Documents/projects/FoodApp-ios/FoodApp-ios.xcworkspace
 xcode_scheme: FoodApp-iosTests
 podfile: /Users/paulkahohi/Documents/projects/FoodApp-ios/Podfile
