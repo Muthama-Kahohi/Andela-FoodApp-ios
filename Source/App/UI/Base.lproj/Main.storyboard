@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="74D-8v-F55">
+                                <rect key="frame" x="73" y="172" width="228" height="83"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-Oe-BFM" customClass="GIDSignInButton">
+                                <rect key="frame" x="105" y="277" width="167" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="top" secondItem="74D-8v-F55" secondAttribute="bottom" constant="22" id="8qn-FC-kNe"/>
+                            <constraint firstItem="74D-8v-F55" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="9ao-EL-pOz"/>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Ka6-Od-6Ij"/>
+                            <constraint firstItem="74D-8v-F55" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="P0s-lz-81m"/>
+                            <constraint firstItem="74D-8v-F55" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wh3-hL-UeV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u2o-Oe-BFM" secondAttribute="bottom" constant="348" id="dks-CA-HF8"/>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="277" id="meY-HR-CfN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u2o-Oe-BFM" secondAttribute="trailing" constant="103" id="sXM-co-kSR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="signIn" destination="u2o-Oe-BFM" id="WIJ-2o-KId"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Andela logo" width="290" height="215"/>
+    </resources>
+</document>
