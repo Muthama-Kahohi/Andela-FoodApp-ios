@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		32F00F8FF960503F7525A15AE00024C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */; };
-		88F0D34A08E2CF15976287BBC88D24C7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742D76912176153C391EBD649A3786 /* Food.swift */; };
+		F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		EE49792611B1819606F73520D76D0B96 /* FoodApp_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */; };
 		38D67D9B245943CB6CF738114423B943 /* FoodApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E108C62E0EA06827DC8881BFF4041 /* FoodApp_iosUITests.swift */; };
 		AE618758C0D1970CF388AFC6845DC386 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D2FC7122BD7E2498377A781B09C8CE8 /* GoogleService-Info.plist */; };
@@ -43,7 +43,9 @@
 /* Begin PBXFileReference section */
 		19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		66742D76912176153C391EBD649A3786 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		89C0FEB402C4B3CF6544A79F2BAC5A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEB633FF6A3E2C69411EFF66C00AD913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		B6E367F4B9E73338146ABB62CA5C3B1D /* FoodApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A518CEA1E4CE46183A1F9589EF85A8 /* FoodApp-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodApp-ios.h"; sourceTree = "<group>"; };
 		EEE6073E4F0DE36E8BCB016A09F373DB /* FoodApp-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodApp-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 		38B246E47F023B937E1038D2F78AB6B7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */,
 				9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */,
 			);
 			path = Base;
@@ -232,6 +235,25 @@
 			path = "FoodApp-iosUITests";
 			sourceTree = "<group>";
 		};
+		ADEB3FCD801884D4D1CFD708035D228E /* Bridging-headers */ = {
+			isa = PBXGroup;
+			children = (
+				42A518CEA1E4CE46183A1F9589EF85A8 /* FoodApp-ios.h */,
+			);
+			path = "Bridging-headers";
+			sourceTree = "<group>";
+		};
+		AFBD573D867DB9AAD4C605FAFB83DEE8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6EF817BF143C9567C85E9F7AFF41D1A8 /* Model */,
+				73433F1231ADAFAEA235455FD6E7A22A /* Service */,
+				01FF641E7598016502DBF546B824D122 /* Store */,
+				B8D6F661327ED5DA67632D1F9DBC144D /* Utility */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		AFC38F96F8F697125C223176011240DA /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,14 +288,6 @@
 				04D1C8E262B6E8033830FC0CB0F4CABC /* Pods_FoodApp_iosUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ADEB3FCD801884D4D1CFD708035D228E /* Bridging-headers */ = {
-			isa = PBXGroup;
-			children = (
-				42A518CEA1E4CE46183A1F9589EF85A8 /* FoodApp-ios.h */,
-			);
-			path = "Bridging-headers";
 			sourceTree = "<group>";
 		};
 		D64E91F819194D795D3AE3CB9EDEDE92 /* UI */ = {
@@ -635,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */,
+				F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */,
 				47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

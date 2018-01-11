@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,27 +15,31 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="74D-8v-F55">
-                                <rect key="frame" x="73" y="172" width="228" height="83"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-Oe-BFM" customClass="GIDSignInButton">
-                                <rect key="frame" x="105" y="277" width="167" height="42"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-Oe-BFM" customClass="GIDSignInButton">
+                                <rect key="frame" x="72.666666666666686" y="382.33333333333331" width="230" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="eHD-AM-Wqp"/>
+                                    <constraint firstAttribute="height" constant="48" id="xwT-Cd-DAc"/>
+                                </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="74D-8v-F55">
+                                <rect key="frame" x="42" y="252" width="290" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="Bhi-00-GmC"/>
+                                    <constraint firstAttribute="height" constant="78" id="unX-Fv-aXN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="top" secondItem="74D-8v-F55" secondAttribute="bottom" constant="22" id="8qn-FC-kNe"/>
-                            <constraint firstItem="74D-8v-F55" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="9ao-EL-pOz"/>
-                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Ka6-Od-6Ij"/>
-                            <constraint firstItem="74D-8v-F55" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="P0s-lz-81m"/>
-                            <constraint firstItem="74D-8v-F55" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wh3-hL-UeV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u2o-Oe-BFM" secondAttribute="bottom" constant="348" id="dks-CA-HF8"/>
-                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="277" id="meY-HR-CfN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u2o-Oe-BFM" secondAttribute="trailing" constant="103" id="sXM-co-kSR"/>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M97-6t-PAE"/>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="deQ-jY-TtD"/>
+                            <constraint firstItem="u2o-Oe-BFM" firstAttribute="top" secondItem="74D-8v-F55" secondAttribute="bottom" constant="53.329999999999998" id="qfW-RJ-I05"/>
+                            <constraint firstItem="74D-8v-F55" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xrk-NM-EH3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -45,7 +49,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50.399999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-16.800000000000001" y="-288.17733990147786"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="kCc-l8-rZz">
+            <objects>
+                <viewController storyboardIdentifier="entryViewControllerID" id="Rc3-52-Iha" customClass="EntryViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apL-SC-FR4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="N2c-3o-QZH">
+                                <rect key="frame" x="67" y="283" width="240" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="VUq-bM-W6b"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixo-ug-WTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.8" y="-344.07796101949026"/>
         </scene>
     </scenes>
     <resources>
