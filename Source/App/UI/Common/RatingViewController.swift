@@ -1,11 +1,12 @@
 import UIKit
 
-class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
     var foodList = [Food]()
 
@@ -15,9 +16,13 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
 
+        commentTextField.delegate = self
+
         dateLabel.textColor = .gray
         dateLabel.text = displayCurrentDate()
-        loadSampleMeal()
+        loadSampleMeal() //dummy data
+
+        registerForKeyboardNotifications()
     }
 
     @IBAction func doneButtonPressed(_ sender: Any) {
@@ -67,4 +72,56 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         return cell
     }
+
+    // MARK: TextView Tracking Methods
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        textField.resignFirstResponder()
+
+        return true
+    }
+
+    // MARK: Keyboard Handling Methods
+    private func registerForKeyboardNotifications() {
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
+    }
+
+    private func adjustingHeight(showing: Bool, notification: NSNotification) {
+
+        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            else { return }
+
+        guard let animationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval
+            else { return }
+
+        let changeInHeight = keyboardSize.height * (showing ? 1 : -1)
+
+        UIView.animate(withDuration: animationDuration,
+                       delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.bottomConstraint.constant += changeInHeight
+        },
+                       completion: nil)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        adjustingHeight(showing: true, notification: notification)
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        adjustingHeight(showing: false, notification: notification)    }
 }
