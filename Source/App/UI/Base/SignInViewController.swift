@@ -13,13 +13,13 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
 
         //Intialize the sign in
         guard let FirApp = FirebaseApp.app() else { return }
+        guard let instance = GIDSignIn.sharedInstance() else { return }
 
-
-        GIDSignIn.sharedInstance().clientID = FirApp.options.clientID
-        GIDSignIn.sharedInstance().hostedDomain = "andela.com"
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signInSilently()
-        GIDSignIn.sharedInstance().delegate = self
+        instance.clientID = FirApp.options.clientID
+        instance.hostedDomain = "andela.com"
+        instance.uiDelegate = self
+        instance.delegate = self
+        instance.signInSilently()
 
     }
 
@@ -30,6 +30,7 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
         if let error = error {
 
             print ("\(error.localizedDescription)")
+            return
         }
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -41,6 +42,4 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
                          completion: nil)
         }
     }
-
-
 }
