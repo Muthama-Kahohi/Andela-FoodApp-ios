@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P91-lH-buj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZyM-g6-2WJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -117,6 +116,75 @@
             </objects>
             <point key="canvasLocation" x="629.60000000000002" y="133.5832083958021"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="0aq-aO-kEO">
+            <objects>
+                <viewController id="ZyM-g6-2WJ" customClass="SignInViewController" customModule="FoodApp_ios" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ia7-WZ-nL9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WqS-Cd-D0D" customClass="GIDSignInButton">
+                                <rect key="frame" x="31" y="309" width="312" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="gM0-zs-MhF"/>
+                                    <constraint firstAttribute="width" constant="312" id="ynV-7N-kZU"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="scw-Ul-bWF">
+                                <rect key="frame" x="67" y="147" width="240" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0oR-WJ-FSH"/>
+                                    <constraint firstAttribute="height" constant="111" id="D7D-Yg-5eK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WqS-Cd-D0D" firstAttribute="centerX" secondItem="ia7-WZ-nL9" secondAttribute="centerX" id="NGY-u1-MsC"/>
+                            <constraint firstItem="scw-Ul-bWF" firstAttribute="centerX" secondItem="WqS-Cd-D0D" secondAttribute="centerX" id="fM3-xi-pDJ"/>
+                            <constraint firstItem="WqS-Cd-D0D" firstAttribute="top" secondItem="scw-Ul-bWF" secondAttribute="bottom" constant="51.329999999999998" id="jO3-Mi-oK5"/>
+                            <constraint firstItem="WqS-Cd-D0D" firstAttribute="centerY" secondItem="ia7-WZ-nL9" secondAttribute="centerY" id="nBh-Hs-KN9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7xB-lE-WFz"/>
+                    </view>
+                    <connections>
+                        <outlet property="signIn" destination="WqS-Cd-D0D" id="YRw-nv-qQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmI-dM-tEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494" y="148"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="b7G-Zi-WwY">
+            <objects>
+                <viewController id="c1a-hv-NnK" customClass="EntryViewController" customModule="FoodApp_ios" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2oa-XQ-dFl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Andela logo" translatesAutoresizingMaskIntoConstraints="NO" id="wgf-Um-OAo">
+                                <rect key="frame" x="67.5" y="243" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ado-gr-ujS"/>
+                                    <constraint firstAttribute="height" constant="181" id="cIJ-yF-mPB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wgf-Um-OAo" firstAttribute="centerY" secondItem="2oa-XQ-dFl" secondAttribute="centerY" id="2Md-Ws-OHY"/>
+                            <constraint firstItem="wgf-Um-OAo" firstAttribute="centerX" secondItem="2oa-XQ-dFl" secondAttribute="centerX" id="bK0-cl-FRG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rgg-GN-rVZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKJ-B6-2bS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871.20000000000005" y="146.17691154422789"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mjC-Wn-M9N">
             <objects>
@@ -134,7 +202,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GrQ-pq-vfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="134"/>
+            <point key="canvasLocation" x="-81" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Andela logo" width="290" height="215"/>
+    </resources>
 </document>
