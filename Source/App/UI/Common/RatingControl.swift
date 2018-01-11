@@ -43,9 +43,7 @@ import UIKit
     // MARK: Private Methods
     @objc func ratingButtonTapped(button: UIButton) {
 
-        guard let index = ratingButtons.index(of: button) else {
-            fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
-        }
+        guard let index = ratingButtons.index(of: button) else { return }
 
         // Calculate the rating of the selected button
         let selectedRating = index + 1
@@ -101,7 +99,7 @@ import UIKit
 
     private func updateButtonSelectionStates() {
         for (index, button) in ratingButtons.enumerated() {
-            // If the index of a button is less than the rating, that button should be selected.
+
             button.isSelected = index < rating
         }
     }
