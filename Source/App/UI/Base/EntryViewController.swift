@@ -2,14 +2,24 @@ import UIKit
 
 class EntryViewController: UIViewController {
 
+    // MARK: Outlets and Actions
+    @IBOutlet weak var breakfastLabel: UILabel!
+    @IBOutlet weak var lunchLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        breakfastLabel.text = "BREAKFAST"
+        lunchLabel.text = "LUNCH"
+
+        breakfastLabel.textColor = .white
+        lunchLabel.textColor = .white
+
     }
+
 }
