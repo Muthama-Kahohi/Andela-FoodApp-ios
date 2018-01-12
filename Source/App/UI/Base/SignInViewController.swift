@@ -35,10 +35,10 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "entryViewControllerID") as? EntryViewController {
-            viewController.modalPresentationStyle = .overFullScreen
-            self.present(viewController,
-                         animated: false,
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+            navigationController.modalPresentationStyle = .overFullScreen
+            self.present(navigationController,
+                         animated: true,
                          completion: nil)
         }
     }
