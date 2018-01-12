@@ -13,3 +13,4 @@
 
 FOUNDATION_EXPORT double Pods_FoodApp_iosVersionNumber;
 FOUNDATION_EXPORT const unsigned char Pods_FoodApp_iosVersionString[];
+
