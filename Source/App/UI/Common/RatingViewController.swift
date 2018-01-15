@@ -18,7 +18,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         commentTextField.delegate = self
         commentTextField.borderStyle = .none
-        drawBottomLine()
+        commentTextField.underlined()
 
         dateLabel.textColor = .gray
         dateLabel.text = displayCurrentDate()
@@ -87,18 +87,6 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return true
     }
 
-    private func drawBottomLine() {
-
-        let border = CALayer()
-        let width = CGFloat(0.5)
-        border.borderColor = UIColor.lightGray.cgColor
-        border.frame = CGRect(x: 0, y: commentTextField.frame.size.height - width, width:  commentTextField.frame.size.width, height: commentTextField.frame.size.height)
-
-        border.borderWidth = width
-        commentTextField.layer.addSublayer(border)
-        commentTextField.layer.masksToBounds = true
-    }
-
     // MARK: Keyboard Handling Methods
     private func registerForKeyboardNotifications() {
 
@@ -138,4 +126,20 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @objc func keyboardWillHide(notification: NSNotification) {
         adjustingHeight(showing: false, notification: notification)    }
+}
+
+extension UITextField {
+
+    public func underlined() {
+
+        let border = CALayer()
+        let width = CGFloat(0.5)
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
+
+        border.borderWidth = width
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }
+
 }
