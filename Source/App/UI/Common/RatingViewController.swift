@@ -17,6 +17,8 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
 
         commentTextField.delegate = self
+        commentTextField.borderStyle = .none
+        drawBottomLine()
 
         dateLabel.textColor = .gray
         dateLabel.text = displayCurrentDate()
@@ -83,6 +85,18 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         textField.resignFirstResponder()
 
         return true
+    }
+
+    private func drawBottomLine() {
+
+        let border = CALayer()
+        let width = CGFloat(0.5)
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(x: 0, y: commentTextField.frame.size.height - width, width:  commentTextField.frame.size.width, height: commentTextField.frame.size.height)
+
+        border.borderWidth = width
+        commentTextField.layer.addSublayer(border)
+        commentTextField.layer.masksToBounds = true
     }
 
     // MARK: Keyboard Handling Methods
