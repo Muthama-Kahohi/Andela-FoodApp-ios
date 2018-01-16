@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		32F00F8FF960503F7525A15AE00024C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */; };
+		808849889C88ACBB8CA7C8DABA87A990 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2696629B94CA17C5572E71C57B51 /* CircleButton.swift */; };
 		F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587074777D13BA6691925A49ACAD0F7 /* CircleLabel.swift */; };
 		F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		EE49792611B1819606F73520D76D0B96 /* FoodApp_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63EE2696629B94CA17C5572E71C57B51 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		8587074777D13BA6691925A49ACAD0F7 /* CircleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLabel.swift; sourceTree = "<group>"; };
 		7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		B6E367F4B9E73338146ABB62CA5C3B1D /* FoodApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		BB2E9C861068DE9E756123EBE4E8CE75 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				63EE2696629B94CA17C5572E71C57B51 /* CircleButton.swift */,
+				8587074777D13BA6691925A49ACAD0F7 /* CircleLabel.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		C7B24849027C49DF42C9A42042B76C5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,14 +307,6 @@
 				04D1C8E262B6E8033830FC0CB0F4CABC /* Pods_FoodApp_iosUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BB2E9C861068DE9E756123EBE4E8CE75 /* CustomControls */ = {
-			isa = PBXGroup;
-			children = (
-				8587074777D13BA6691925A49ACAD0F7 /* CircleLabel.swift */,
-			);
-			path = CustomControls;
 			sourceTree = "<group>";
 		};
 		D64E91F819194D795D3AE3CB9EDEDE92 /* UI */ = {
@@ -655,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */,
+				808849889C88ACBB8CA7C8DABA87A990 /* CircleButton.swift in Sources */,
 				F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */,
 				F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */,
 				03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */,
