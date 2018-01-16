@@ -1,6 +1,6 @@
 
 struct Meal {
 
-    var foodList: [Food]
+    var foodList: [MealItem]
 
 }
