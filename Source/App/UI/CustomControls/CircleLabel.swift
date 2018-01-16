@@ -20,7 +20,6 @@ class CircleLabel: UILabel {
         self.layer.cornerRadius = self.bounds.width/2
         self.clipsToBounds = true
         self.textColor = .black
-        self.backgroundColor = .green
         self.setProperties(borderWidth: 1.0, borderColor: .black)
 
     }

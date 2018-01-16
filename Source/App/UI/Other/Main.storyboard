@@ -11,6 +11,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Georgia.ttf">
+            <string>Georgia</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Meals View Controller-->
         <scene sceneID="A9W-A7-02h">
@@ -29,17 +34,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-uY-9Nx">
-                                <rect key="frame" x="165" y="590" width="60" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="UfV-SN-JBq"/>
-                                    <constraint firstAttribute="width" constant="60" id="eQe-uy-KWB"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="filledStar"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="saP-U8-UYG"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-pb-PFY">
                                 <rect key="frame" x="12" y="106" width="351" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,6 +47,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-2q-k0q" userLabel="Letter" customClass="CircleLabel" customModule="FoodApp_ios" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="11" width="41" height="41"/>
+                                                    <color key="backgroundColor" red="0.31913548707962036" green="0.70814001560211182" blue="0.56475061178207397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="EHv-yK-u4y"/>
                                                         <constraint firstAttribute="width" constant="41" id="ZdA-BT-DZn"/>
@@ -63,7 +58,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-XB-lyL" userLabel="Name">
                                                     <rect key="frame" x="71" y="11" width="265" height="41"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -85,6 +80,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-uY-9Nx">
+                                <rect key="frame" x="299" y="590" width="60" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="UfV-SN-JBq"/>
+                                    <constraint firstAttribute="width" constant="60" id="eQe-uy-KWB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="filledStar"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="saP-U8-UYG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -92,7 +98,7 @@
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerY" secondItem="Lxg-u6-IHQ" secondAttribute="centerY" id="B7z-eW-fox"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="leading" secondItem="hh3-mF-209" secondAttribute="leading" constant="12" id="DdJ-ew-KaT"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="LgZ-sD-jV3"/>
-                            <constraint firstItem="nf2-uY-9Nx" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" constant="7.5" id="g1U-G8-l7P"/>
+                            <constraint firstItem="nf2-uY-9Nx" firstAttribute="trailing" secondItem="Lxg-u6-IHQ" secondAttribute="trailingMargin" id="N64-uk-cAr"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="top" secondItem="ibB-m1-GOW" secondAttribute="bottom" constant="8" symbolic="YES" id="hZa-LY-LeS"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="ibB-m1-GOW" secondAttribute="trailing" constant="150" id="qYj-sY-OzI"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="bottom" secondItem="nf2-uY-9Nx" secondAttribute="bottom" constant="20" id="xDe-dI-CgJ"/>
