@@ -6,7 +6,7 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
     @IBOutlet weak var mealsTable: UITableView!
     @IBOutlet weak var rateButton: UIButton!
 
-    var foodList = [Food]()
+    var foodList = [MealItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +33,11 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
 
     private func loadSampleMeal() {
 
-        let sampleFood = Food(name: "Ugali", rating: 4)
-        let sampleFood1 = Food(name: "Spinach", rating: 1)
-        let sampleFood2 = Food(name: "Mbuzi Fry", rating: 5)
-        let sampleFood3 = Food(name: "Mixed Veggies", rating: 3)
-        let sampleFood4 = Food(name: "Mukimo", rating: 2)
+        let sampleFood = MealItem(name: "Ugali", rating: 4)
+        let sampleFood1 = MealItem(name: "Spinach", rating: 1)
+        let sampleFood2 = MealItem(name: "Mbuzi Fry", rating: 5)
+        let sampleFood3 = MealItem(name: "Mixed Veggies", rating: 3)
+        let sampleFood4 = MealItem(name: "Mukimo", rating: 2)
 
         foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
     }
@@ -61,10 +61,4 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
 
         return cell
     }
-
-
-
-
-
-
 }
