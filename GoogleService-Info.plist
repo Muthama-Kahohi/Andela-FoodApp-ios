@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>897994341831-3pqpfol9trkv9e9agqgoamb02e2l96i5.apps.googleusercontent.com</string>
+	<string>293627844999-0718qlqs85enthlr2c5cf55ar71o1q34.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.897994341831-3pqpfol9trkv9e9agqgoamb02e2l96i5</string>
+	<string>com.googleusercontent.apps.293627844999-0718qlqs85enthlr2c5cf55ar71o1q34</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBmk4T2G0j4ee9tKTO9zT7dphFc5x8f7Ts</string>
+	<string>AIzaSyDwGYFJkvsKYmwBaIHtHXQ96MRkCPAZdvc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>897994341831</string>
+	<string>293627844999</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.andela.FoodApp-ios</string>
 	<key>PROJECT_ID</key>
-	<string>andela-food-app-ios</string>
+	<string>food-app-151f8</string>
 	<key>STORAGE_BUCKET</key>
-	<string>andela-food-app-ios.appspot.com</string>
+	<string>food-app-151f8.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:897994341831:ios:c477dee6617b0cf5</string>
+	<string>1:293627844999:ios:c477dee6617b0cf5</string>
 	<key>DATABASE_URL</key>
-	<string>https://andela-food-app-ios.firebaseio.com</string>
+	<string>https://food-app-151f8.firebaseio.com</string>
 </dict>
 </plist>
