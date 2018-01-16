@@ -6,35 +6,110 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meals View Controller-->
         <scene sceneID="A9W-A7-02h">
             <objects>
-                <viewController id="pBW-E4-1Cp" sceneMemberID="viewController">
+                <viewController id="pBW-E4-1Cp" customClass="MealsViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxg-u6-IHQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSH-Xx-iXK">
-                                <rect key="frame" x="197" y="435" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 12, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-m1-GOW" userLabel="Date">
+                                <rect key="frame" x="16" y="72" width="209" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="3n6-wc-CIx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-pb-PFY">
+                                <rect key="frame" x="12" y="106" width="351" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="351" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxV-qx-9fb" id="Ngl-Ay-ZyY">
+                                            <rect key="frame" x="0.0" y="0.0" width="351" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-2q-k0q" userLabel="Letter" customClass="CircleLabel" customModule="FoodApp_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="41" height="41"/>
+                                                    <color key="backgroundColor" red="0.31913548707962036" green="0.70814001560211182" blue="0.56475061178207397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="EHv-yK-u4y"/>
+                                                        <constraint firstAttribute="width" constant="41" id="ZdA-BT-DZn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-XB-lyL" userLabel="Name">
+                                                    <rect key="frame" x="71" y="11" width="265" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nte-XB-lyL" firstAttribute="baseline" secondItem="x2e-2q-k0q" secondAttribute="baseline" id="1vT-Rd-ScA"/>
+                                                <constraint firstItem="x2e-2q-k0q" firstAttribute="leading" secondItem="Ngl-Ay-ZyY" secondAttribute="leadingMargin" id="7G0-58-KnD"/>
+                                                <constraint firstItem="Nte-XB-lyL" firstAttribute="leading" secondItem="x2e-2q-k0q" secondAttribute="trailing" constant="15" id="FEO-hf-oci"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Nte-XB-lyL" secondAttribute="trailing" id="Owp-IB-az3"/>
+                                                <constraint firstItem="Nte-XB-lyL" firstAttribute="firstBaseline" secondItem="x2e-2q-k0q" secondAttribute="firstBaseline" id="PoD-oH-a1x"/>
+                                                <constraint firstItem="x2e-2q-k0q" firstAttribute="centerY" secondItem="Ngl-Ay-ZyY" secondAttribute="centerY" id="mnG-fE-ipk"/>
+                                                <constraint firstItem="Nte-XB-lyL" firstAttribute="bottom" secondItem="Ngl-Ay-ZyY" secondAttribute="bottomMargin" id="p9N-Zm-2cF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="letterLabel" destination="x2e-2q-k0q" id="xMl-u4-HhX"/>
+                                            <outlet property="mealName" destination="Nte-XB-lyL" id="4py-v9-ZfI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-uY-9Nx">
+                                <rect key="frame" x="299" y="590" width="60" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="UfV-SN-JBq"/>
+                                    <constraint firstAttribute="width" constant="60" id="eQe-uy-KWB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="filledStar"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="fWG-Hd-4Uc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="saP-U8-UYG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ibB-m1-GOW" firstAttribute="leading" secondItem="Lxg-u6-IHQ" secondAttribute="leadingMargin" id="4el-kc-Qjw"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="centerY" secondItem="Lxg-u6-IHQ" secondAttribute="centerY" id="B7z-eW-fox"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="leading" secondItem="hh3-mF-209" secondAttribute="leading" constant="12" id="DdJ-ew-KaT"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="LgZ-sD-jV3"/>
+                            <constraint firstItem="nf2-uY-9Nx" firstAttribute="trailing" secondItem="Lxg-u6-IHQ" secondAttribute="trailingMargin" id="N64-uk-cAr"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="top" secondItem="ibB-m1-GOW" secondAttribute="bottom" constant="8" symbolic="YES" id="hZa-LY-LeS"/>
+                            <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="ibB-m1-GOW" secondAttribute="trailing" constant="150" id="qYj-sY-OzI"/>
+                            <constraint firstItem="hh3-mF-209" firstAttribute="bottom" secondItem="nf2-uY-9Nx" secondAttribute="bottom" constant="20" id="xDe-dI-CgJ"/>
+                            <constraint firstItem="ibB-m1-GOW" firstAttribute="top" secondItem="hh3-mF-209" secondAttribute="top" constant="8" id="y9G-7a-eAR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hh3-mF-209"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="ibB-m1-GOW" id="5eG-4r-GlV"/>
+                        <outlet property="mealsTable" destination="KH6-pb-PFY" id="NDF-Px-4cN"/>
+                        <outlet property="rateButton" destination="nf2-uY-9Nx" id="ENZ-4Z-FCL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBL-hl-WCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092" y="134"/>
+            <point key="canvasLocation" x="2092" y="133.5832083958021"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -140,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2956" y="134"/>
+            <point key="canvasLocation" x="2956" y="133.5832083958021"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="Zmr-o9-EdR">
@@ -185,7 +260,7 @@
             </objects>
             <point key="canvasLocation" x="-1134" y="149"/>
         </scene>
-        <!--Entry View Controller-->
+        <!--Foodie-->
         <scene sceneID="LDP-5a-oeg">
             <objects>
                 <viewController storyboardIdentifier="entryViewControllerID" id="IVU-h5-7b5" customClass="EntryViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -224,7 +299,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="kta-nH-ghc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aWh-dV-ny6"/>
+                    <navigationItem key="navigationItem" title="Foodie" id="aWh-dV-ny6"/>
                     <connections>
                         <outlet property="breakfastLabel" destination="hwU-sf-fDo" id="Ed5-o7-c1A"/>
                         <outlet property="lunchLabel" destination="TmU-qI-kmo" id="huC-N7-va2"/>
@@ -243,6 +318,9 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.90766948461532593" green="0.17513649165630341" blue="0.31380888819694519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -257,6 +335,7 @@
     <resources>
         <image name="AndelaLogo" width="290" height="215"/>
         <image name="breakfast" width="188" height="139"/>
+        <image name="filledStar" width="256" height="256"/>
         <image name="lunch" width="188" height="154"/>
     </resources>
 </document>
