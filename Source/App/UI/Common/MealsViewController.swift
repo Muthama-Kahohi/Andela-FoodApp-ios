@@ -4,8 +4,9 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mealsTable: UITableView!
-    @IBOutlet weak var rateButton: UIButton!
 
+    @IBOutlet weak var rateButton: CircleButton!
+    
     var foodList = [MealItem]()
 
     override func viewDidLoad() {
@@ -15,9 +16,11 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
         mealsTable.dataSource = self
         dateLabel.text = displayCurrentDate()
         loadSampleMeal()
-        mealsTable.tableFooterView = UIView()
-        mealsTable.reloadData()
 
+        mealsTable.tableFooterView = UIView()
+        mealsTable.separatorStyle = .none
+
+        mealsTable.reloadData()
     }
 
     // MARK: Private Methods

@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-class CircleLabel: UILabel {
+class CircleButton: UIButton {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -19,7 +19,6 @@ class CircleLabel: UILabel {
 
         self.layer.cornerRadius = self.bounds.width/2
         self.clipsToBounds = true
-        self.textColor = .white
         self.setProperties(borderWidth: 0.0, borderColor: .white)
 
     }
