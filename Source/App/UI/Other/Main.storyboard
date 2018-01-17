@@ -210,6 +210,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="rKK-kh-qH9" id="aXJ-dX-qsd"/>
                         <outlet property="commentLabel" destination="0Ve-Eb-pmp" id="Tbm-QA-889"/>
                         <outlet property="commentTextField" destination="fG8-No-bv7" id="Vhm-jF-FEM"/>
                         <outlet property="dateLabel" destination="sEZ-Oj-Nwj" id="oNR-RK-ujc"/>
