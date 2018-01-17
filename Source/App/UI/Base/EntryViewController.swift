@@ -14,12 +14,6 @@ class EntryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        breakfastLabel.text = "BREAKFAST"
-        lunchLabel.text = "LUNCH"
-
-        breakfastLabel.textColor = .white
-        lunchLabel.textColor = .white
-
     }
 
 }

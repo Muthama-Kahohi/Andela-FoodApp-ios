@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivv-jc-Gmy">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="pBW-E4-1Cp" customClass="MealsViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lxg-u6-IHQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 12, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-m1-GOW" userLabel="Date">
-                                <rect key="frame" x="16" y="72" width="154" height="26"/>
+                                <rect key="frame" x="16" y="72" width="209" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="3n6-wc-CIx"/>
                                 </constraints>
@@ -30,14 +30,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-pb-PFY">
-                                <rect key="frame" x="12" y="106" width="296" height="268"/>
+                                <rect key="frame" x="12" y="106" width="351" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="296" height="63"/>
+                                        <rect key="frame" x="0.0" y="28" width="351" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxV-qx-9fb" id="Ngl-Ay-ZyY">
-                                            <rect key="frame" x="0.0" y="0.0" width="296" height="62.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="351" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-2q-k0q" userLabel="Letter" customClass="CircleLabel" customModule="FoodApp_ios" customModuleProvider="target">
@@ -52,7 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-XB-lyL" userLabel="Name">
-                                                    <rect key="frame" x="71" y="11" width="210" height="41"/>
+                                                    <rect key="frame" x="71" y="11" width="265" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8U9-me-07L" customClass="CircleButton" customModule="FoodApp_ios" customModuleProvider="target">
-                                <rect key="frame" x="233" y="395" width="46" height="46"/>
+                                <rect key="frame" x="288" y="582" width="46" height="46"/>
                                 <color key="backgroundColor" red="0.31913548707962036" green="0.70814001560211182" blue="0.56475061178207397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="20v-bj-Xze"/>
@@ -117,31 +117,35 @@
             <objects>
                 <viewController storyboardIdentifier="ratingViewControllerID" id="BYZ-38-t0r" userLabel="Rating View Controller" customClass="RatingViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEZ-Oj-Nwj" userLabel="Date Label">
-                                <rect key="frame" x="16" y="72" width="143" height="21"/>
+                                <rect key="frame" x="16" y="72" width="198" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hRL-aY-1vY">
-                                <rect key="frame" x="16" y="117" width="288" height="247"/>
+                                <rect key="frame" x="16" y="117" width="343" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="96"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pXg-Wd-hGa" id="c9G-o2-CB6">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="95.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-Lv-Lq2" userLabel="Rating Stack View" customClass="RatingControl" customModule="FoodApp_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="40" width="197" height="44"/>
+                                                    <rect key="frame" x="15" y="40" width="252" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="252" id="kDR-sn-GZv"/>
+                                                        <constraint firstAttribute="height" constant="44" id="t0k-xm-Spd"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-kj-Bhv" userLabel="Food Name Label">
-                                                    <rect key="frame" x="15" y="11" width="258" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -152,7 +156,6 @@
                                                 <constraint firstItem="jPg-kj-Bhv" firstAttribute="trailing" secondItem="c9G-o2-CB6" secondAttribute="trailingMargin" id="4kO-fc-skZ"/>
                                                 <constraint firstItem="jPg-kj-Bhv" firstAttribute="leading" secondItem="c9G-o2-CB6" secondAttribute="leadingMargin" id="7Tb-Am-M6W"/>
                                                 <constraint firstItem="jPg-kj-Bhv" firstAttribute="top" secondItem="c9G-o2-CB6" secondAttribute="topMargin" id="LxV-eK-Qcv"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="P0e-Lv-Lq2" secondAttribute="trailing" constant="61" id="M2w-ax-q9r"/>
                                                 <constraint firstItem="P0e-Lv-Lq2" firstAttribute="top" secondItem="jPg-kj-Bhv" secondAttribute="bottom" constant="8" id="NeR-Rn-H1A"/>
                                                 <constraint firstItem="P0e-Lv-Lq2" firstAttribute="leading" secondItem="c9G-o2-CB6" secondAttribute="leadingMargin" id="Pam-Kd-gfP"/>
                                             </constraints>
@@ -165,13 +168,13 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Any other feedback? (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-No-bv7" userLabel="Comment Text Field">
-                                <rect key="frame" x="16" y="423" width="288" height="17"/>
+                                <rect key="frame" x="16" y="610" width="343" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ve-Eb-pmp" userLabel="Comment Label">
-                                <rect key="frame" x="16" y="394" width="135" height="21"/>
+                                <rect key="frame" x="16" y="581" width="190" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="x9O-sT-7eL"/>
                                 </constraints>
@@ -184,16 +187,16 @@
                         <constraints>
                             <constraint firstItem="0Ve-Eb-pmp" firstAttribute="top" secondItem="hRL-aY-1vY" secondAttribute="bottom" constant="30" id="1kx-M8-mwH"/>
                             <constraint firstItem="hRL-aY-1vY" firstAttribute="top" secondItem="sEZ-Oj-Nwj" secondAttribute="bottom" constant="24" id="2o6-Qw-Q4e"/>
-                            <constraint firstItem="hRL-aY-1vY" firstAttribute="trailing" secondItem="fG8-No-bv7" secondAttribute="trailing" id="ACG-7H-91q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ve-Eb-pmp" secondAttribute="trailing" constant="169" id="DGy-m5-0H3"/>
+                            <constraint firstItem="fG8-No-bv7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fqa-cR-w3e"/>
                             <constraint firstItem="sEZ-Oj-Nwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Fqy-12-Hng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sEZ-Oj-Nwj" secondAttribute="trailing" constant="161" id="Mu8-sl-Xd3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fG8-No-bv7" secondAttribute="bottom" constant="40" id="VuQ-y8-N9m"/>
-                            <constraint firstItem="fG8-No-bv7" firstAttribute="top" secondItem="0Ve-Eb-pmp" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFa-ZX-IM4"/>
                             <constraint firstItem="sEZ-Oj-Nwj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dyp-PR-iub"/>
                             <constraint firstItem="hRL-aY-1vY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hhA-tw-aX1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fG8-No-bv7" secondAttribute="trailing" constant="16" id="l1V-v1-zte"/>
                             <constraint firstItem="sEZ-Oj-Nwj" firstAttribute="leading" secondItem="hRL-aY-1vY" secondAttribute="leading" id="qpa-kQ-6zh"/>
-                            <constraint firstItem="0Ve-Eb-pmp" firstAttribute="leading" secondItem="fG8-No-bv7" secondAttribute="leading" id="zbt-AU-2yS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fG8-No-bv7" secondAttribute="bottom" constant="40" id="rKK-kh-qH9"/>
+                            <constraint firstItem="fG8-No-bv7" firstAttribute="top" secondItem="0Ve-Eb-pmp" secondAttribute="bottom" constant="8" id="sEj-Qd-qh4"/>
                             <constraint firstItem="hRL-aY-1vY" firstAttribute="leading" secondItem="0Ve-Eb-pmp" secondAttribute="leading" id="zdS-FW-yNR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -207,7 +210,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomConstraint" destination="VuQ-y8-N9m" id="TfC-LG-6Ai"/>
                         <outlet property="commentLabel" destination="0Ve-Eb-pmp" id="Tbm-QA-889"/>
                         <outlet property="commentTextField" destination="fG8-No-bv7" id="Vhm-jF-FEM"/>
                         <outlet property="dateLabel" destination="sEZ-Oj-Nwj" id="oNR-RK-ujc"/>
@@ -223,11 +225,11 @@
             <objects>
                 <viewController id="Ivv-jc-Gmy" customClass="SignInViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Siu-ka-VV8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRO-Y4-PnZ" customClass="GIDSignInButton">
-                                <rect key="frame" x="4" y="216" width="312" height="48"/>
+                                <rect key="frame" x="31.5" y="309.5" width="312" height="48"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="YKI-Ni-04Z"/>
@@ -235,7 +237,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AndelaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BoI-2F-iiW">
-                                <rect key="frame" x="40" y="36" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="129.5" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="QbC-a6-jCc"/>
                                     <constraint firstAttribute="width" constant="240" id="ebZ-aG-e3A"/>
@@ -266,45 +268,39 @@
             <objects>
                 <viewController storyboardIdentifier="entryViewControllerID" id="IVU-h5-7b5" customClass="EntryViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJN-11-6fJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x82-Ds-1cJ" userLabel="Breakfast Button">
-                                <rect key="frame" x="0.0" y="64" width="375" height="302"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="breakfast"/>
-                                <connections>
-                                    <segue destination="pBW-E4-1Cp" kind="show" id="BzS-YD-Uto"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-BV-mHB" userLabel="Lunch Button">
-                                <rect key="frame" x="0.0" y="365" width="375" height="302"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="lunch"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmU-qI-kmo" userLabel="Lunch Label">
-                                <rect key="frame" x="16" y="626" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-sf-fDo" userLabel="Breakfast Label">
-                                <rect key="frame" x="16" y="336" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-Q2-SIt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRQ-6E-JVK" userLabel="Breakfast Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
+                                        <state key="normal" backgroundImage="breakfast"/>
+                                        <connections>
+                                            <segue destination="pBW-E4-1Cp" kind="show" id="uAo-qY-wCN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-8w-24Z" userLabel="Lunch Button">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                        <state key="normal" backgroundImage="lunch"/>
+                                        <connections>
+                                            <segue destination="pBW-E4-1Cp" kind="show" id="0xm-rf-hxf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kta-nH-ghc" firstAttribute="trailing" secondItem="eSQ-Q2-SIt" secondAttribute="trailing" id="HtI-S2-p7C"/>
+                            <constraint firstItem="kta-nH-ghc" firstAttribute="bottom" secondItem="eSQ-Q2-SIt" secondAttribute="bottom" id="Xx7-89-S90"/>
+                            <constraint firstItem="eSQ-Q2-SIt" firstAttribute="leading" secondItem="kta-nH-ghc" secondAttribute="leading" id="hy5-8f-fre"/>
+                            <constraint firstItem="eSQ-Q2-SIt" firstAttribute="top" secondItem="kta-nH-ghc" secondAttribute="top" id="nZ5-qr-ctd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kta-nH-ghc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Foodie" id="aWh-dV-ny6"/>
-                    <connections>
-                        <outlet property="breakfastLabel" destination="hwU-sf-fDo" id="Ed5-o7-c1A"/>
-                        <outlet property="lunchLabel" destination="TmU-qI-kmo" id="huC-N7-va2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQC-iP-r8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,7 +312,7 @@
                 <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P91-lH-buj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fHN-Gs-mrQ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.90766948461532593" green="0.17513649165630341" blue="0.31380888819694519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -336,7 +332,10 @@
     <resources>
         <image name="AndelaLogo" width="290" height="215"/>
         <image name="StarIcon" width="22" height="20"/>
-        <image name="breakfast" width="188" height="139"/>
-        <image name="lunch" width="188" height="154"/>
+        <image name="breakfast" width="376" height="279"/>
+        <image name="lunch" width="377" height="309"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0xm-rf-hxf"/>
+    </inferredMetricsTieBreakers>
 </document>
