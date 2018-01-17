@@ -33,7 +33,7 @@
                                 <rect key="frame" x="12" y="106" width="296" height="268"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="296" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxV-qx-9fb" id="Ngl-Ay-ZyY">
@@ -82,7 +82,8 @@
                                     <constraint firstAttribute="width" constant="46" id="20v-bj-Xze"/>
                                     <constraint firstAttribute="height" constant="46" id="Yxd-wJ-n3p"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="filledStar"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="6" maxY="0.0"/>
+                                <state key="normal" image="StarIcon"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="rYf-P4-mqK"/>
                                 </connections>
@@ -129,7 +130,7 @@
                                 <rect key="frame" x="16" y="117" width="288" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pXg-Wd-hGa" id="c9G-o2-CB6">
@@ -137,10 +138,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-Lv-Lq2" userLabel="Rating Stack View" customClass="RatingControl" customModule="FoodApp_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="40" width="189" height="44"/>
+                                                    <rect key="frame" x="15" y="40" width="197" height="44"/>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-kj-Bhv" userLabel="Food Name Label">
-                                                    <rect key="frame" x="15" y="11" width="250" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="258" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -334,8 +335,8 @@
     </scenes>
     <resources>
         <image name="AndelaLogo" width="290" height="215"/>
+        <image name="StarIcon" width="22" height="20"/>
         <image name="breakfast" width="188" height="139"/>
-        <image name="filledStar" width="256" height="256"/>
         <image name="lunch" width="188" height="154"/>
     </resources>
 </document>
