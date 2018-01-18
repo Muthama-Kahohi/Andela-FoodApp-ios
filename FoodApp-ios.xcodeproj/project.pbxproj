@@ -22,6 +22,7 @@
 		AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
 		23EAA13D72D0010C9462B2CEF67C03F1 /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23998E8B1152CE536C05278DA504261C /* MealsTableViewCell.swift */; };
 		2B14A6AEF1AF6973023BB127EED7E27E /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE5846D6EC69FE3E40E7348703277A /* MealsViewController.swift */; };
+		68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */; };
 		579F56C403EECFBFEA190501EAC037AC /* Pods_FoodApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67F9E7DCFEB8C79989B812082424BDD /* Pods_FoodApp_ios.framework */; };
 		0E7EB20DA3FCD58A0241FE3DA83957FA /* Pods_FoodApp_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 530A43D0342CA5C7A3FD886F3BD8B866 /* Pods_FoodApp_iosTests.framework */; };
 		E79D628EB234A243F046A2C9FFA309B1 /* Pods_FoodApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D1C8E262B6E8033830FC0CB0F4CABC /* Pods_FoodApp_iosUITests.framework */; };
@@ -71,6 +72,7 @@
 		314BF7F2485751438789FDE64C734832 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
 		23998E8B1152CE536C05278DA504261C /* MealsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsTableViewCell.swift; sourceTree = "<group>"; };
 		6EAE5846D6EC69FE3E40E7348703277A /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
+		670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		73AAC1688C95D91195035CE63AF70FDE /* Pods-FoodApp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-ios/Pods-FoodApp-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E3632DE7CF326371C44E4B6810371B43 /* Pods-FoodApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-ios/Pods-FoodApp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		D82AD046ADC95E8002F22D638C433026 /* Pods-FoodApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-iosTests/Pods-FoodApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		9C1BED116A382852EA6F94F70C8C5D49 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */,
 				23EAA13D72D0010C9462B2CEF67C03F1 /* MealsTableViewCell.swift in Sources */,
 				2B14A6AEF1AF6973023BB127EED7E27E /* MealsViewController.swift in Sources */,
+				68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */,
 				D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */,
 				8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */,
 				9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */,
