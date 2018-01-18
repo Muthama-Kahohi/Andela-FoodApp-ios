@@ -12,6 +12,7 @@ target 'FoodApp-ios' do
     target 'FoodApp-iosTests' do
         inherit! :search_paths
         # Pods for testing
+        pod 'Firebase/Core'
     end
 
     target 'FoodApp-iosUITests' do

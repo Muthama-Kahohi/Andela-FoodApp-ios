@@ -30,6 +30,7 @@
 		8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */; };
 		45455C156685C5881357E0BFD6429ADD /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
+		E6B408F4D66F92BB0699D6722EC61708 /* RatingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A135E60C3603F82BC9291D0489C12 /* RatingViewModelTests.swift */; };
 		47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
+		457A135E60C3603F82BC9291D0489C12 /* RatingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModelTests.swift; sourceTree = "<group>"; };
 		9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		661A27202DB42A69AD53835931936F6D /* uniquify_projects.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = uniquify_projects.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -334,6 +336,7 @@
 			children = (
 				D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */,
 				5AD2E1D31F8BCF2804E4F40FB3EF5A37 /* Info.plist */,
+				457A135E60C3603F82BC9291D0489C12 /* RatingViewModelTests.swift */,
 			);
 			path = "FoodApp-iosTests";
 			sourceTree = "<group>";
@@ -542,9 +545,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FoodApp-iosTests/Pods-FoodApp-iosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-Defines-NSData+zlib/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -629,7 +637,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodApp-ios/Pods-FoodApp-ios-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -652,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE49792611B1819606F73520D76D0B96 /* FoodApp_iosTests.swift in Sources */,
+				E6B408F4D66F92BB0699D6722EC61708 /* RatingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
