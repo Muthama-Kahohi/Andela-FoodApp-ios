@@ -1,12 +1,6 @@
-//
-//  FoodApp_iosTests.swift
-//  FoodApp-iosTests
-//
-//  Created by Paul Kahohi on 1/8/18.
-//  Copyright © 2018 Paul Kahohi. All rights reserved.
-//
-
 import XCTest
+import Firebase
+
 @testable import FoodApp_ios
 
 class FoodApp_iosTests: XCTestCase {

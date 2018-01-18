@@ -2,16 +2,24 @@ import UIKit
 
 class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
+    //MARK: IBOutlets
+
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
-    var foodList = [MealItem]()
+    //MARK: Internal Properties
+
+    internal var viewModel: RatingViewModel =  RatingViewModel()
+
+    //MARK: Overriden methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        viewModel.loadSampleMeal()
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -20,53 +28,33 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         commentTextField.underlined()
 
         dateLabel.textColor = .gray
-        dateLabel.text = displayCurrentDate()
-        loadSampleMeal() //dummy data
+        dateLabel.text = viewModel.getCurrentDate()
 
         registerForKeyboardNotifications()
     }
 
-    @IBAction func doneButtonPressed(_ sender: Any) {
-    }
+    //MARK: Private Methods
 
-    // MARK: Private Methods
-    private func displayCurrentDate() -> String {
-
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-
-        return formatter.string(from: now)
-    }
-
-    private func loadSampleMeal() {
-
-        let sampleFood = MealItem(name: "Ugali", rating: 4)
-        let sampleFood1 = MealItem(name: "Spinach", rating: 1)
-        let sampleFood2 = MealItem(name: "Mbuzi Fry", rating: 5)
-        let sampleFood3 = MealItem(name: "Mixed Veggies", rating: 3)
-        let sampleFood4 = MealItem(name: "Mukimo", rating: 2)
-
-        foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
-        //let sampleMeal = Meal(foodList: foodList)
+    @IBAction private func doneButtonPressed(_ sender: Any) {
     }
 
     // MARK: UITableView Delegate/DataSource methods
+
     internal func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodList.count
+
+        return viewModel.foodList.count
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as? RatingTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellName, for: indexPath) as? RatingTableViewCell
             else { return UITableViewCell() }
 
-        let food = foodList[indexPath.row]
+        let food = viewModel.foodList[indexPath.row]
 
         cell.foodNameLabel.text = food.name
         cell.ratingControl.rating = food.rating ?? 0
@@ -75,6 +63,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     // MARK: TextView Tracking Methods
+
     func textFieldDidEndEditing(_ textField: UITextField) {
 
     }
@@ -87,6 +76,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     // MARK: Keyboard Handling Methods
+
     private func registerForKeyboardNotifications() {
 
         NotificationCenter.default.addObserver(self,
