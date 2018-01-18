@@ -29,6 +29,7 @@
 		D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */; };
 		8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */; };
+		45455C156685C5881357E0BFD6429ADD /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
 		9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		661A27202DB42A69AD53835931936F6D /* uniquify_projects.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = uniquify_projects.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */,
+				FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */,
 				8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */,
 				9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */,
+				45455C156685C5881357E0BFD6429ADD /* RatingViewModel.swift in Sources */,
 				47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
