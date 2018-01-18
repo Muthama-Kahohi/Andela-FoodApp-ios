@@ -3,26 +3,38 @@ import GoogleSignIn
 import Firebase
 
 class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+    
+    // MARK: UIOutlets
 
-    @IBOutlet weak var signIn: GIDSignInButton!
-    override func viewDidLoad() {
+    @IBOutlet public weak var signIn: GIDSignInButton!
+    
+    // MARK: Internal Properties
+    
+    internal var viewModel: SignInViewModel = SignInViewModel()
+    
+    // MARK: Public Instance Methods
+    
+    override public func viewDidLoad() {
 
         super.viewDidLoad()
 
         signIn.style = .wide
 
         //Intialize the sign in
+        
         guard let FirApp = FirebaseApp.app() else { return }
         guard let instance = GIDSignIn.sharedInstance() else { return }
 
         instance.clientID = FirApp.options.clientID
-        instance.hostedDomain = "andela.com"
+        instance.hostedDomain = viewModel.domain
         instance.uiDelegate = self
         instance.delegate = self
         instance.signInSilently()
     }
+    
+    // MARK: Internal Instance Methods
 
-    func sign(_ signIn: GIDSignIn!,
+    internal func sign(_ signIn: GIDSignIn!,
               didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
 
