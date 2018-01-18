@@ -16,6 +16,7 @@
 		38D67D9B245943CB6CF738114423B943 /* FoodApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E108C62E0EA06827DC8881BFF4041 /* FoodApp_iosUITests.swift */; };
 		AE618758C0D1970CF388AFC6845DC386 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D2FC7122BD7E2498377A781B09C8CE8 /* GoogleService-Info.plist */; };
 		D97E037F4AA4E5AFACDA63190BD555E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A745A64781D5470C99B54DF01A75AE /* LaunchScreen.storyboard */; };
+		57EC8F6EADD07D87508CC54EA277AB61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9892C39102E0D527791666C8ECFD9C17 /* Localizable.strings */; };
 		6DE7521C7DAAEBCE4D2D375F73739A03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
 		03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */; };
 		AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
@@ -64,6 +65,7 @@
 		96F36926F7C5ED83C68D6E4FA99A107B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1C3EF0AA1DB0A84F0370D9BC8593702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A745A64781D5470C99B54DF01A75AE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9892C39102E0D527791666C8ECFD9C17 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		314BF7F2485751438789FDE64C734832 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */,
 				96F36926F7C5ED83C68D6E4FA99A107B /* Info.plist */,
+				9892C39102E0D527791666C8ECFD9C17 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				32F00F8FF960503F7525A15AE00024C8 /* Assets.xcassets in Resources */,
 				AE618758C0D1970CF388AFC6845DC386 /* GoogleService-Info.plist in Resources */,
 				D97E037F4AA4E5AFACDA63190BD555E9 /* LaunchScreen.storyboard in Resources */,
+				57EC8F6EADD07D87508CC54EA277AB61 /* Localizable.strings in Resources */,
 				6DE7521C7DAAEBCE4D2D375F73739A03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
