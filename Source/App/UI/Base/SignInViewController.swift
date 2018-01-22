@@ -20,7 +20,6 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
         instance.uiDelegate = self
         instance.delegate = self
         instance.signInSilently()
-
     }
 
     func sign(_ signIn: GIDSignIn!,
