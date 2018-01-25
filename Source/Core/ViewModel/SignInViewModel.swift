@@ -10,6 +10,6 @@ public class SignInViewModel {
     
     public init() {
         
-        self.domain = "andela.com"
+        self.domain = NSLocalizedString("Domain", comment: "")
     }
 }
