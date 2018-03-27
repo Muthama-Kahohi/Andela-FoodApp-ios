@@ -18,7 +18,8 @@ profile
 DerivedData
 *.hmap
 *.ipa
-
+GoogleService-Info.plist
+GoogleService-Info-dev.plist
 # Bundler
 .bundle
 
