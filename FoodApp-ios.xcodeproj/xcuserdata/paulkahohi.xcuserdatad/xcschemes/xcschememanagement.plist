@@ -7,7 +7,11 @@
 		<key>FoodApp-ios dev.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>9</integer>
+=======
+			<integer>1</integer>
+>>>>>>> Paul/Updates capuccino image
 		</dict>
 		<key>FoodApp-ios.xcscheme_^#shared#^_</key>
 		<dict>

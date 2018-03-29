@@ -8,8 +8,6 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
     @IBOutlet weak var mealsTable: UITableView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
 
-    @IBOutlet weak var rateButton: CircleButton!
-
     let viewModel: MealsViewModel = MealsViewModel()
     var mealType: String?
     var ref: DatabaseReference?
