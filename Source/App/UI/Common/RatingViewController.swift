@@ -13,6 +13,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Internal Properties
 
     internal var viewModel: RatingViewModel =  RatingViewModel()
+    private var comment: String? = ""
 
     //MARK: Overriden methods
 
@@ -20,7 +21,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         viewModel.loadSampleMeal()
-        viewModel.loadSampleRatings()
+//        viewModel.loadSampleRatings()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,6 +39,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
         
+        viewModel.writeRatings(viewModel.ratingsList)
         
     }
 
@@ -58,19 +60,30 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
             else { return UITableViewCell() }
 
         let food = viewModel.foodList[indexPath.row]
-        let rating = viewModel.ratingsList
 
         cell.foodNameLabel.text = food.name
-        cell.ratingControl.rating = rating[indexPath.row].values[food.id!]!
+        cell.ratingControl.rating = 0
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! RatingTableViewCell
+        
+        let rating = Ratings(chefId: 1,
+                             comment: self.comment!,
+                             date: viewModel.getCurrentDate(),
+                             mealId: "Lunch",
+                             values: [indexPath.row : cell.ratingControl.rating])
+        
+        viewModel.ratingsList.append(rating)
     }
 
     // MARK: TextView Tracking Methods
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        
+        self.comment = textField.text
 
     }
 

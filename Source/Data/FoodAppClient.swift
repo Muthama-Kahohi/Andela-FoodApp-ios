@@ -37,8 +37,29 @@ public class FoodAppClient {
     
     //MARK: Public Instance Methods
     
+    public func getChildrenCount(completion: @escaping (UInt) -> Void) {
+        
+        FoodAppClient.databaseRef.child("ratings").observe(.value, with: { (snapshot) in
+            
+            completion(snapshot.childrenCount)
+        })
+    }
+    
     public func submitRatings(_ ratingValues: [Ratings]) {
         
-//        ratingValues[id] = Auth.auth().currentUser?.chef_id
+        for rating in ratingValues {
+            
+            var count: UInt?
+            
+            getChildrenCount(completion: { (childrenCount) in
+                count = childrenCount + 1
+            })
+            
+            FoodAppClient.databaseRef.child("ratings/\(count!)").setValue(["chef_id": 1,
+                                                                           "comment": rating.comment,
+                                                                           "date": rating.date,
+                                                                           "meal_id": rating.mealId,
+                                                                           "values": rating.values])
+        }
     }
 }

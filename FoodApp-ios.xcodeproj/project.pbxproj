@@ -166,13 +166,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01FF641E7598016502DBF546B824D122 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
 		1742C30A09D0FAC6C66B865ED65022EC /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,13 +247,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		73433F1231ADAFAEA235455FD6E7A22A /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		83CA167F9D48491529DE410627172744 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,8 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				6EF817BF143C9567C85E9F7AFF41D1A8 /* Model */,
-				73433F1231ADAFAEA235455FD6E7A22A /* Service */,
-				01FF641E7598016502DBF546B824D122 /* Store */,
 				B8D6F661327ED5DA67632D1F9DBC144D /* Utility */,
 				5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */,
 			);

@@ -3,7 +3,12 @@ import UIKit
 public class RatingViewModel {
 
     //MARK: Internal Properties
-
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
+    
     internal var foodList = [MealItem]()
     internal var ratingsList = [Ratings]()
 
@@ -34,24 +39,8 @@ public class RatingViewModel {
         foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
     }
     
-//    public func loadSampleRatings() {
-//
-//        var count = 0
-//
-//        for meal in foodList {
-//            count = count + 1
-//            let rating = Ratings(chefId: meal.id!,
-//                                 comment: "Comment",
-//                                 date: getCurrentDate(),
-//                                 mealID: "Lunch",
-//                                 values: [meal.id! : count])
-//
-//            ratingsList += [rating]
-//        }
-//    }
-    
-    public func writeRatings() {
+    public func writeRatings(_ ratingsList: [Ratings]) {
         
-        
+        self.appDelegate?.foodAppClient.submitRatings(ratingsList)
     }
 }
