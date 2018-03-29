@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Rating {
+public struct Rating {
     let id: Int
     let comment: String
     let date: Date
