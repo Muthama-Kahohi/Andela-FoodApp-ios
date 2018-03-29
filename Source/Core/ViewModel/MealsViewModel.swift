@@ -18,11 +18,11 @@ class MealsViewModel {
 
     public func loadSampleMeal() {
 
-        let sampleFood = MealItem(name: "Ugali", rating: 4)
-        let sampleFood1 = MealItem(name: "Spinach", rating: 1)
-        let sampleFood2 = MealItem(name: "Mbuzi Fry", rating: 5)
-        let sampleFood3 = MealItem(name: "Mixed Veggies", rating: 3)
-        let sampleFood4 = MealItem(name: "Mukimo", rating: 2)
+        let sampleFood = MealItem(id: 4, name: "Ugali")
+        let sampleFood1 = MealItem(id: 1, name: "Spinach")
+        let sampleFood2 = MealItem(id: 5, name: "Mbuzi Fry")
+        let sampleFood3 = MealItem(id: 3, name: "Mixed Veggies")
+        let sampleFood4 = MealItem(id: 2, name: "Mukimo")
 
         foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
     }

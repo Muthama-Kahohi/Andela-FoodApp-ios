@@ -25,14 +25,14 @@
 		583827D41A7EF1EF80F25CBBA0A05251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
 		5B05D9BF206CD138000DBB08 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 		5B05D9C0206CD139000DBB08 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
+		5B05D9C1206CD494000DBB08 /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFFF643206CB044007B1E5B /* GoogleService-Info-dev.plist */; };
 		5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */; };
-		5BFFF62C206BBA19007B1E5B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Rating.swift */; };
-		5BFFF62E206BBAF0007B1E5B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Rating.swift */; };
+		5BFFF62C206BBA19007B1E5B /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Ratings.swift */; };
+		5BFFF62E206BBAF0007B1E5B /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Ratings.swift */; };
 		5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
 		5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
-		5BFFF645206CB044007B1E5B /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFFF643206CB044007B1E5B /* GoogleService-Info-dev.plist */; };
 		5BFFF646206CB044007B1E5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFFF644206CB044007B1E5B /* GoogleService-Info.plist */; };
 		6044573B910B8703233C62B05FA117BF /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
 		68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */; };
@@ -95,7 +95,7 @@
 		530A43D0342CA5C7A3FD886F3BD8B866 /* Pods_FoodApp_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodApp_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD2E1D31F8BCF2804E4F40FB3EF5A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppClient.swift; sourceTree = "<group>"; };
-		5BFFF62B206BBA19007B1E5B /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		5BFFF62B206BBA19007B1E5B /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		5BFFF643206CB044007B1E5B /* GoogleService-Info-dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-dev.plist"; sourceTree = "<group>"; };
 		5BFFF644206CB044007B1E5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C5ED2CB1C5E0981501A42CDD6600EDE /* FoodApp-ios dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,7 +249,7 @@
 			children = (
 				2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */,
 				314BF7F2485751438789FDE64C734832 /* MealItem.swift */,
-				5BFFF62B206BBA19007B1E5B /* Rating.swift */,
+				5BFFF62B206BBA19007B1E5B /* Ratings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,7 +559,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F00F8FF960503F7525A15AE00024C8 /* Assets.xcassets in Resources */,
-				5BFFF645206CB044007B1E5B /* GoogleService-Info-dev.plist in Resources */,
 				D97E037F4AA4E5AFACDA63190BD555E9 /* LaunchScreen.storyboard in Resources */,
 				57EC8F6EADD07D87508CC54EA277AB61 /* Localizable.strings in Resources */,
 				6DE7521C7DAAEBCE4D2D375F73739A03 /* Main.storyboard in Resources */,
@@ -572,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6740EC1DA24CB60CE8B23FAE67BA94 /* Assets.xcassets in Resources */,
+				5B05D9C1206CD494000DBB08 /* GoogleService-Info-dev.plist in Resources */,
 				C6252C0147F473E09C3B6971E3EE2884 /* LaunchScreen.storyboard in Resources */,
 				248C0CBDC3B538BDD1F11B68977A1995 /* Localizable.strings in Resources */,
 				583827D41A7EF1EF80F25CBBA0A05251 /* Main.storyboard in Resources */,
@@ -813,7 +813,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BFFF62E206BBAF0007B1E5B /* Rating.swift in Sources */,
+				5BFFF62E206BBAF0007B1E5B /* Ratings.swift in Sources */,
 				E58642E30DAA6451C577AA0390BFB7CE /* CircleButton.swift in Sources */,
 				EAE32C54C2F791F1708D97D17E0B18C1 /* CircleLabel.swift in Sources */,
 				CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */,
@@ -855,7 +855,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				808849889C88ACBB8CA7C8DABA87A990 /* CircleButton.swift in Sources */,
-				5BFFF62C206BBA19007B1E5B /* Rating.swift in Sources */,
+				5BFFF62C206BBA19007B1E5B /* Ratings.swift in Sources */,
 				F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */,
 				F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */,
 				03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */,

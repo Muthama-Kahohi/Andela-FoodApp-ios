@@ -16,14 +16,28 @@ public class FoodAppClient {
         
     }
     
+    //Private Instance Methods
+    
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
+    
+    private var currentUser: User? {
+        return appDelegate?.currentUser
+    }
+    
+    private var currentUserID: String? {
+        return appDelegate?.currentUserId
+    }
+    
     // Database Instance
     static let databaseRef = Database.database().reference()
     
-    
-    
     //MARK: Public Instance Methods
     
-    public func submitRatings(_ ratingValues: [Rating]) {
+    public func submitRatings(_ ratingValues: [Ratings]) {
         
 //        ratingValues[id] = Auth.auth().currentUser?.chef_id
     }

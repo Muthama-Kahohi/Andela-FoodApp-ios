@@ -1,6 +1,6 @@
 
 struct MealItem {
 
+    let id: Int?
     let name: String
-    let rating: Int?
 }

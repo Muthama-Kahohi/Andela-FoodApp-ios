@@ -20,7 +20,8 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         viewModel.loadSampleMeal()
-
+        viewModel.loadSampleRatings()
+        
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -36,6 +37,8 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Private Methods
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
+        
+        
     }
 
     // MARK: UITableView Delegate/DataSource methods
@@ -55,9 +58,10 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
             else { return UITableViewCell() }
 
         let food = viewModel.foodList[indexPath.row]
+        let rating = viewModel.ratingsList
 
         cell.foodNameLabel.text = food.name
-        cell.ratingControl.rating = food.rating ?? 0
+        cell.ratingControl.rating = rating[indexPath.row].values[food.id!]!
 
         return cell
     }
@@ -65,6 +69,8 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: TextView Tracking Methods
 
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        
 
     }
 
