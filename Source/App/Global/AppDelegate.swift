@@ -1,6 +1,7 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
