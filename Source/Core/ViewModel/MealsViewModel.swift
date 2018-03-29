@@ -60,10 +60,9 @@ class MealsViewModel {
                     let mealItem = MealItem(name: name)
 
                     self.foodList.append(mealItem)
-                    completion()
+                     completion()
                 }
             })
         }
-        //completion()
     }
 }

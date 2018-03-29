@@ -93,6 +93,13 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="rYf-P4-mqK"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-we-eKI">
+                                <rect key="frame" x="12" y="396" width="351" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="nFf-y0-PWI"/>
+                                    <constraint firstAttribute="height" constant="40" id="uRf-KT-gfU"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -103,6 +110,8 @@
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="LgZ-sD-jV3"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="8U9-me-07L" secondAttribute="trailing" constant="41" id="X7Y-Y2-cx4"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="top" secondItem="ibB-m1-GOW" secondAttribute="bottom" constant="8" symbolic="YES" id="hZa-LY-LeS"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="k5G-cB-J94"/>
+                            <constraint firstItem="KH6-pb-PFY" firstAttribute="centerY" secondItem="Lxg-u6-IHQ" secondAttribute="centerY" id="kjU-9n-4sH"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="ibB-m1-GOW" secondAttribute="trailing" constant="150" id="qYj-sY-OzI"/>
                             <constraint firstItem="ibB-m1-GOW" firstAttribute="top" secondItem="hh3-mF-209" secondAttribute="top" constant="8" id="y9G-7a-eAR"/>
                         </constraints>
@@ -110,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="ibB-m1-GOW" id="5eG-4r-GlV"/>
+                        <outlet property="loader" destination="vqg-we-eKI" id="JR6-Hm-h8V"/>
                         <outlet property="mealsTable" destination="KH6-pb-PFY" id="NDF-Px-4cN"/>
                     </connections>
                 </viewController>
@@ -235,7 +245,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kIf-0d-laQ">
-                                <rect key="frame" x="37.666666666666657" y="94" width="300" height="584"/>
+                                <rect key="frame" x="37.666666666666657" y="94" width="300" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Chakula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcW-p1-aYs">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="59"/>
@@ -257,7 +267,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capuccino" translatesAutoresizingMaskIntoConstraints="NO" id="Mk9-Vj-caU">
-                                        <rect key="frame" x="0.0" y="149" width="300" height="435"/>
+                                        <rect key="frame" x="0.0" y="149" width="300" height="171"/>
+                                        <color key="backgroundColor" red="0.70044481749999998" green="0.6523734927" blue="0.57651484009999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="PFd-6s-yiH"/>
                                             <constraint firstAttribute="height" constant="320" id="ehQ-0B-F9J"/>

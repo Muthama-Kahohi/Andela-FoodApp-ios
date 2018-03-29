@@ -6,6 +6,7 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mealsTable: UITableView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
 
     @IBOutlet weak var rateButton: CircleButton!
 
@@ -21,11 +22,13 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
         mealsTable.dataSource = self
 
         dateLabel.text = viewModel.displayCurrentDate()
+        loader.color = .black
+        loader.startAnimating()
         self.viewModel.loadSampleMeal(){ mealsList in
-
             self.viewModel.populateFoodList(mealIds: mealsList) {
-                    self.mealsTable.reloadData()
-
+                self.loader.color = .clear
+                self.loader.stopAnimating()
+                self.mealsTable.reloadData()
             }
         }
 
