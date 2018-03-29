@@ -20,18 +20,20 @@
 		3F6740EC1DA24CB60CE8B23FAE67BA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */; };
 		45455C156685C5881357E0BFD6429ADD /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		46C3B6E52A4CD6A35185B639 /* Pods_FoodApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67F9E7DCFEB8C79989B812082424BDD /* Pods_FoodApp_ios.framework */; };
-		47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 		579F56C403EECFBFEA190501EAC037AC /* Pods_FoodApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67F9E7DCFEB8C79989B812082424BDD /* Pods_FoodApp_ios.framework */; };
 		57EC8F6EADD07D87508CC54EA277AB61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9892C39102E0D527791666C8ECFD9C17 /* Localizable.strings */; };
 		583827D41A7EF1EF80F25CBBA0A05251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
 		5BFFF624206BA0AE007B1E5B /* GoogleService-Info-dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFFF622206BA09A007B1E5B /* GoogleService-Info-dev.plist */; };
 		5BFFF626206BA151007B1E5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFFF625206BA151007B1E5B /* GoogleService-Info.plist */; };
-		5BFFF627206BA280007B1E5B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 		5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */; };
-		5BFFF62A206BB9A3007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
 		5BFFF62C206BBA19007B1E5B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Rating.swift */; };
-		5BFFF62D206BBAEC007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
 		5BFFF62E206BBAF0007B1E5B /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Rating.swift */; };
+		5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
+		5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
+		5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
+		5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */; };
+		5BFFF640206CAB65007B1E5B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
+		5BFFF641206CAB66007B1E5B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 		6044573B910B8703233C62B05FA117BF /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
 		68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */; };
 		6DE7521C7DAAEBCE4D2D375F73739A03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
@@ -41,11 +43,9 @@
 		8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */; };
 		AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
-		B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		C6252C0147F473E09C3B6971E3EE2884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A745A64781D5470C99B54DF01A75AE /* LaunchScreen.storyboard */; };
 		CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
-		D1D299A447D3ED1BBC623D8C725C8C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DA3CFD20CC49FAE7939B0749DB62EE /* AppDelegate.swift */; };
 		D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */; };
 		D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */; };
 		D97E037F4AA4E5AFACDA63190BD555E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A745A64781D5470C99B54DF01A75AE /* LaunchScreen.storyboard */; };
@@ -740,23 +740,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BFFF627206BA280007B1E5B /* SignInViewController.swift in Sources */,
-				D1D299A447D3ED1BBC623D8C725C8C6F /* AppDelegate.swift in Sources */,
 				5BFFF62E206BBAF0007B1E5B /* Rating.swift in Sources */,
 				E58642E30DAA6451C577AA0390BFB7CE /* CircleButton.swift in Sources */,
 				EAE32C54C2F791F1708D97D17E0B18C1 /* CircleLabel.swift in Sources */,
 				CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */,
 				D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */,
-				5BFFF62D206BBAEC007B1E5B /* FoodAppClient.swift in Sources */,
 				6044573B910B8703233C62B05FA117BF /* MealItem.swift in Sources */,
 				3BB6FD95C58A3A0EB5BD07AF57843389 /* MealsTableViewCell.swift in Sources */,
+				5BFFF640206CAB65007B1E5B /* SignInViewController.swift in Sources */,
 				EA1F0BD89BC3AED5A9F70A716CE7874A /* MealsViewController.swift in Sources */,
 				31B8B51A71817F57DC6AA2EB41B03AA9 /* MealsViewModel.swift in Sources */,
 				6E2DA489B51CE07A545AC0C0DB8EEAC0 /* RatingControl.swift in Sources */,
 				CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */,
 				FBC92C8CD09C008915AB63E05FFD208D /* RatingViewController.swift in Sources */,
 				3A203E0BED943578EF2DFF61307F05D0 /* RatingViewModel.swift in Sources */,
+				5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */,
 				5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */,
+				5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,23 +781,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8AADAB9390E0468553A9E817E293A99 /* AppDelegate.swift in Sources */,
 				808849889C88ACBB8CA7C8DABA87A990 /* CircleButton.swift in Sources */,
 				5BFFF62C206BBA19007B1E5B /* Rating.swift in Sources */,
 				F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */,
 				F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */,
 				03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */,
 				AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */,
-				5BFFF62A206BB9A3007B1E5B /* FoodAppClient.swift in Sources */,
 				23EAA13D72D0010C9462B2CEF67C03F1 /* MealsTableViewCell.swift in Sources */,
+				5BFFF641206CAB66007B1E5B /* SignInViewController.swift in Sources */,
 				2B14A6AEF1AF6973023BB127EED7E27E /* MealsViewController.swift in Sources */,
 				68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */,
 				D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */,
 				8DDBA5D72B6E3F5587858F3A5C06AAE8 /* RatingTableViewCell.swift in Sources */,
 				9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */,
 				45455C156685C5881357E0BFD6429ADD /* RatingViewModel.swift in Sources */,
-				47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */,
+				5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */,
 				896C5027BE1B8E685D8F5EBD49A14BE6 /* SignInViewModel.swift in Sources */,
+				5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
