@@ -12,14 +12,19 @@ import FirebaseDatabase
 
 public class FoodAppClient {
     
-    let shared = FoodAppClient()
+    public init() {
+        
+    }
     
     // Database Instance
-    static let databaseRef = FIRDatabase.database().reference()
+    static let databaseRef = Database.database().reference()
+    
+    
     
     //MARK: Public Instance Methods
+    
     public func submitRatings(_ ratingValues: [Rating]) {
         
-//        ratingValues[Rating.id] = Auth.auth().currentUser?.chef_id
+//        ratingValues[id] = Auth.auth().currentUser?.chef_id
     }
 }

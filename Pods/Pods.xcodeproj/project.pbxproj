@@ -36,9 +36,10 @@
 		1CAD2D19B6043B494770E9DC585D276D /* GTMMIMEDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = B904080AA310D8EF3BC3AB906DF277A2 /* GTMMIMEDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2073ECE1B4D058873B8F5E031774FD20 /* block.cc in Sources */ = {isa = PBXBuildFile; fileRef = 22CD224826359597498D5AA53658153A /* block.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		216FD026B6CF3F6C3477A41C7F805FA4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293365045366DD99DF1A95F45C8B5A8D /* Security.framework */; };
-		23B205658E3085F321A277F9FB7BC3AB /* Pods-FoodApp-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA71A10C5D9773CFD221974A2B71189 /* Pods-FoodApp-ios-dummy.m */; };
+		23B205658E3085F321A277F9FB7BC3AB /* Pods-FoodApp-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E83A7F4112A2713020CAEB350114773C /* Pods-FoodApp-ios-dummy.m */; };
 		244163F0856ACB7C6CEB5658D4117630 /* GoogleToolboxForMac-f0850809-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 660CC29074210C25FCC8BFC6F687CBB7 /* GoogleToolboxForMac-f0850809-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 857E571F9376D998C22922C5BDF54369 /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4970DAB2C9B16B7A27889C332A1C47 /* Pods-FoodApp-ios-FoodApp-ios dev-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9EB001454A5859C6EA80352D83C014 /* Pods-FoodApp-ios-FoodApp-ios dev-dummy.m */; };
 		2DEA98AA54F4D62EEB952189658BD89C /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 646AA0B153EF15025E5B9EB8755071E2 /* GTMSessionFetcher.m */; };
 		2EF9AC0688E024B3ACC363ABDE13147E /* status.h in Headers */ = {isa = PBXBuildFile; fileRef = DAEEE69C4DAAC018A6D98C88CC8E2C26 /* status.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F90CCCB03C93484F5810B18080D16D4 /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA2DB56ECA30251C8E7EBDFE02B243 /* logging.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -48,10 +49,10 @@
 		33A9409EEF41860E9F0BD47D91E436D5 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFAB4377902E31A956AB4E9156CE923 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34AEE5E46A58FA4F6AB5578E8132B06C /* memtable.h in Headers */ = {isa = PBXBuildFile; fileRef = 716159825B6F3715492120CD04B52C36 /* memtable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		360F3EFFFCCF95B8D073D7C72067AD1C /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F98A92ABE30EFFBB54F219EBC582DD /* GTMSessionFetcherService.m */; };
-		385D9127AD39988C5A9F0FF9C7DF6D87 /* Pods-FoodApp-iosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFB4C9908277031E16D8D8450E59E16 /* Pods-FoodApp-iosTests-dummy.m */; };
+		385D9127AD39988C5A9F0FF9C7DF6D87 /* Pods-FoodApp-iosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 537794C0EFF45FA7D6D8577AAA859897 /* Pods-FoodApp-iosTests-dummy.m */; };
 		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EFF1852F4F3B18C6D854A9F8DB6E8D7 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = C094E3BFE7DFF33E34B007294D975BDC /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
-		3A626489C7AB33FD04C1510A9D812C8C /* Pods-FoodApp-iosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 134D69E0CFB3435741789126C9F50FDC /* Pods-FoodApp-iosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A626489C7AB33FD04C1510A9D812C8C /* Pods-FoodApp-iosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E8C486BF43F2B2211E4C3213D047F8 /* Pods-FoodApp-iosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DBFD436769841EABCD8865516C7AB07 /* log_format.h in Headers */ = {isa = PBXBuildFile; fileRef = 31F11A7E8C1C615FCB096933545E4409 /* log_format.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3E95058C12588FB186618FB358EB60E1 /* options.cc in Sources */ = {isa = PBXBuildFile; fileRef = 01EE7504E4CD3ECF6D5875988D6DAA65 /* options.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		3EA5EB74DECDECA27E6505BD395A6BB9 /* GTMOAuth2ViewControllerTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 6274F388341B3713BDDC540B6C5A72CD /* GTMOAuth2ViewControllerTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,7 +74,7 @@
 		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69323D411DECC80859333ED72BFEB7 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		5613300A2C0510D0E9DD865BF090875C /* block_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5F2A35FEE64502AAA05981AEFBF7BE8B /* block_builder.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		58BD23E49069CDB97DB822D30EC5579F /* memtable.cc in Sources */ = {isa = PBXBuildFile; fileRef = 01EA66BD474CF67453D6369BBC9E87A4 /* memtable.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
-		5931A80FCD8DF07FFE027FEACCEBB817 /* Pods-FoodApp-iosUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40DBD4D48CBB8BC59CDD04A342242AC5 /* Pods-FoodApp-iosUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5931A80FCD8DF07FFE027FEACCEBB817 /* Pods-FoodApp-iosUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 507699CE4010EA6798E88C34A91E2F1F /* Pods-FoodApp-iosUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B1AF8B6D07FA01316058C49151CF53A /* GTMOAuth2Authentication.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED958B40CACC53A783B553C697A2AE1 /* GTMOAuth2Authentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CC14863F1CE18295BCA9D191A728C9A /* version_set.cc in Sources */ = {isa = PBXBuildFile; fileRef = E2E55DC30C4DB2483471B59DDD073554 /* version_set.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		5DD133D587AB8FCB50ED56E220F2FF64 /* merger.cc in Sources */ = {isa = PBXBuildFile; fileRef = 515F4852A97C43772D480194FB883110 /* merger.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -96,6 +97,7 @@
 		80F4757729D67504713F2CC65864E8BC /* arena.cc in Sources */ = {isa = PBXBuildFile; fileRef = A233AE0A84D197837D08FFD44E7F1CA3 /* arena.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		81D48643EA10A7CEF4036CC2A967CDEF /* slice.h in Headers */ = {isa = PBXBuildFile; fileRef = D775F9BC6EAA3CC13B670373920530DF /* slice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8522410C85B627FD53DD15A9D7C6D2D1 /* db_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = EFA70C5B6D2B13CC0264C292815CA1E8 /* db_impl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8C2C3006E6F32193F1E7D0C2A78943E6 /* Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 886445C5A7F725B724B7D15276831690 /* Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DBD79DD89E835D879F19571B82BBC10 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BC05343437E378369AD730DE9A04AC6 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E6C2D2EBF7002B6D303012713BC2CD7 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FFAB4377902E31A956AB4E9156CE923 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC8E3E8E5F0C3020829D0AAAF4C8AC4 /* iterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 80467BCAAE65BD9D634B0E6ED576ABA9 /* iterator.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
@@ -142,13 +144,14 @@
 		BA7F6EAA26CF9D5C1BCA6FCC5F22BD7E /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C31AEA45CB20F6E801870D34B946A32F /* GTMSessionUploadFetcher.m */; };
 		BD4DBE66C5321DDDADC94E55B08F934A /* table.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1311414ADE854FA90B0054BE39BFD466 /* table.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		BE830CC3262BEFC804CBE9AD8C1E0A04 /* table_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = FD5BF678B8557A51F6C068439B05218F /* table_builder.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
-		BE9219804F0C702FEFD199E4D6DC2019 /* Pods-FoodApp-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F6221A63BA22090032ED21EAA86E43A /* Pods-FoodApp-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE9219804F0C702FEFD199E4D6DC2019 /* Pods-FoodApp-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B8149625A2483E013531E8CCF6F5AF /* Pods-FoodApp-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C09A9D7003942172FB4178D1413EC484 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B20778C7937823E832FA4E621A557 /* GTMReadMonitorInputStream.m */; };
 		C14D5C4335D506E9D97E71608A06963D /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = D29B97B06211A401000E33F8B63B4CBC /* hash.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C43DF6C7E1E7F3148A016F5D278717A8 /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F44D6B30B961C5C2D8A5C1C1ED20F0F /* format.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C8F61AC766D4AD989C744074194D6A70 /* crc32c.h in Headers */ = {isa = PBXBuildFile; fileRef = A03C0E47F39B93C9FDC4D42727B6B4BF /* crc32c.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CB8DEAB39CEA8CBFA79C0EE66C0B119A /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3414CF46D8D5C228D0749BFA5433D8D9 /* GTMSessionFetcher.framework */; };
 		CD02EFF91211DCC1DE607F885831F891 /* GTMOAuth2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 989F88ED3AEAC65AB78FF95500693383 /* GTMOAuth2-dummy.m */; };
+		CE1D32BA91CF161865D839A38102F9C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F94C6C025CA1FB9C812AC44677D479 /* Foundation.framework */; };
 		D02943388E1F14C3C2DFAC67A9D5BFB8 /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = 98478CB18F483AC99FE7BB94AC70A421 /* db.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0C4C038F83836962A703CE46CF56073 /* comparator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5B4924E667380EB889A2EC783FAF4770 /* comparator.cc */; settings = {COMPILER_FLAGS = "-DOS_MACOSX -DLEVELDB_PLATFORM_POSIX -fno-objc-arc"; }; };
 		D194B165AAEF9A6775CCF1A58B772B90 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 033F6189EAB1EC13D6AE366586D4F90A /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,7 +170,7 @@
 		E93DCCCE78D990BBA222C32F30E30D90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293365045366DD99DF1A95F45C8B5A8D /* Security.framework */; };
 		EA0D49A50C63B470B5BC360B25D0E212 /* GTMNSDictionary+URLArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = 7713B49C871EF6248D088EDB27D0D9EF /* GTMNSDictionary+URLArguments.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE8F4C47A1F1611BF2B344E08EA04DF4 /* filename.h in Headers */ = {isa = PBXBuildFile; fileRef = 548C7CBD91C791E434C66E59D79C19B8 /* filename.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0D90427991683E81D81FEC9A996CA8D /* Pods-FoodApp-iosUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 206ABBFB67920479C42F705130753D90 /* Pods-FoodApp-iosUITests-dummy.m */; };
+		F0D90427991683E81D81FEC9A996CA8D /* Pods-FoodApp-iosUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B645FE75CF61AE4281A33248F53ABDE1 /* Pods-FoodApp-iosUITests-dummy.m */; };
 		F54EC7109557F389C1994199FC92497F /* GoogleToolboxForMac-Defines-NSData+zlib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB24616F74274AA353F282B4DEFA097 /* GoogleToolboxForMac-Defines-NSData+zlib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5531F9DDD1D852322A97C682A5AFC15 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63C9AFD805AE78B9CC98E33850233B8 /* GTMOAuth2ViewTouch.xib */; };
 		F6CA012C4CEB1D996CC12EEADD21CDB1 /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F09104DCBD02026EFC65CD6CF53B60F /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -191,7 +194,28 @@
 			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
 			remoteInfo = nanopb;
 		};
+		5C26E8187AC0DC7AE24EE5F65333221B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8159F94E49D9B443DE18F0F8B38078B8;
+			remoteInfo = "GoogleToolboxForMac-f0850809";
+		};
 		5F28B6FD4A57CAE8C4A9FF48AF51AFB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 681BE6E3D02A43F9BA63777AC435C8FD;
+			remoteInfo = GTMSessionFetcher;
+		};
+		6587AAD59A87484B1BB9290C89DAB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
+			remoteInfo = nanopb;
+		};
+		748CFC28385CBD727A48305BD3EDFDED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -219,12 +243,26 @@
 			remoteGlobalIDString = 433E90BF6136E433A0FEA61CD4159E56;
 			remoteInfo = "GoogleToolboxForMac-Defines-NSData+zlib";
 		};
+		D19B573C54BF66F92EF64BDF200A8CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B08C49A396BAA0D9DCAD4460CC52F95;
+			remoteInfo = "leveldb-library";
+		};
 		D714BE93D0C0E344643FC1FFDEEDC282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B08C49A396BAA0D9DCAD4460CC52F95;
 			remoteInfo = "leveldb-library";
+		};
+		E737751A970E016470EE834EB9911D6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1C4AAFAF49036C7007633DAA3C806AD;
+			remoteInfo = GTMOAuth2;
 		};
 		FE7B7DD3E98DCB167D7EE0E9C8F2C5E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -241,73 +279,69 @@
 		01EA66BD474CF67453D6369BBC9E87A4 /* memtable.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = memtable.cc; path = db/memtable.cc; sourceTree = "<group>"; };
 		01EE7504E4CD3ECF6D5875988D6DAA65 /* options.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = options.cc; path = util/options.cc; sourceTree = "<group>"; };
 		033F6189EAB1EC13D6AE366586D4F90A /* GTMDebugThreadValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugThreadValidation.h; path = DebugUtils/GTMDebugThreadValidation.h; sourceTree = "<group>"; };
-		05CE8F30A940177DEC138B7BEEA3CBC9 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = "GoogleToolboxForMac-Defines-NSData+zlib.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06532FBC561D15197F2572B03937CEF1 /* c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c.h; path = include/leveldb/c.h; sourceTree = "<group>"; };
 		08EC40C9A46DE79F1458BE3194A081F4 /* crc32c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = crc32c.cc; path = util/crc32c.cc; sourceTree = "<group>"; };
-		09671E1E85367F0E86523F97164FB6E0 /* Pods_FoodApp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_ios.framework; path = "Pods-FoodApp-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C27D51D1FDD0ED3D616504C697805 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = Resources/GoogleSignIn.bundle; sourceTree = "<group>"; };
-		0C826496D127EA47A3B18BF87B11C08E /* Pods-FoodApp-iosTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosTests-frameworks.sh"; sourceTree = "<group>"; };
 		0EAA2DB56ECA30251C8E7EBDFE02B243 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = logging.cc; path = util/logging.cc; sourceTree = "<group>"; };
 		0F22ADEB201EA7FA2C56E61CB748B929 /* env.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env.h; path = include/leveldb/env.h; sourceTree = "<group>"; };
 		0FD36FE78FB65E43BFAEF0B61A0D6869 /* GoogleToolboxForMac-Defines-NSData+zlib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GoogleToolboxForMac-Defines-NSData+zlib.modulemap"; sourceTree = "<group>"; };
-		12C8F6BF2409E31B2AC7393B79A678F3 /* Pods-FoodApp-iosTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosTests-resources.sh"; sourceTree = "<group>"; };
 		1311414ADE854FA90B0054BE39BFD466 /* table.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table.cc; path = table/table.cc; sourceTree = "<group>"; };
-		134D69E0CFB3435741789126C9F50FDC /* Pods-FoodApp-iosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-iosTests-umbrella.h"; sourceTree = "<group>"; };
 		1359EB8C6093FD50307671271AE0FF30 /* comparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = comparator.h; path = include/leveldb/comparator.h; sourceTree = "<group>"; };
 		16270C3AF20F2A805785A13A0C42BAA0 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDebugSelectorValidation.h; path = DebugUtils/GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
 		17A9D5D1000E40249D73ED334B373C26 /* db_iter.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_iter.cc; path = db/db_iter.cc; sourceTree = "<group>"; };
 		18E9D97963FF8D09183E77EC9BA562D6 /* GTMSessionFetcher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMSessionFetcher.modulemap; sourceTree = "<group>"; };
 		1B338F048531F7CCA65D38013830A0D5 /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
 		1BC1D39CC1D400692D3743A6E77E3F89 /* status.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = status.cc; path = util/status.cc; sourceTree = "<group>"; };
-		1BFB4C9908277031E16D8D8450E59E16 /* Pods-FoodApp-iosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-iosTests-dummy.m"; sourceTree = "<group>"; };
 		1E090455F3746E9D86F97D199A2D70BE /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		1E30688050B2ED16F74634F174E64161 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2Authentication.m; path = Source/GTMOAuth2Authentication.m; sourceTree = "<group>"; };
 		1EC99B62B3EBD32C55B3FF44D45BB839 /* GTMMIMEDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMMIMEDocument.m; path = Source/GTMMIMEDocument.m; sourceTree = "<group>"; };
 		20290634382394907BBAD599099898E8 /* GTMNSDictionary+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSDictionary+URLArguments.m"; path = "Foundation/GTMNSDictionary+URLArguments.m"; sourceTree = "<group>"; };
-		206ABBFB67920479C42F705130753D90 /* Pods-FoodApp-iosUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-iosUITests-dummy.m"; sourceTree = "<group>"; };
+		211A002971829CFDFF26D8CBA7066DB2 /* Pods-FoodApp-iosTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosTests-resources.sh"; sourceTree = "<group>"; };
 		213B0C82530D77305E6BB3A403A046BC /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
-		224C51B8CBD0B2D68619C6563DA7B640 /* Pods-FoodApp-iosUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-iosUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22CD224826359597498D5AA53658153A /* block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block.cc; path = table/block.cc; sourceTree = "<group>"; };
 		2315DECB1391E3BE35FA39ABD39DC274 /* options.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = options.h; path = include/leveldb/options.h; sourceTree = "<group>"; };
 		23F810CA94066C7918325686D9B32C98 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2ViewControllerTouch.m; path = Source/Touch/GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
-		2434B60DAB9D1830FC9632FAD5091E73 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = leveldb.framework; path = "leveldb-library.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B9CC3700E5CE2E9011607E0CEDFBB4 /* write_batch_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch_internal.h; path = db/write_batch_internal.h; sourceTree = "<group>"; };
+		290CE9E7A45DF823FF9353FE35F7C2E3 /* Pods-FoodApp-ios-FoodApp-ios dev.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-ios-FoodApp-ios dev.modulemap"; sourceTree = "<group>"; };
 		293365045366DD99DF1A95F45C8B5A8D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		2A4D76018B602CF141F1857D546C01F3 /* Pods-FoodApp-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-ios-acknowledgements.plist"; sourceTree = "<group>"; };
 		2DE3826F08EB7C5FC52A08A7FAB00265 /* filter_block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filter_block.h; path = table/filter_block.h; sourceTree = "<group>"; };
-		2F4F68D2FE7B8F2A69B9CAF6675A63EA /* Pods-FoodApp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		2F6221A63BA22090032ED21EAA86E43A /* Pods-FoodApp-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-ios-umbrella.h"; sourceTree = "<group>"; };
 		2FFAB4377902E31A956AB4E9156CE923 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		304CDCB5A92671F9267F379814F76311 /* version_edit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version_edit.h; path = db/version_edit.h; sourceTree = "<group>"; };
-		310E41117B7622DA106F53E35AD66EF6 /* Pods-FoodApp-iosUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosUITests-frameworks.sh"; sourceTree = "<group>"; };
 		31B8F0ABFF91B14034F3F6C53A87353D /* write_batch.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = write_batch.cc; path = db/write_batch.cc; sourceTree = "<group>"; };
 		31F11A7E8C1C615FCB096933545E4409 /* log_format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_format.h; path = db/log_format.h; sourceTree = "<group>"; };
 		3414CF46D8D5C228D0749BFA5433D8D9 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343FDE5056553FFDF3D0A10404590BB3 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
+		362660014FCDC49B017B7102E8659748 /* Pods-FoodApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		3AC02998F414E7B9B28F62A8A192902D /* leveldb-library-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-umbrella.h"; sourceTree = "<group>"; };
+		3B236A49E68ED3128FF5B5198322EE22 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C5DBDAC0DD92035E18D96CF85D0FFAB /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		3D0043735812861E6892475CF50A505C /* Pods-FoodApp-iosUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-iosUITests.modulemap"; sourceTree = "<group>"; };
 		3D84FAB3ABC3A5F7D4B8ED48BE5CE50A /* testharness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testharness.h; path = util/testharness.h; sourceTree = "<group>"; };
 		3F7198664A7159CC7D73BE7200501DCA /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		40DBD4D48CBB8BC59CDD04A342242AC5 /* Pods-FoodApp-iosUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-iosUITests-umbrella.h"; sourceTree = "<group>"; };
+		410F20AB2EA0D566DEFA48DEBD850B2D /* Pods_FoodApp_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_iosTests.framework; path = "Pods-FoodApp-iosTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4120E1F7FC49028DAB38BB817B8F1E09 /* c.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = c.cc; path = db/c.cc; sourceTree = "<group>"; };
 		42BB5202E7D21BC446130DB2136D612A /* coding.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = coding.cc; path = util/coding.cc; sourceTree = "<group>"; };
-		4343E1192DFF03C548353F012605C924 /* Pods-FoodApp-iosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-iosTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4452391F85F6FF3D770280A1FAAD5DE0 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = "GoogleToolboxForMac-f0850809.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D78C95EBB45E7900FF6A9D806A137B /* GTMNSString+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+URLArguments.h"; path = "Foundation/GTMNSString+URLArguments.h"; sourceTree = "<group>"; };
 		46712411DFA012FC8502158DD7795435 /* leveldb-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "leveldb-library-dummy.m"; sourceTree = "<group>"; };
+		46AD26740DF0014D3AA8A33FD6D8C0B0 /* Pods-FoodApp-iosUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-iosUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4762097AD5E578210D47B5B402A9ECCD /* db_impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = db_impl.cc; path = db/db_impl.cc; sourceTree = "<group>"; };
-		4AD57C87E4CBCB20D1A59CA959FC7EE8 /* Pods-FoodApp-ios-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-resources.sh"; sourceTree = "<group>"; };
+		493C1753A9AE4E93FAE13F8351161FD9 /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMOAuth2.framework; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4644EBE575BB4CFDDAA21067406F6B /* leveldb-library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "leveldb-library.modulemap"; sourceTree = "<group>"; };
+		4C9984AE051245FF34572AF526B4966D /* Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.plist"; sourceTree = "<group>"; };
 		4E820E2FC53D76812AE962EA27F44E60 /* merger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = merger.h; path = table/merger.h; sourceTree = "<group>"; };
-		4EAC54577CB61D931A6B8BF93F2FADE8 /* Pods-FoodApp-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED958B40CACC53A783B553C697A2AE1 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2Authentication.h; path = Source/GTMOAuth2Authentication.h; sourceTree = "<group>"; };
 		4F8E8C70FBD3EBF57157482F847940BB /* dbformat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dbformat.h; path = db/dbformat.h; sourceTree = "<group>"; };
+		4FA4FC98C729B5668685BB0BAAA24ECD /* Pods-FoodApp-iosUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosUITests-frameworks.sh"; sourceTree = "<group>"; };
+		507699CE4010EA6798E88C34A91E2F1F /* Pods-FoodApp-iosUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-iosUITests-umbrella.h"; sourceTree = "<group>"; };
 		50ECA767C73A19D62BB4D38FB08FF45E /* port_example.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port_example.h; path = port/port_example.h; sourceTree = "<group>"; };
 		515F4852A97C43772D480194FB883110 /* merger.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = merger.cc; path = table/merger.cc; sourceTree = "<group>"; };
 		528B16518FF89A3D9E36861B0B3586CF /* leveldb-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "leveldb-library.xcconfig"; sourceTree = "<group>"; };
 		52B20FA458DABB0BBC14A2F066CFB717 /* log_writer.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_writer.cc; path = db/log_writer.cc; sourceTree = "<group>"; };
+		533A2E498ACA232B16A352DE17D6EB81 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5375C73D434A2FD708E0AD382704564A /* table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table.h; path = include/leveldb/table.h; sourceTree = "<group>"; };
+		537794C0EFF45FA7D6D8577AAA859897 /* Pods-FoodApp-iosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-iosTests-dummy.m"; sourceTree = "<group>"; };
 		548C7CBD91C791E434C66E59D79C19B8 /* filename.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filename.h; path = db/filename.h; sourceTree = "<group>"; };
+		550A93B9D6D3EF5F6109C0EC953CE1C9 /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = leveldb.framework; path = "leveldb-library.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		560658BD02354A2974031A5A1677FD0B /* histogram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = histogram.h; path = util/histogram.h; sourceTree = "<group>"; };
 		590E150F0BB822786092F3FF39C4A0B4 /* atomic_pointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = atomic_pointer.h; path = port/atomic_pointer.h; sourceTree = "<group>"; };
 		591DA060DB8A4B6CD6540AF211525A8D /* GoogleToolboxForMac-f0850809.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "GoogleToolboxForMac-f0850809.xcconfig"; path = "../GoogleToolboxForMac-f0850809/GoogleToolboxForMac-f0850809.xcconfig"; sourceTree = "<group>"; };
@@ -316,47 +350,55 @@
 		5BC05343437E378369AD730DE9A04AC6 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
 		5EFF1852F4F3B18C6D854A9F8DB6E8D7 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 		5F2A35FEE64502AAA05981AEFBF7BE8B /* block_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = block_builder.cc; path = table/block_builder.cc; sourceTree = "<group>"; };
+		5FAF538D046F1CFC00FA46CA258E29E1 /* Pods-FoodApp-ios-FoodApp-ios dev-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-FoodApp-ios dev-frameworks.sh"; sourceTree = "<group>"; };
 		61EA4F7C869C8CB8DE899659C5C4BCA4 /* filter_policy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = filter_policy.h; path = include/leveldb/filter_policy.h; sourceTree = "<group>"; };
 		6274F388341B3713BDDC540B6C5A72CD /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2ViewControllerTouch.h; path = Source/Touch/GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
 		646AA0B153EF15025E5B9EB8755071E2 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
 		64B40516AB98CEB5D44839DE2F7207D3 /* builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = builder.cc; path = db/builder.cc; sourceTree = "<group>"; };
 		6548490989D100AC673FFC433A108B01 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		65B8149625A2483E013531E8CCF6F5AF /* Pods-FoodApp-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-ios-umbrella.h"; sourceTree = "<group>"; };
 		660CC29074210C25FCC8BFC6F687CBB7 /* GoogleToolboxForMac-f0850809-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GoogleToolboxForMac-f0850809-umbrella.h"; path = "../GoogleToolboxForMac-f0850809/GoogleToolboxForMac-f0850809-umbrella.h"; sourceTree = "<group>"; };
 		672477A6681D79312586AB426B4D71D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		6746810A460CD2A43BA80F0C8AC90539 /* Pods_FoodApp_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_iosUITests.framework; path = "Pods-FoodApp-iosUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		695C9F3BB598757BDE9515F26037EBD1 /* GoogleToolboxForMac-f0850809-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GoogleToolboxForMac-f0850809-dummy.m"; path = "../GoogleToolboxForMac-f0850809/GoogleToolboxForMac-f0850809-dummy.m"; sourceTree = "<group>"; };
 		6AD01E3EB4D026EFB34E2F5823954B96 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMReadMonitorInputStream.h; path = Source/GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
 		6CD6FD8EA6E7C64CD21B0BAAAD41A990 /* histogram.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = histogram.cc; path = util/histogram.cc; sourceTree = "<group>"; };
 		6CF55BF181572474EDF099A81C921F46 /* iterator_wrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator_wrapper.h; path = table/iterator_wrapper.h; sourceTree = "<group>"; };
 		6D0C023A32B9BA1DCE74A52703BF5E9C /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		6E3004FC075B6A67EAE3529C839FC0B8 /* testutil.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testutil.cc; path = util/testutil.cc; sourceTree = "<group>"; };
+		6E6C09A2BDD42513487299ECD6A1A082 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9DB26F78DE02FEEFEEDB88A7738610 /* db_iter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db_iter.h; path = db/db_iter.h; sourceTree = "<group>"; };
 		6EA01F2C335D0B999B4012527DD643AA /* env_posix_test_helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env_posix_test_helper.h; path = util/env_posix_test_helper.h; sourceTree = "<group>"; };
-		6EA71A10C5D9773CFD221974A2B71189 /* Pods-FoodApp-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-ios-dummy.m"; sourceTree = "<group>"; };
 		704A783ECCB2CB5D854D3D6429A368EE /* block_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = block_builder.h; path = table/block_builder.h; sourceTree = "<group>"; };
 		716159825B6F3715492120CD04B52C36 /* memtable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = memtable.h; path = db/memtable.h; sourceTree = "<group>"; };
 		74EA3F32046077776857C76FE8EEBBF0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C3E04803A6A3552DFAE4EAF4AC0A66 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
 		767FA6725C31B66235DB933B2F7637E6 /* cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cache.h; path = include/leveldb/cache.h; sourceTree = "<group>"; };
 		7713B49C871EF6248D088EDB27D0D9EF /* GTMNSDictionary+URLArguments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSDictionary+URLArguments.h"; path = "Foundation/GTMNSDictionary+URLArguments.h"; sourceTree = "<group>"; };
+		793E81ABA15D5E7C2D159A57AE63532E /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		796F6449D83B3A37C29ADEBA8C49759F /* Pods_FoodApp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_ios.framework; path = "Pods-FoodApp-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7E7E73CB2DF11DF185495C29C9F070 /* random.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = random.h; path = util/random.h; sourceTree = "<group>"; };
 		7C8A714E5297183E292F99EF96505216 /* write_batch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = write_batch.h; path = include/leveldb/write_batch.h; sourceTree = "<group>"; };
 		7D035F98C80E7582712F1FE011B37360 /* two_level_iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = two_level_iterator.h; path = table/two_level_iterator.h; sourceTree = "<group>"; };
+		7ECEFCF2110EC0F1E6752072B6A8BACD /* Pods-FoodApp-iosTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosTests-frameworks.sh"; sourceTree = "<group>"; };
 		7F7E4AD73E7FC918FDB6CF81DE086DF5 /* GTMOAuth2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMOAuth2.modulemap; sourceTree = "<group>"; };
 		7FF7ACD17AF6B39D724D77CF5DE2AA63 /* GoogleToolboxForMac-Defines-NSData+zlib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-Defines-NSData+zlib-dummy.m"; sourceTree = "<group>"; };
 		80467BCAAE65BD9D634B0E6ED576ABA9 /* iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = iterator.cc; path = table/iterator.cc; sourceTree = "<group>"; };
+		80C91251EA9280E15A946D3D44638E8B /* Pods-FoodApp-ios-FoodApp-ios dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios-FoodApp-ios dev.debug.xcconfig"; sourceTree = "<group>"; };
 		81DB614FAB5D3355FD01D6943BA52670 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E90996A6D7D1772D92D410EFC96FE4 /* filter_block.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_block.cc; path = table/filter_block.cc; sourceTree = "<group>"; };
 		8372A9F82F261C9F1E5BD2A20FF79837 /* version_set.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = version_set.h; path = db/version_set.h; sourceTree = "<group>"; };
 		857E571F9376D998C22922C5BDF54369 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
+		86BA4EB3B1FB8A1806ED396E09F89486 /* Pods-FoodApp-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-ios-acknowledgements.plist"; sourceTree = "<group>"; };
+		886445C5A7F725B724B7D15276831690 /* Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h"; sourceTree = "<group>"; };
 		89BD3CE07D2628C025F7F611EF019B95 /* filename.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filename.cc; path = db/filename.cc; sourceTree = "<group>"; };
 		8B2AC933003277FB99E11A00CAF2521C /* log_writer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_writer.h; path = db/log_writer.h; sourceTree = "<group>"; };
 		8D1B20778C7937823E832FA4E621A557 /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMReadMonitorInputStream.m; path = Source/GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
-		8FDF352F8FCEB34BE4AD5784F86021E3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		903733E680459CBF838D1E92C91A1551 /* Pods-FoodApp-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		90639E6A8917EDDA1191594D386505BA /* env.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env.cc; path = util/env.cc; sourceTree = "<group>"; };
 		92F98A92ABE30EFFBB54F219EBC582DD /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		943D097F43EA916D89EB1319D10468A7 /* port_posix_sse.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_posix_sse.cc; path = port/port_posix_sse.cc; sourceTree = "<group>"; };
+		961D6F269C9A3FE63608F74CA3EA1122 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96533CF456C2159958830CA29B4F610F /* GTMMethodCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMethodCheck.h; path = DebugUtils/GTMMethodCheck.h; sourceTree = "<group>"; };
 		96E8E9F5D1BF0D0B4F99F5BB9F1AB445 /* thread_annotations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = thread_annotations.h; path = port/thread_annotations.h; sourceTree = "<group>"; };
 		98478CB18F483AC99FE7BB94AC70A421 /* db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db.h; path = include/leveldb/db.h; sourceTree = "<group>"; };
@@ -364,97 +406,104 @@
 		990414951C0A06168638B707210BC5AE /* two_level_iterator.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = two_level_iterator.cc; path = table/two_level_iterator.cc; sourceTree = "<group>"; };
 		9971BE0A4EDEBA168170A798D8457F6A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		99F4C1A2D868218DBB2E332F91522329 /* filter_policy.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = filter_policy.cc; path = util/filter_policy.cc; sourceTree = "<group>"; };
+		9A62A84F839ABB6F436D2C3D5EC1BE2D /* Pods-FoodApp-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B78DA4F2BE64CE1BE990502A5A04C9C /* GTMSessionFetcher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-umbrella.h"; sourceTree = "<group>"; };
 		9BAC244E25814BC9730F9758513525E5 /* skiplist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = skiplist.h; path = db/skiplist.h; sourceTree = "<group>"; };
 		9C7ACBC446AE2706679EE85617501C69 /* dumpfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dumpfile.h; path = include/leveldb/dumpfile.h; sourceTree = "<group>"; };
+		9D23379FBEB8E8DBF62263698272B232 /* Pods_FoodApp_ios_FoodApp_ios_dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_ios_FoodApp_ios_dev.framework; path = "Pods-FoodApp-ios-FoodApp-ios dev.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F09104DCBD02026EFC65CD6CF53B60F /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
 		9F44D6B30B961C5C2D8A5C1C1ED20F0F /* format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = format.h; path = table/format.h; sourceTree = "<group>"; };
+		9FDAFAAF3C185FB3F8D6FE80AFC9E97F /* Pods-FoodApp-iosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-iosTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9FDE68F7BF375A80BD8DC95CA6238AD3 /* Pods-FoodApp-iosUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosUITests-resources.sh"; sourceTree = "<group>"; };
 		A006F5DFB362BF37C910DB3E2E45DE51 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
 		A03C0E47F39B93C9FDC4D42727B6B4BF /* crc32c.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crc32c.h; path = util/crc32c.h; sourceTree = "<group>"; };
-		A19D6FBA1270B05068E1244DB9C374EB /* Pods-FoodApp-iosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-iosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A1C6E6A24D9CF9615A6B7CAA0BD24142 /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
 		A1E25855BFDC1C4A5A79144F02ED3B71 /* env_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = env_posix.cc; path = util/env_posix.cc; sourceTree = "<group>"; };
 		A233AE0A84D197837D08FFD44E7F1CA3 /* arena.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = arena.cc; path = util/arena.cc; sourceTree = "<group>"; };
 		A290057BDA94666264361FA803E87899 /* arena.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = arena.h; path = util/arena.h; sourceTree = "<group>"; };
+		A4911AA5E4470515222A2873B8B2D22A /* Pods-FoodApp-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-ios.modulemap"; sourceTree = "<group>"; };
+		A6EBE808967FC50D7BDA5C4E9EDBCDD8 /* Pods-FoodApp-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A70FDA91D2D474400435D19FA80210BF /* testutil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = testutil.h; path = util/testutil.h; sourceTree = "<group>"; };
+		A7BD330A928E58C8C6765B455F090E0F /* Pods-FoodApp-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-frameworks.sh"; sourceTree = "<group>"; };
 		A7D4C86359837822672D6AB7C8531E94 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
 		A8622CF5C2DC2FA779F62F7A5F4B2DAB /* log_reader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log_reader.h; path = db/log_reader.h; sourceTree = "<group>"; };
+		A8B74D0185B7F5FA802718038D3A7B87 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = "GoogleToolboxForMac-Defines-NSData+zlib.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA4C3478E2406A46C10757BAAFAA538 /* coding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = coding.h; path = util/coding.h; sourceTree = "<group>"; };
+		AB0DE975B1E2A8EE1F75279A403E4B79 /* Pods-FoodApp-iosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-iosTests.modulemap"; sourceTree = "<group>"; };
 		AC0229E791E49AB97D0D7CA67B254A18 /* snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = snapshot.h; path = db/snapshot.h; sourceTree = "<group>"; };
 		AC110388284FCB209467D246EBE0624B /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		AD2320D7EE16C247E9712D9086F2DE9E /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
-		B2E8D25548CA2B9BE4FD60C1B9CF8662 /* Pods-FoodApp-iosUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-iosUITests.modulemap"; sourceTree = "<group>"; };
 		B333007949D152920CD2A356404BCEB7 /* bloom.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = bloom.cc; path = util/bloom.cc; sourceTree = "<group>"; };
-		B4635801B750E1AB929E0B2A7CDBA5A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B6B73AADA03A26943C591E6E40F9C9 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; sourceTree = "<group>"; };
 		B50A69B2C4DC73CC9064B750346D8753 /* version_edit.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_edit.cc; path = db/version_edit.cc; sourceTree = "<group>"; };
-		B82C058E9B8412A2D8EBE7721D98CDAC /* Pods-FoodApp-iosUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-iosUITests-resources.sh"; sourceTree = "<group>"; };
+		B645FE75CF61AE4281A33248F53ABDE1 /* Pods-FoodApp-iosUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-iosUITests-dummy.m"; sourceTree = "<group>"; };
 		B904080AA310D8EF3BC3AB906DF277A2 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
-		BC90997A2B40D2D8518FA1E9E8D168E1 /* Pods-FoodApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios.release.xcconfig"; sourceTree = "<group>"; };
 		BEEE8763C61603011109D84D5BACA7A9 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
 		C094E3BFE7DFF33E34B007294D975BDC /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
 		C0E839AAEFF6D81683209682DBFE64BA /* cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = cache.cc; path = util/cache.cc; sourceTree = "<group>"; };
 		C31AEA45CB20F6E801870D34B946A32F /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
 		C339231533B08C7A2EB3AA8B1DCA080C /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging.h; path = util/logging.h; sourceTree = "<group>"; };
 		C3A918BA6299AEFF81AD4AC835C8BBC1 /* GoogleToolboxForMac-f0850809.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "GoogleToolboxForMac-f0850809.modulemap"; path = "../GoogleToolboxForMac-f0850809/GoogleToolboxForMac-f0850809.modulemap"; sourceTree = "<group>"; };
-		C426B5A5A7C0AFC508FDEC0515036195 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3BF3F5C308ECCE56E23EE962E2AF886 /* Pods-FoodApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C43B3B891FAD6190A1E4F6F5212C294D /* port_posix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port_posix.h; path = port/port_posix.h; sourceTree = "<group>"; };
 		C446C5321053C6DAFC8AF9551FCE6822 /* port_posix.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = port_posix.cc; path = port/port_posix.cc; sourceTree = "<group>"; };
 		C4BA2C9687920F70F1EEF0FF9BE2F6DF /* leveldb-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "leveldb-library-prefix.pch"; sourceTree = "<group>"; };
 		C4F84078873976CCEEE0DC9CCB6EDC50 /* port.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = port.h; path = port/port.h; sourceTree = "<group>"; };
-		C7A7950048B9EA182CD8A28334722FDF /* GTMOAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMOAuth2.framework; path = GTMOAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B9876F3D4E25A7EBE346D6F9041963 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		CA436F3B51D8AD875EA4277308EE6B74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAE0457A65E038846456EBD097FB8853 /* Pods-FoodApp-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-ios.modulemap"; sourceTree = "<group>"; };
 		CCDD5111FED29BAAA93F856C35C1FAE1 /* GTMOAuth2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMOAuth2.xcconfig; sourceTree = "<group>"; };
 		CDE62ED7C07B65211C89EA2FAC71922A /* hash.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = hash.cc; path = util/hash.cc; sourceTree = "<group>"; };
 		CDEF50717802D2060FF1A9D739F2427F /* builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = builder.h; path = db/builder.h; sourceTree = "<group>"; };
 		CE6C5C6D6B0E205FCF9D9B2740FBCB9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../GoogleToolboxForMac-f0850809/Info.plist"; sourceTree = "<group>"; };
+		CE786F0A0A2D2526D0B23D88D31BF1BA /* Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFF1410CF99E79279C74C5B62A362035 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		D08848348396C11FE0744ED092B2914F /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
+		D1E8C486BF43F2B2211E4C3213D047F8 /* Pods-FoodApp-iosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodApp-iosTests-umbrella.h"; sourceTree = "<group>"; };
+		D1EBD0305F2E1FAC6B0153B77679EBA2 /* Pods-FoodApp-iosUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-iosUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D29B97B06211A401000E33F8B63B4CBC /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = util/hash.h; sourceTree = "<group>"; };
 		D4F94C6C025CA1FB9C812AC44677D479 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D5E18F32CC12EB6337168BBFFA5149E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6E6223BF6B67C9D6F5F953D67F999A1 /* Pods-FoodApp-iosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-iosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D73B26E17CACC6E90938DD6F7FDC38D9 /* testharness.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = testharness.cc; path = util/testharness.cc; sourceTree = "<group>"; };
 		D775F9BC6EAA3CC13B670373920530DF /* slice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = slice.h; path = include/leveldb/slice.h; sourceTree = "<group>"; };
 		D85A601F85FDD260AD6A9B56B8794664 /* mutexlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mutexlock.h; path = util/mutexlock.h; sourceTree = "<group>"; };
 		D9F31E60F49494609F6C6426AAF5CBA7 /* dumpfile.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dumpfile.cc; path = db/dumpfile.cc; sourceTree = "<group>"; };
 		DAEEE69C4DAAC018A6D98C88CC8E2C26 /* status.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = status.h; path = include/leveldb/status.h; sourceTree = "<group>"; };
-		DB6AAE8C743CB9A68DB2E2F8C28C5DE3 /* Pods-FoodApp-iosUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodApp-iosUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DBB2CED78DC86C6C76F24D9758512B47 /* log_reader.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = log_reader.cc; path = db/log_reader.cc; sourceTree = "<group>"; };
 		DC15D4B6C31DB3FC52A25B56C29A7852 /* GoogleToolboxForMac-f0850809-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GoogleToolboxForMac-f0850809-prefix.pch"; path = "../GoogleToolboxForMac-f0850809/GoogleToolboxForMac-f0850809-prefix.pch"; sourceTree = "<group>"; };
 		DCF8BB0EA68BAF89FEF806D0A8831535 /* iterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = include/leveldb/iterator.h; sourceTree = "<group>"; };
 		DD6F86CE287A3CAD19AB878CDA9EFEEF /* repair.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = repair.cc; path = db/repair.cc; sourceTree = "<group>"; };
 		DF4AB5AFA90510E3F76096B217DD6941 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2SignIn.m; path = Source/GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		DF7D7EAA00061EEDBB6DB6543198D958 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = "GoogleToolboxForMac-f0850809.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB24616F74274AA353F282B4DEFA097 /* GoogleToolboxForMac-Defines-NSData+zlib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-Defines-NSData+zlib-umbrella.h"; sourceTree = "<group>"; };
 		E223E83201327876CE16E1E303582971 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E267505621AEB2C8C4E9927A4E4FDF99 /* Pods-FoodApp-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		E2E55DC30C4DB2483471B59DDD073554 /* version_set.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = version_set.cc; path = db/version_set.cc; sourceTree = "<group>"; };
-		E2F7E35BDA11683763321AFE3890402C /* Pods-FoodApp-iosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodApp-iosTests.modulemap"; sourceTree = "<group>"; };
 		E4172494CCBB36E9425E94CDCFF80061 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
-		E4D163495A95EB6150637D003BDE3FBF /* Pods-FoodApp-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodApp-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E500BB50B05AEDCBA3D74D04D65584CA /* Pods_FoodApp_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_iosTests.framework; path = "Pods-FoodApp-iosTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5402102071E35BBA5715B128A4C34EF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63C9AFD805AE78B9CC98E33850233B8 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = Source/Touch/GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
-		E7B3D056D123FB6567A0E69D4EF1BA03 /* Pods-FoodApp-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-frameworks.sh"; sourceTree = "<group>"; };
-		E7DD12F029875F48503E926DB069C88D /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E91090D9078A2D491CA8A942079A1B84 /* Pods-FoodApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E74434C6B55077607D1D54D469504E1B /* Pods-FoodApp-ios-FoodApp-ios dev-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-FoodApp-ios dev-resources.sh"; sourceTree = "<group>"; };
+		E83A7F4112A2713020CAEB350114773C /* Pods-FoodApp-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-ios-dummy.m"; sourceTree = "<group>"; };
 		E92B47B9CC64B03295351C7CF0CCB67D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		EAAC800FCF54AF94C77A817496676C03 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GTMSessionFetcher.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2F9E19CCCBBFA683D045EAE97801AB /* posix_logger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = posix_logger.h; path = util/posix_logger.h; sourceTree = "<group>"; };
 		EB4DA04FCCBC0C84C2E13ECF69C8A36E /* GTMOAuth2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMOAuth2-prefix.pch"; sourceTree = "<group>"; };
 		EDFAF9DD6202E2B43C5477426AF487AB /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
 		EFA70C5B6D2B13CC0264C292815CA1E8 /* db_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = db_impl.h; path = db/db_impl.h; sourceTree = "<group>"; };
+		F280732975DF4D48B643DB52879C5662 /* Pods-FoodApp-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2C40C3D39373AD3DA9864068858595C /* GTMNSString+URLArguments.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+URLArguments.m"; path = "Foundation/GTMNSString+URLArguments.m"; sourceTree = "<group>"; };
+		F2D7A818D21B0ACBAC8767712701EB15 /* Pods-FoodApp-ios-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodApp-ios-resources.sh"; sourceTree = "<group>"; };
+		F373D6A8DEA40CD2C4A6F8E37F52B70D /* Pods-FoodApp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		F3DDA886D8F8B8758BC7186654E12993 /* table_cache.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_cache.cc; path = db/table_cache.cc; sourceTree = "<group>"; };
 		F465281A995507378AFBA6A0386759AB /* table_cache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table_cache.h; path = db/table_cache.h; sourceTree = "<group>"; };
-		F5A536F0D19164B978224DD8C6469A96 /* Pods-FoodApp-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodApp-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F61CD2502509E3DEA2A25BFB6BD89929 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		F643ABEE127E6F61F56DCCA8097BE3EE /* block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = block.h; path = table/block.h; sourceTree = "<group>"; };
 		F7FFA21DD5A002D7EB0A01F9220BF3FA /* dbformat.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = dbformat.cc; path = db/dbformat.cc; sourceTree = "<group>"; };
 		F808D5C6C6E75AE5FF0D210844B103E6 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
 		F824116398C71CC6AAA25F4AD0C463EC /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
 		FA7B71CDBA3BC086D5D5961231A56744 /* table_builder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = table_builder.h; path = include/leveldb/table_builder.h; sourceTree = "<group>"; };
+		FA9EB001454A5859C6EA80352D83C014 /* Pods-FoodApp-ios-FoodApp-ios dev-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodApp-ios-FoodApp-ios dev-dummy.m"; sourceTree = "<group>"; };
 		FB75537C61B15133172A7FF7F1DFC64A /* GTMOAuth2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMOAuth2-umbrella.h"; sourceTree = "<group>"; };
 		FBDB8677D78BC3192E6C096674EBDFA8 /* format.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = format.cc; path = table/format.cc; sourceTree = "<group>"; };
+		FBF446E4C5E6ADF0AB80E586EFA5A624 /* Pods_FoodApp_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodApp_iosUITests.framework; path = "Pods-FoodApp-iosUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEB53FD7228FA2F05F9EDE47035FDD0 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2SignIn.h; path = Source/GTMOAuth2SignIn.h; sourceTree = "<group>"; };
 		FD5BF678B8557A51F6C068439B05218F /* table_builder.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = table_builder.cc; path = table/table_builder.cc; sourceTree = "<group>"; };
 		FD874B4FBE3B542BCB04DD01ED2649F8 /* GoogleToolboxForMac-Defines-NSData+zlib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-Defines-NSData+zlib-prefix.pch"; sourceTree = "<group>"; };
@@ -527,6 +576,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7DFA0B95D5558F9DFE5B465DA9D241 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D063C34E5687674F1BA876E0CACF01B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE1D32BA91CF161865D839A38102F9C9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +796,24 @@
 			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
+		285AD7279F27B9ECBC066703E65A3EAD /* Pods-FoodApp-ios */ = {
+			isa = PBXGroup;
+			children = (
+				961D6F269C9A3FE63608F74CA3EA1122 /* Info.plist */,
+				A4911AA5E4470515222A2873B8B2D22A /* Pods-FoodApp-ios.modulemap */,
+				A6EBE808967FC50D7BDA5C4E9EDBCDD8 /* Pods-FoodApp-ios-acknowledgements.markdown */,
+				86BA4EB3B1FB8A1806ED396E09F89486 /* Pods-FoodApp-ios-acknowledgements.plist */,
+				E83A7F4112A2713020CAEB350114773C /* Pods-FoodApp-ios-dummy.m */,
+				A7BD330A928E58C8C6765B455F090E0F /* Pods-FoodApp-ios-frameworks.sh */,
+				F2D7A818D21B0ACBAC8767712701EB15 /* Pods-FoodApp-ios-resources.sh */,
+				65B8149625A2483E013531E8CCF6F5AF /* Pods-FoodApp-ios-umbrella.h */,
+				F373D6A8DEA40CD2C4A6F8E37F52B70D /* Pods-FoodApp-ios.debug.xcconfig */,
+				362660014FCDC49B017B7102E8659748 /* Pods-FoodApp-ios.release.xcconfig */,
+			);
+			name = "Pods-FoodApp-ios";
+			path = "Target Support Files/Pods-FoodApp-ios";
+			sourceTree = "<group>";
+		};
 		2C5D068BED90BA79E7F0CAAD9B7EFB25 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -775,6 +850,24 @@
 			path = GTMSessionFetcher;
 			sourceTree = "<group>";
 		};
+		52BCDA3330B156D9763553FE61894B77 /* Pods-FoodApp-ios-FoodApp-ios dev */ = {
+			isa = PBXGroup;
+			children = (
+				533A2E498ACA232B16A352DE17D6EB81 /* Info.plist */,
+				290CE9E7A45DF823FF9353FE35F7C2E3 /* Pods-FoodApp-ios-FoodApp-ios dev.modulemap */,
+				CE786F0A0A2D2526D0B23D88D31BF1BA /* Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.markdown */,
+				4C9984AE051245FF34572AF526B4966D /* Pods-FoodApp-ios-FoodApp-ios dev-acknowledgements.plist */,
+				FA9EB001454A5859C6EA80352D83C014 /* Pods-FoodApp-ios-FoodApp-ios dev-dummy.m */,
+				5FAF538D046F1CFC00FA46CA258E29E1 /* Pods-FoodApp-ios-FoodApp-ios dev-frameworks.sh */,
+				E74434C6B55077607D1D54D469504E1B /* Pods-FoodApp-ios-FoodApp-ios dev-resources.sh */,
+				886445C5A7F725B724B7D15276831690 /* Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h */,
+				80C91251EA9280E15A946D3D44638E8B /* Pods-FoodApp-ios-FoodApp-ios dev.debug.xcconfig */,
+				B3B6B73AADA03A26943C591E6E40F9C9 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */,
+			);
+			name = "Pods-FoodApp-ios-FoodApp-ios dev";
+			path = "Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev";
+			sourceTree = "<group>";
+		};
 		5B56D4D5348B1B8C37C14087623C88F6 /* GoogleSignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,46 +878,12 @@
 			path = GoogleSignIn;
 			sourceTree = "<group>";
 		};
-		5FA0A61C36EE91E7C2248C68FAC64271 /* Pods-FoodApp-iosTests */ = {
-			isa = PBXGroup;
-			children = (
-				C426B5A5A7C0AFC508FDEC0515036195 /* Info.plist */,
-				E2F7E35BDA11683763321AFE3890402C /* Pods-FoodApp-iosTests.modulemap */,
-				A19D6FBA1270B05068E1244DB9C374EB /* Pods-FoodApp-iosTests-acknowledgements.markdown */,
-				4343E1192DFF03C548353F012605C924 /* Pods-FoodApp-iosTests-acknowledgements.plist */,
-				1BFB4C9908277031E16D8D8450E59E16 /* Pods-FoodApp-iosTests-dummy.m */,
-				0C826496D127EA47A3B18BF87B11C08E /* Pods-FoodApp-iosTests-frameworks.sh */,
-				12C8F6BF2409E31B2AC7393B79A678F3 /* Pods-FoodApp-iosTests-resources.sh */,
-				134D69E0CFB3435741789126C9F50FDC /* Pods-FoodApp-iosTests-umbrella.h */,
-				E91090D9078A2D491CA8A942079A1B84 /* Pods-FoodApp-iosTests.debug.xcconfig */,
-				E267505621AEB2C8C4E9927A4E4FDF99 /* Pods-FoodApp-iosTests.release.xcconfig */,
-			);
-			name = "Pods-FoodApp-iosTests";
-			path = "Target Support Files/Pods-FoodApp-iosTests";
-			sourceTree = "<group>";
-		};
 		609E41F33692B7AD62D503B39BE6C019 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E63C9AFD805AE78B9CC98E33850233B8 /* GTMOAuth2ViewTouch.xib */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		6A3C4301CB90C02CBDD8ED0DE25F49DB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				05CE8F30A940177DEC138B7BEEA3CBC9 /* GoogleToolboxForMac.framework */,
-				4452391F85F6FF3D770280A1FAAD5DE0 /* GoogleToolboxForMac.framework */,
-				C7A7950048B9EA182CD8A28334722FDF /* GTMOAuth2.framework */,
-				EAAC800FCF54AF94C77A817496676C03 /* GTMSessionFetcher.framework */,
-				2434B60DAB9D1830FC9632FAD5091E73 /* leveldb.framework */,
-				E7DD12F029875F48503E926DB069C88D /* nanopb.framework */,
-				09671E1E85367F0E86523F97164FB6E0 /* Pods_FoodApp_ios.framework */,
-				E500BB50B05AEDCBA3D74D04D65584CA /* Pods_FoodApp_iosTests.framework */,
-				6746810A460CD2A43BA80F0C8AC90539 /* Pods_FoodApp_iosUITests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		77388F5536181A37A2968EA51A9DFA72 /* Support Files */ = {
@@ -867,8 +926,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				F2A875A48A4D36B979C042CC40252657 /* Frameworks */,
 				1A2BB08FFCCD65D0B77ADD33472336B7 /* Pods */,
-				6A3C4301CB90C02CBDD8ED0DE25F49DB /* Products */,
-				9A9462C163167D3E059913D8E56DF322 /* Targets Support Files */,
+				956E837E8EEC9B292DEB8F2EFFC884DF /* Products */,
+				A1FE5C73857547D0F41C1E12DA24A20B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -888,6 +947,41 @@
 			name = decode;
 			sourceTree = "<group>";
 		};
+		956E837E8EEC9B292DEB8F2EFFC884DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8B74D0185B7F5FA802718038D3A7B87 /* GoogleToolboxForMac.framework */,
+				DF7D7EAA00061EEDBB6DB6543198D958 /* GoogleToolboxForMac.framework */,
+				493C1753A9AE4E93FAE13F8351161FD9 /* GTMOAuth2.framework */,
+				793E81ABA15D5E7C2D159A57AE63532E /* GTMSessionFetcher.framework */,
+				550A93B9D6D3EF5F6109C0EC953CE1C9 /* leveldb.framework */,
+				E5402102071E35BBA5715B128A4C34EF /* nanopb.framework */,
+				796F6449D83B3A37C29ADEBA8C49759F /* Pods_FoodApp_ios.framework */,
+				9D23379FBEB8E8DBF62263698272B232 /* Pods_FoodApp_ios_FoodApp_ios_dev.framework */,
+				410F20AB2EA0D566DEFA48DEBD850B2D /* Pods_FoodApp_iosTests.framework */,
+				FBF446E4C5E6ADF0AB80E586EFA5A624 /* Pods_FoodApp_iosUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95C2C4B4CC7B3C7CCB8BA3A07F092AC6 /* Pods-FoodApp-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B236A49E68ED3128FF5B5198322EE22 /* Info.plist */,
+				3D0043735812861E6892475CF50A505C /* Pods-FoodApp-iosUITests.modulemap */,
+				D1EBD0305F2E1FAC6B0153B77679EBA2 /* Pods-FoodApp-iosUITests-acknowledgements.markdown */,
+				46AD26740DF0014D3AA8A33FD6D8C0B0 /* Pods-FoodApp-iosUITests-acknowledgements.plist */,
+				B645FE75CF61AE4281A33248F53ABDE1 /* Pods-FoodApp-iosUITests-dummy.m */,
+				4FA4FC98C729B5668685BB0BAAA24ECD /* Pods-FoodApp-iosUITests-frameworks.sh */,
+				9FDE68F7BF375A80BD8DC95CA6238AD3 /* Pods-FoodApp-iosUITests-resources.sh */,
+				507699CE4010EA6798E88C34A91E2F1F /* Pods-FoodApp-iosUITests-umbrella.h */,
+				9A62A84F839ABB6F436D2C3D5EC1BE2D /* Pods-FoodApp-iosUITests.debug.xcconfig */,
+				F280732975DF4D48B643DB52879C5662 /* Pods-FoodApp-iosUITests.release.xcconfig */,
+			);
+			name = "Pods-FoodApp-iosUITests";
+			path = "Target Support Files/Pods-FoodApp-iosUITests";
+			sourceTree = "<group>";
+		};
 		98F583A44FC26ACE98A3E6BCC704E996 /* GoogleToolboxForMac */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,12 +996,13 @@
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
-		9A9462C163167D3E059913D8E56DF322 /* Targets Support Files */ = {
+		A1FE5C73857547D0F41C1E12DA24A20B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E330BD4B370A5E3B3CAA73DA53FC609E /* Pods-FoodApp-ios */,
-				5FA0A61C36EE91E7C2248C68FAC64271 /* Pods-FoodApp-iosTests */,
-				A2C599FE75DFB952D03C4BADCB2B72CC /* Pods-FoodApp-iosUITests */,
+				285AD7279F27B9ECBC066703E65A3EAD /* Pods-FoodApp-ios */,
+				52BCDA3330B156D9763553FE61894B77 /* Pods-FoodApp-ios-FoodApp-ios dev */,
+				C6E2735461B893846D0557B70F66E0F0 /* Pods-FoodApp-iosTests */,
+				95C2C4B4CC7B3C7CCB8BA3A07F092AC6 /* Pods-FoodApp-iosUITests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -925,24 +1020,6 @@
 				C31AEA45CB20F6E801870D34B946A32F /* GTMSessionUploadFetcher.m */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		A2C599FE75DFB952D03C4BADCB2B72CC /* Pods-FoodApp-iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8FDF352F8FCEB34BE4AD5784F86021E3 /* Info.plist */,
-				B2E8D25548CA2B9BE4FD60C1B9CF8662 /* Pods-FoodApp-iosUITests.modulemap */,
-				224C51B8CBD0B2D68619C6563DA7B640 /* Pods-FoodApp-iosUITests-acknowledgements.markdown */,
-				DB6AAE8C743CB9A68DB2E2F8C28C5DE3 /* Pods-FoodApp-iosUITests-acknowledgements.plist */,
-				206ABBFB67920479C42F705130753D90 /* Pods-FoodApp-iosUITests-dummy.m */,
-				310E41117B7622DA106F53E35AD66EF6 /* Pods-FoodApp-iosUITests-frameworks.sh */,
-				B82C058E9B8412A2D8EBE7721D98CDAC /* Pods-FoodApp-iosUITests-resources.sh */,
-				40DBD4D48CBB8BC59CDD04A342242AC5 /* Pods-FoodApp-iosUITests-umbrella.h */,
-				4EAC54577CB61D931A6B8BF93F2FADE8 /* Pods-FoodApp-iosUITests.debug.xcconfig */,
-				F5A536F0D19164B978224DD8C6469A96 /* Pods-FoodApp-iosUITests.release.xcconfig */,
-			);
-			name = "Pods-FoodApp-iosUITests";
-			path = "Target Support Files/Pods-FoodApp-iosUITests";
 			sourceTree = "<group>";
 		};
 		A71CC68B6F92F9E5D117D9AB099D544D /* Frameworks */ = {
@@ -994,6 +1071,24 @@
 			);
 			name = Firebase;
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		C6E2735461B893846D0557B70F66E0F0 /* Pods-FoodApp-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E6C09A2BDD42513487299ECD6A1A082 /* Info.plist */,
+				AB0DE975B1E2A8EE1F75279A403E4B79 /* Pods-FoodApp-iosTests.modulemap */,
+				D6E6223BF6B67C9D6F5F953D67F999A1 /* Pods-FoodApp-iosTests-acknowledgements.markdown */,
+				9FDAFAAF3C185FB3F8D6FE80AFC9E97F /* Pods-FoodApp-iosTests-acknowledgements.plist */,
+				537794C0EFF45FA7D6D8577AAA859897 /* Pods-FoodApp-iosTests-dummy.m */,
+				7ECEFCF2110EC0F1E6752072B6A8BACD /* Pods-FoodApp-iosTests-frameworks.sh */,
+				211A002971829CFDFF26D8CBA7066DB2 /* Pods-FoodApp-iosTests-resources.sh */,
+				D1E8C486BF43F2B2211E4C3213D047F8 /* Pods-FoodApp-iosTests-umbrella.h */,
+				C3BF3F5C308ECCE56E23EE962E2AF886 /* Pods-FoodApp-iosTests.debug.xcconfig */,
+				903733E680459CBF838D1E92C91A1551 /* Pods-FoodApp-iosTests.release.xcconfig */,
+			);
+			name = "Pods-FoodApp-iosTests";
+			path = "Target Support Files/Pods-FoodApp-iosTests";
 			sourceTree = "<group>";
 		};
 		CB5C2E49157A540B365DDC2D63DC1D9C /* nanopb */ = {
@@ -1083,24 +1178,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/nanopb";
-			sourceTree = "<group>";
-		};
-		E330BD4B370A5E3B3CAA73DA53FC609E /* Pods-FoodApp-ios */ = {
-			isa = PBXGroup;
-			children = (
-				B4635801B750E1AB929E0B2A7CDBA5A9 /* Info.plist */,
-				CAE0457A65E038846456EBD097FB8853 /* Pods-FoodApp-ios.modulemap */,
-				E4D163495A95EB6150637D003BDE3FBF /* Pods-FoodApp-ios-acknowledgements.markdown */,
-				2A4D76018B602CF141F1857D546C01F3 /* Pods-FoodApp-ios-acknowledgements.plist */,
-				6EA71A10C5D9773CFD221974A2B71189 /* Pods-FoodApp-ios-dummy.m */,
-				E7B3D056D123FB6567A0E69D4EF1BA03 /* Pods-FoodApp-ios-frameworks.sh */,
-				4AD57C87E4CBCB20D1A59CA959FC7EE8 /* Pods-FoodApp-ios-resources.sh */,
-				2F6221A63BA22090032ED21EAA86E43A /* Pods-FoodApp-ios-umbrella.h */,
-				2F4F68D2FE7B8F2A69B9CAF6675A63EA /* Pods-FoodApp-ios.debug.xcconfig */,
-				BC90997A2B40D2D8518FA1E9E8D168E1 /* Pods-FoodApp-ios.release.xcconfig */,
-			);
-			name = "Pods-FoodApp-ios";
-			path = "Target Support Files/Pods-FoodApp-ios";
 			sourceTree = "<group>";
 		};
 		E98973E5098414CA86943D69308D41AE /* Support Files */ = {
@@ -1275,6 +1352,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D380C420BC323BC8ABF3A6660443760A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2C3006E6F32193F1E7D0C2A78943E6 /* Pods-FoodApp-ios-FoodApp-ios dev-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0F298085FA83EC416618D18B2E79BAD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1302,7 +1387,7 @@
 			);
 			name = "leveldb-library";
 			productName = "leveldb-library";
-			productReference = 2434B60DAB9D1830FC9632FAD5091E73 /* leveldb.framework */;
+			productReference = 550A93B9D6D3EF5F6109C0EC953CE1C9 /* leveldb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		433E90BF6136E433A0FEA61CD4159E56 /* GoogleToolboxForMac-Defines-NSData+zlib */ = {
@@ -1319,7 +1404,7 @@
 			);
 			name = "GoogleToolboxForMac-Defines-NSData+zlib";
 			productName = "GoogleToolboxForMac-Defines-NSData+zlib";
-			productReference = 05CE8F30A940177DEC138B7BEEA3CBC9 /* GoogleToolboxForMac.framework */;
+			productReference = A8B74D0185B7F5FA802718038D3A7B87 /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		50D7870161599F03683CE28B2D4C3AC5 /* Pods-FoodApp-ios */ = {
@@ -1341,7 +1426,7 @@
 			);
 			name = "Pods-FoodApp-ios";
 			productName = "Pods-FoodApp-ios";
-			productReference = 09671E1E85367F0E86523F97164FB6E0 /* Pods_FoodApp_ios.framework */;
+			productReference = 796F6449D83B3A37C29ADEBA8C49759F /* Pods_FoodApp_ios.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		681BE6E3D02A43F9BA63777AC435C8FD /* GTMSessionFetcher */ = {
@@ -1358,7 +1443,7 @@
 			);
 			name = GTMSessionFetcher;
 			productName = GTMSessionFetcher;
-			productReference = EAAC800FCF54AF94C77A817496676C03 /* GTMSessionFetcher.framework */;
+			productReference = 793E81ABA15D5E7C2D159A57AE63532E /* GTMSessionFetcher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8159F94E49D9B443DE18F0F8B38078B8 /* GoogleToolboxForMac-f0850809 */ = {
@@ -1375,7 +1460,7 @@
 			);
 			name = "GoogleToolboxForMac-f0850809";
 			productName = "GoogleToolboxForMac-f0850809";
-			productReference = 4452391F85F6FF3D770280A1FAAD5DE0 /* GoogleToolboxForMac.framework */;
+			productReference = DF7D7EAA00061EEDBB6DB6543198D958 /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AF1C316D351B7012E408EA7F8076501F /* Pods-FoodApp-iosUITests */ = {
@@ -1392,7 +1477,7 @@
 			);
 			name = "Pods-FoodApp-iosUITests";
 			productName = "Pods-FoodApp-iosUITests";
-			productReference = 6746810A460CD2A43BA80F0C8AC90539 /* Pods_FoodApp_iosUITests.framework */;
+			productReference = FBF446E4C5E6ADF0AB80E586EFA5A624 /* Pods_FoodApp_iosUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B1C4AAFAF49036C7007633DAA3C806AD /* GTMOAuth2 */ = {
@@ -1411,7 +1496,7 @@
 			);
 			name = GTMOAuth2;
 			productName = GTMOAuth2;
-			productReference = C7A7950048B9EA182CD8A28334722FDF /* GTMOAuth2.framework */;
+			productReference = 493C1753A9AE4E93FAE13F8351161FD9 /* GTMOAuth2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C2DC2B7533FDCC729376E190C94A0841 /* Pods-FoodApp-iosTests */ = {
@@ -1430,7 +1515,29 @@
 			);
 			name = "Pods-FoodApp-iosTests";
 			productName = "Pods-FoodApp-iosTests";
-			productReference = E500BB50B05AEDCBA3D74D04D65584CA /* Pods_FoodApp_iosTests.framework */;
+			productReference = 410F20AB2EA0D566DEFA48DEBD850B2D /* Pods_FoodApp_iosTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF804C5F55FDB11403F4C7173B03004E /* Pods-FoodApp-ios-FoodApp-ios dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C110583CCCD000FB926467E3D435DF7 /* Build configuration list for PBXNativeTarget "Pods-FoodApp-ios-FoodApp-ios dev" */;
+			buildPhases = (
+				2E9459B058F6CEA35B2F2565EEEF5EC7 /* Sources */,
+				D063C34E5687674F1BA876E0CACF01B6 /* Frameworks */,
+				D380C420BC323BC8ABF3A6660443760A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EBECDFA4EDBAE7063E767C37E488723 /* PBXTargetDependency */,
+				29AF48FFE3A3164F58D539077B50CC36 /* PBXTargetDependency */,
+				A78F5DD872D5390F69FB8A0625FB681D /* PBXTargetDependency */,
+				165358DCB5E554017C189391389863C7 /* PBXTargetDependency */,
+				1300B7350E052162B01D66D1FA840800 /* PBXTargetDependency */,
+			);
+			name = "Pods-FoodApp-ios-FoodApp-ios dev";
+			productName = "Pods-FoodApp-ios-FoodApp-ios dev";
+			productReference = 9D23379FBEB8E8DBF62263698272B232 /* Pods_FoodApp_ios_FoodApp_ios_dev.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
@@ -1447,7 +1554,7 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = E7DD12F029875F48503E926DB069C88D /* nanopb.framework */;
+			productReference = E5402102071E35BBA5715B128A4C34EF /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1467,7 +1574,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6A3C4301CB90C02CBDD8ED0DE25F49DB /* Products */;
+			productRefGroup = 956E837E8EEC9B292DEB8F2EFFC884DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1478,6 +1585,7 @@
 				3B08C49A396BAA0D9DCAD4460CC52F95 /* leveldb-library */,
 				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
 				50D7870161599F03683CE28B2D4C3AC5 /* Pods-FoodApp-ios */,
+				CF804C5F55FDB11403F4C7173B03004E /* Pods-FoodApp-ios-FoodApp-ios dev */,
 				C2DC2B7533FDCC729376E190C94A0841 /* Pods-FoodApp-iosTests */,
 				AF1C316D351B7012E408EA7F8076501F /* Pods-FoodApp-iosUITests */,
 			);
@@ -1515,6 +1623,14 @@
 				3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */,
 				54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */,
 				55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9459B058F6CEA35B2F2565EEEF5EC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4970DAB2C9B16B7A27889C332A1C47 /* Pods-FoodApp-ios-FoodApp-ios dev-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1630,17 +1746,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1300B7350E052162B01D66D1FA840800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
+			targetProxy = 6587AAD59A87484B1BB9290C89DAB33D /* PBXContainerItemProxy */;
+		};
+		165358DCB5E554017C189391389863C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "leveldb-library";
+			target = 3B08C49A396BAA0D9DCAD4460CC52F95 /* leveldb-library */;
+			targetProxy = D19B573C54BF66F92EF64BDF200A8CF2 /* PBXContainerItemProxy */;
+		};
 		2624A3C2751187E5C51A3694B185CA40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
 			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
 			targetProxy = 4B9EE90D071023F066A7D7C8A87F74DF /* PBXContainerItemProxy */;
 		};
+		29AF48FFE3A3164F58D539077B50CC36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = 681BE6E3D02A43F9BA63777AC435C8FD /* GTMSessionFetcher */;
+			targetProxy = 748CFC28385CBD727A48305BD3EDFDED /* PBXContainerItemProxy */;
+		};
 		3685CC549B13D25F9B663361874E198F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GTMSessionFetcher;
 			target = 681BE6E3D02A43F9BA63777AC435C8FD /* GTMSessionFetcher */;
 			targetProxy = 170F5BE3B9815D61BA81BCBD97BCE075 /* PBXContainerItemProxy */;
+		};
+		7EBECDFA4EDBAE7063E767C37E488723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMOAuth2;
+			target = B1C4AAFAF49036C7007633DAA3C806AD /* GTMOAuth2 */;
+			targetProxy = E737751A970E016470EE834EB9911D6B /* PBXContainerItemProxy */;
 		};
 		97DC6AF2D3E451D3435C71F4437FD378 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1653,6 +1793,12 @@
 			name = GTMSessionFetcher;
 			target = 681BE6E3D02A43F9BA63777AC435C8FD /* GTMSessionFetcher */;
 			targetProxy = 5F28B6FD4A57CAE8C4A9FF48AF51AFB5 /* PBXContainerItemProxy */;
+		};
+		A78F5DD872D5390F69FB8A0625FB681D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GoogleToolboxForMac-f0850809";
+			target = 8159F94E49D9B443DE18F0F8B38078B8 /* GoogleToolboxForMac-f0850809 */;
+			targetProxy = 5C26E8187AC0DC7AE24EE5F65333221B /* PBXContainerItemProxy */;
 		};
 		AE7D777A8C6E74D8B5033154C78034F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1870,7 +2016,7 @@
 		};
 		461BED7BC2E2780DCF274D9CB02429EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F4F68D2FE7B8F2A69B9CAF6675A63EA /* Pods-FoodApp-ios.debug.xcconfig */;
+			baseConfigurationReference = F373D6A8DEA40CD2C4A6F8E37F52B70D /* Pods-FoodApp-ios.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1903,7 +2049,7 @@
 		};
 		4D307A0B0CD72835F6B2F401FD764F32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EAC54577CB61D931A6B8BF93F2FADE8 /* Pods-FoodApp-iosUITests.debug.xcconfig */;
+			baseConfigurationReference = 9A62A84F839ABB6F436D2C3D5EC1BE2D /* Pods-FoodApp-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1934,9 +2080,42 @@
 			};
 			name = Debug;
 		};
+		4EBE90681CD292321EC2BDC58776FC31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80C91251EA9280E15A946D3D44638E8B /* Pods-FoodApp-ios-FoodApp-ios dev.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Pods-FoodApp-ios-FoodApp-ios dev.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FoodApp_ios_FoodApp_ios_dev;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		50029E6EE21AF8DC14707B12158AB0A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E91090D9078A2D491CA8A942079A1B84 /* Pods-FoodApp-iosTests.debug.xcconfig */;
+			baseConfigurationReference = C3BF3F5C308ECCE56E23EE962E2AF886 /* Pods-FoodApp-iosTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2060,7 +2239,7 @@
 		};
 		6C59D6021CBF874BD573CC242622C760 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC90997A2B40D2D8518FA1E9E8D168E1 /* Pods-FoodApp-ios.release.xcconfig */;
+			baseConfigurationReference = 362660014FCDC49B017B7102E8659748 /* Pods-FoodApp-ios.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2083,6 +2262,40 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_FoodApp_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6E9CF56ECD0381A6A6799F7920C8F83D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B6B73AADA03A26943C591E6E40F9C9 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Pods-FoodApp-ios-FoodApp-ios dev.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FoodApp_ios_FoodApp_ios_dev;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2215,7 +2428,7 @@
 		};
 		C7E5B3E5CA42A430BD0CF1E9DD240853 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E267505621AEB2C8C4E9927A4E4FDF99 /* Pods-FoodApp-iosTests.release.xcconfig */;
+			baseConfigurationReference = 903733E680459CBF838D1E92C91A1551 /* Pods-FoodApp-iosTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2337,7 +2550,7 @@
 		};
 		FAB2965A88EAC7AEDDBBEB37885772F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5A536F0D19164B978224DD8C6469A96 /* Pods-FoodApp-iosUITests.release.xcconfig */;
+			baseConfigurationReference = F280732975DF4D48B643DB52879C5662 /* Pods-FoodApp-iosUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2377,6 +2590,15 @@
 			buildConfigurations = (
 				B067CD49B8C03729A7EDB816B6487C98 /* Debug */,
 				1D50F8436FBEAE67DA681F73FBDBF017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C110583CCCD000FB926467E3D435DF7 /* Build configuration list for PBXNativeTarget "Pods-FoodApp-ios-FoodApp-ios dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBE90681CD292321EC2BDC58776FC31 /* Debug */,
+				6E9CF56ECD0381A6A6799F7920C8F83D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
