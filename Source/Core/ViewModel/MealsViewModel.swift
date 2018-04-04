@@ -57,7 +57,7 @@ class MealsViewModel {
                 if let snapDict =  snapshot.value as? [String: Any],
                     let name = snapDict["name"] as? String {
 
-                    let mealItem = MealItem(name: name)
+                    let mealItem = MealItem(id: 1,name: name)
 
                     self.foodList.append(mealItem)
                      completion()

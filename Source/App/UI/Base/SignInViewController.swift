@@ -2,28 +2,33 @@ import UIKit
 import GoogleSignIn
 import Firebase
 
-class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
-
+class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
     var signinButton = UIButton()
+    internal var viewModel: SignInViewModel = SignInViewModel()
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        
-        signIn.style = .wide
-        
+
         //Intialize the sign in
         
         guard let instance = GIDSignIn.sharedInstance() else { return }
         
         instance.hostedDomain = viewModel.domain
+        instance.clientID = FirebaseApp.app()?.options.clientID
         instance.uiDelegate = self
         instance.signInSilently()
         
     }
-}
+
+    @objc func signinButtonPressed(){
+
+        GIDSignIn.sharedInstance().signIn()
+    }
+
 
     func setupSigninButtton() {
+
 
         let buttonColor =  UIColor(red: 242/255, green: 57/255, blue: 62/255, alpha: 1)
 
@@ -77,5 +82,51 @@ class SignInViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDele
 
         signinButton.addTarget(self, action: #selector(signinButtonPressed), for: .touchUpInside)
 
+    }
+}
+
+extension SignInViewController {
+
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
+}
+
+extension SignInViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!,
+              didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+
+        if let error = error {
+            print("\(error.localizedDescription)")
+
+        } else {
+            guard
+                let authentication = user.authentication else { return }
+
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                           accessToken: authentication.accessToken)
+
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if let error = error {
+                    print("\(error.localizedDescription)")
+                }
+                if let user = user, let appDel = self.appDelegate {
+                    appDel.currentUser = user
+                    appDel.currentUserId = user.uid
+                }
+            })
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+            if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+                navigationController.modalPresentationStyle = .overFullScreen
+                self.present(navigationController,
+                             animated: true,
+                             completion: nil)
+            }
+        }
     }
 }

@@ -29,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             else { fatalError("Invalid Firebase configuration file.")}
 
         FirebaseApp.configure(options: options)
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
@@ -41,43 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplicationOpenURLOptionsKey.annotation])
-    }
-}
-
-extension AppDelegate: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!,
-              didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        
-        if let error = error {
-            print("\(error.localizedDescription)")
-            
-        } else {
-            guard
-                let authentication = user.authentication else { return }
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                           accessToken: authentication.accessToken)
-            
-            Auth.auth().signIn(with: credential, completion: { (user, error) in
-                if let error = error {
-                    print("\(error.localizedDescription)")
-                }
-                if let user = user {
-                    self.currentUser = user
-                    self.currentUserId = user.uid
-                }
-            })
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
-                navigationController.modalPresentationStyle = .overFullScreen
-                self.window?.rootViewController?.present(navigationController,
-                             animated: true,
-                             completion: nil)
-            }
-        }
     }
 }
 

@@ -35,7 +35,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5139DA00B50569B5C77AB5510E0744D0"
-               BuildableName = "FoodApp-iosTests.xctest"
+               BuildableName = "FoodApp-iosTests"
                BlueprintName = "FoodApp-iosTests"
                ReferencedContainer = "container:FoodApp-ios.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51F40C2B52CB02CC7760F48E5A1CDB7E"
-               BuildableName = "FoodApp-iosUITests.xctest"
+               BuildableName = "FoodApp-iosUITests"
                BlueprintName = "FoodApp-iosUITests"
                ReferencedContainer = "container:FoodApp-ios.xcodeproj">
             </BuildableReference>
