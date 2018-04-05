@@ -10,7 +10,7 @@ public class RatingViewModel {
     }
     
     internal var foodList = [MealItem]()
-    internal var ratingsList = [Ratings]()
+    //internal var ratingsList = [Ratings]()
 
     //MARK: Public properties
 
@@ -39,8 +39,8 @@ public class RatingViewModel {
         foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
     }
     
-    public func writeRatings(_ ratingsList: [Ratings]) {
+    public func writeRatings(_ ratings: Ratings) {
         
-        self.appDelegate?.foodAppClient.submitRatings(ratingsList)
+        self.appDelegate?.foodAppClient.submitRatings(ratings)
     }
 }

@@ -1,10 +1,17 @@
 
 import Foundation
+import FirebaseDatabase
+
 
 class MealsViewModel {
 
     let cellIdentifier = "mealcell"
     var foodList = [MealItem]()
+    var mealnumbers = [String]()
+    var ref: DatabaseReference?
+    var refHandle: UInt = 0
+    var reflist = [DatabaseReference]()
+
 
     public func displayCurrentDate() -> String {
 
@@ -16,14 +23,46 @@ class MealsViewModel {
         return formatter.string(from: now)
     }
 
-    public func loadSampleMeal() {
+    public func loadSampleMeal(completion: @escaping ([Int]) -> Void){
 
-        let sampleFood = MealItem(id: 4, name: "Ugali")
-        let sampleFood1 = MealItem(id: 1, name: "Spinach")
-        let sampleFood2 = MealItem(id: 5, name: "Mbuzi Fry")
-        let sampleFood3 = MealItem(id: 3, name: "Mixed Veggies")
-        let sampleFood4 = MealItem(id: 2, name: "Mukimo")
+        // Gets the ref of the meal items of a specific day
 
-        foodList += [sampleFood, sampleFood1, sampleFood2, sampleFood3, sampleFood4]
+        ref = Database.database().reference()
+
+        let mealsRef = "meals/1/meal_items"
+        var list = [Int]()
+        ref?.child(mealsRef).observe(.value, with: { snapshot in
+
+            if snapshot.childrenCount > 0 {
+
+                let enumerator = snapshot.children
+                while let next = enumerator.nextObject() as? DataSnapshot, let id = next.value as? Int {
+
+                    list.append(id)
+                }
+            }
+            completion(list)
+        })
+
+    }
+
+    public func populateFoodList(mealIds: [Int], completion: @escaping () -> Void) {
+        let mealItemsRef = "mealItems/"
+
+        for id in mealIds {
+
+            let fullref = "\(mealItemsRef)\(id)"
+            ref?.child(fullref).observe(.value, with: { snapshot in
+
+                if let snapDict =  snapshot.value as? [String: Any],
+                    let name = snapDict["name"] as? String {
+
+                    let mealItem = MealItem(id: 1,name: name)
+
+                    self.foodList.append(mealItem)
+                     completion()
+                }
+            })
+        }
     }
 }

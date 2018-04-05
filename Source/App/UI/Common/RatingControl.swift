@@ -97,7 +97,7 @@ import UIKit
         updateButtonSelectionStates()
     }
 
-    private func updateButtonSelectionStates() {
+    private func  updateButtonSelectionStates (){
         for (index, button) in ratingButtons.enumerated() {
 
             button.isSelected = index < rating

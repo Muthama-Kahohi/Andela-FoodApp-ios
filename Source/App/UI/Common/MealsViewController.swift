@@ -1,13 +1,17 @@
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mealsTable: UITableView!
-
-    @IBOutlet weak var rateButton: CircleButton!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
 
     let viewModel: MealsViewModel = MealsViewModel()
+    var mealType: String?
+    var ref: DatabaseReference?
+    var handle: DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +20,18 @@ class MealsViewController: UIViewController , UITableViewDelegate, UITableViewDa
         mealsTable.dataSource = self
 
         dateLabel.text = viewModel.displayCurrentDate()
-        viewModel.loadSampleMeal()
+        loader.color = .black
+        loader.startAnimating()
+        self.viewModel.loadSampleMeal(){ mealsList in
+            self.viewModel.populateFoodList(mealIds: mealsList) {
+                self.loader.color = .clear
+                self.loader.stopAnimating()
+                self.mealsTable.reloadData()
+            }
+        }
 
-        mealsTable.tableFooterView = UIView()
-        mealsTable.separatorStyle = .none
-
-        mealsTable.reloadData()
+        self.mealsTable.tableFooterView = UIView()
+        self.mealsTable.separatorStyle = .none
     }
 
     // MARK: TableView Delegate Methods
