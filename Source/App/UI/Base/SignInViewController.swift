@@ -14,23 +14,32 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         
         guard let instance = GIDSignIn.sharedInstance() else { return }
         
-        instance.hostedDomain = viewModel.domain
         instance.clientID = FirebaseApp.app()?.options.clientID
+        instance.delegate = self
+        instance.hostedDomain = viewModel.domain
+//        instance.signInSilently()
         instance.uiDelegate = self
-        instance.signInSilently()
 
         setupSigninButtton()
     }
 
-    @objc func signinButtonPressed(){
-
+    @objc func signinButtonPressed() {
+        
         GIDSignIn.sharedInstance().signIn()
-
     }
-
-
+    
+    func segueToNextScreen() {
+        let storyboard = UIStoryboard(name: "Main",
+                                      bundle: nil)
+        
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+            navigationController.modalPresentationStyle = .overFullScreen
+            self.topViewController.present(navigationController,
+                                           animated: true)
+        }
+    }
+ 
     func setupSigninButtton() {
-
 
         let buttonColor =  UIColor(red: 242/255, green: 57/255, blue: 62/255, alpha: 1)
 
@@ -82,7 +91,9 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         view.addConstraint(buttonHeightConstraint)
         view.addConstraint(buttonWidthConstraint)
 
-        signinButton.addTarget(self, action: #selector(signinButtonPressed), for: .touchUpInside)
+        signinButton.addTarget(self,
+                               action: #selector(signinButtonPressed),
+                               for: .touchUpInside)
 
     }
 }
@@ -94,41 +105,33 @@ extension SignInViewController {
             let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         return delegate
     }
+    
+    private var topViewController: UIViewController {
+        guard
+            let tvc = appDelegate?.window?.rootViewController else { return UIViewController() }
+        return tvc
+    }
 }
 
 extension SignInViewController: GIDSignInDelegate {
+    
     func sign(_ signIn: GIDSignIn!,
               didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
-
-        if let error = error {
-            print("\(error.localizedDescription)")
-
-        } else {
-            guard
-                let authentication = user.authentication else { return }
-
+        
+        if let authentication = user.authentication {
+            
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                            accessToken: authentication.accessToken)
-
+            
             Auth.auth().signIn(with: credential) { (user, error) in
-                if let error = error {
-                    print("\(error.localizedDescription)")
-                }
-                if let user = user, let appDel = self.appDelegate {
-                    appDel.currentUser = user
-                    appDel.currentUserId = user.uid
+                if error == nil {
+                    self.appDelegate?.currentUser = user!
+                    self.appDelegate?.currentUserId = (user?.uid)!
                 }
             }
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
-                navigationController.modalPresentationStyle = .overFullScreen
-                self.present(navigationController,
-                             animated: true,
-                             completion: nil)
-            }
+            self.segueToNextScreen()
         }
     }
 }
