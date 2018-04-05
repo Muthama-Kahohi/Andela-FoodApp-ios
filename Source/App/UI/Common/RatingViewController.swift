@@ -13,7 +13,8 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Internal Properties
 
     internal var viewModel: RatingViewModel =  RatingViewModel()
-    private var comment: String? = ""
+    var ratingsDictionary = [String: Int]()
+    private var comment: String = ""
 
     //MARK: Overriden methods
 
@@ -38,8 +39,14 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //MARK: Private Methods
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
-        
-        viewModel.writeRatings(viewModel.ratingsList)
+
+        let rating = Ratings(chefId: 1,
+                             comment: comment,
+                             date: viewModel.getCurrentDate(),
+                             mealId: "Lunch",
+                             values: ratingsDictionary)
+
+        viewModel.writeRatings(rating)
         
     }
 
@@ -69,22 +76,18 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RatingTableViewCell
-        
-        let rating = Ratings(chefId: 1,
-                             comment: self.comment!,
-                             date: viewModel.getCurrentDate(),
-                             mealId: "Lunch",
-                             values: [indexPath.row : cell.ratingControl.rating])
-        
-        viewModel.ratingsList.append(rating)
+        let rowString = String(indexPath.row)
+
+        ratingsDictionary[rowString] = cell.ratingControl.rating
     }
 
     // MARK: TextView Tracking Methods
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        self.comment = textField.text
 
+        guard let comment = textField.text else { return }
+        
+        self.comment = comment
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

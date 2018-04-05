@@ -45,21 +45,16 @@ public class FoodAppClient {
         })
     }
     
-    public func submitRatings(_ ratingValues: [Ratings]) {
-        
-        for rating in ratingValues {
-            
-            var count: UInt?
-            
-            getChildrenCount(completion: { (childrenCount) in
-                count = childrenCount + 1
-            })
-            
-            FoodAppClient.databaseRef.child("ratings/\(count!)").setValue(["chef_id": 1,
-                                                                           "comment": rating.comment,
-                                                                           "date": rating.date,
-                                                                           "meal_id": rating.mealId,
-                                                                           "values": rating.values])
-        }
+    public func submitRatings(_ ratings: Ratings) {
+
+        getChildrenCount(completion: { (childrenCount) in
+
+            let count = childrenCount + 1
+            FoodAppClient.databaseRef.child("ratings/\(count)").setValue(["chef_id": 1,
+                                                                          "comment": ratings.comment,
+                                                                          "date": ratings.date,
+                                                                          "meal_id": ratings.mealId,
+                                                                          "values": ratings.values])
+        })
     }
 }

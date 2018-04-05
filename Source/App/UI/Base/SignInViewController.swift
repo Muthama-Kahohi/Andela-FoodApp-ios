@@ -18,12 +18,22 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         instance.clientID = FirebaseApp.app()?.options.clientID
         instance.uiDelegate = self
         instance.signInSilently()
-        
+
+        setupSigninButtton()
     }
 
     @objc func signinButtonPressed(){
 
         GIDSignIn.sharedInstance().signIn()
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+            navigationController.modalPresentationStyle = .overFullScreen
+            self.present(navigationController,
+                         animated: true,
+                         completion: nil)
+        }
     }
 
 
@@ -118,15 +128,6 @@ extension SignInViewController: GIDSignInDelegate {
                     appDel.currentUserId = user.uid
                 }
             })
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-            if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
-                navigationController.modalPresentationStyle = .overFullScreen
-                self.present(navigationController,
-                             animated: true,
-                             completion: nil)
-            }
         }
     }
 }
