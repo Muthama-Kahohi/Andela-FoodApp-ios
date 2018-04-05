@@ -26,14 +26,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
         GIDSignIn.sharedInstance().signIn()
 
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
-            navigationController.modalPresentationStyle = .overFullScreen
-            self.present(navigationController,
-                         animated: true,
-                         completion: nil)
-        }
     }
 
 
@@ -119,7 +111,7 @@ extension SignInViewController: GIDSignInDelegate {
             let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                            accessToken: authentication.accessToken)
 
-            Auth.auth().signIn(with: credential, completion: { (user, error) in
+            Auth.auth().signIn(with: credential) { (user, error) in
                 if let error = error {
                     print("\(error.localizedDescription)")
                 }
@@ -127,7 +119,16 @@ extension SignInViewController: GIDSignInDelegate {
                     appDel.currentUser = user
                     appDel.currentUserId = user.uid
                 }
-            })
+            }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+                navigationController.modalPresentationStyle = .overFullScreen
+                self.present(navigationController,
+                             animated: true,
+                             completion: nil)
+            }
         }
     }
 }

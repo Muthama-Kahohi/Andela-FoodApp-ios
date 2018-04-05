@@ -38,7 +38,7 @@
 		9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */; };
 		AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BF7F2485751438789FDE64C734832 /* MealItem.swift */; };
 		B17BAE2CA7B5A5400DB3D127 /* Pods_FoodApp_ios_FoodApp_ios_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7750E006420C0390367427129FA28D /* Pods_FoodApp_ios_FoodApp_ios_dev.framework */; };
-		C6252C0147F473E09C3B6971E3EE2884 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		C6252C0147F473E09C3B6971E3EE2884 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		CD6E3B2F20752C0D007020DE /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23998E8B1152CE536C05278DA504261C /* MealsTableViewCell.swift */; };
 		CD6E3B3020752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		CD6E3B3120752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
@@ -48,7 +48,7 @@
 		CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */; };
 		D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */; };
-		D97E037F4AA4E5AFACDA63190BD555E9 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		D97E037F4AA4E5AFACDA63190BD555E9 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		E58642E30DAA6451C577AA0390BFB7CE /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE2696629B94CA17C5572E71C57B51 /* CircleButton.swift */; };
 		E6B408F4D66F92BB0699D6722EC61708 /* RatingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457A135E60C3603F82BC9291D0489C12 /* RatingViewModelTests.swift */; };
 		E79D628EB234A243F046A2C9FFA309B1 /* Pods_FoodApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D1C8E262B6E8033830FC0CB0F4CABC /* Pods_FoodApp_iosUITests.framework */; };
@@ -545,7 +545,7 @@
 				32F00F8FF960503F7525A15AE00024C8 /* Assets.xcassets in Resources */,
 				CD6E3B332075322E007020DE /* Main.storyboard in Resources */,
 				043C86F55CA2E0CAA766EB5287E89ADA /* GoogleService-Info.plist in Resources */,
-				D97E037F4AA4E5AFACDA63190BD555E9 /* BuildFile in Resources */,
+				D97E037F4AA4E5AFACDA63190BD555E9 /* (null) in Resources */,
 				57EC8F6EADD07D87508CC54EA277AB61 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5454F8A647AC616515A9A9B21D2F2A7F /* GoogleService-Info-dev.plist in Resources */,
-				C6252C0147F473E09C3B6971E3EE2884 /* BuildFile in Resources */,
+				C6252C0147F473E09C3B6971E3EE2884 /* (null) in Resources */,
 				248C0CBDC3B538BDD1F11B68977A1995 /* Localizable.strings in Resources */,
 				583827D41A7EF1EF80F25CBBA0A05251 /* Main.storyboard in Resources */,
 				CD6E3B3220752D3C007020DE /* Assets.xcassets in Resources */,
@@ -1045,7 +1045,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N9J69K4A53;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/dev-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";
@@ -1120,7 +1120,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N9J69K4A53;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/dev-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";
