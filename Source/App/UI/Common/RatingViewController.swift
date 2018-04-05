@@ -12,7 +12,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     //MARK: Internal Properties
 
-    internal var viewModel: RatingViewModel =  RatingViewModel()
+    internal var viewModel: RatingViewModel?
     var ratingsDictionary = [String: Int]()
     private var comment: String = ""
 
@@ -21,9 +21,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.loadSampleMeal()
-//        viewModel.loadSampleRatings()
-        
+        guard let vm = viewModel else { return }
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -31,7 +29,9 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         commentTextField.underlined()
 
         dateLabel.textColor = .gray
-        dateLabel.text = viewModel.getCurrentDate()
+        dateLabel.text = vm.getCurrentDate()
+
+        tableView.tableFooterView = UIView()
 
         registerForKeyboardNotifications()
     }
@@ -40,13 +40,15 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
 
+        guard let vm = viewModel else { return }
+
         let rating = Ratings(chefId: 1,
                              comment: comment,
-                             date: viewModel.getCurrentDate(),
+                             date: vm.getCurrentDate(),
                              mealId: "Lunch",
                              values: ratingsDictionary)
 
-        viewModel.writeRatings(rating)
+        vm.writeRatings(rating)
         
     }
 
@@ -58,15 +60,24 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return viewModel.foodList.count
+        guard let vm = viewModel else { return 0}
+        guard let foodlist = vm.foodList else { return 0 }
+
+        return foodlist.count
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let emptyCell = UITableViewCell()
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellName, for: indexPath) as? RatingTableViewCell
+        guard let vm = viewModel else { return emptyCell}
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellName, for: indexPath) as? RatingTableViewCell
             else { return UITableViewCell() }
 
-        let food = viewModel.foodList[indexPath.row]
+
+
+        guard let foodlist = vm.foodList else { return emptyCell }
+        let food = foodlist[indexPath.row]
 
         cell.foodNameLabel.text = food.name
         cell.ratingControl.rating = 0

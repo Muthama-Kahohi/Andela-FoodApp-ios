@@ -90,7 +90,7 @@
                                 <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="6" maxY="0.0"/>
                                 <state key="normal" image="StarIcon"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="rYf-P4-mqK"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toRatingsSegue" id="04L-3E-baf"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-we-eKI">
@@ -121,6 +121,7 @@
                         <outlet property="dateLabel" destination="ibB-m1-GOW" id="5eG-4r-GlV"/>
                         <outlet property="loader" destination="vqg-we-eKI" id="JR6-Hm-h8V"/>
                         <outlet property="mealsTable" destination="KH6-pb-PFY" id="NDF-Px-4cN"/>
+                        <outlet property="rateButton" destination="8U9-me-07L" id="LQ7-AX-rsp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBL-hl-WCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,7 +131,7 @@
         <!--Rating View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ratingViewControllerID" id="BYZ-38-t0r" userLabel="Rating View Controller" customClass="RatingViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ratingViewControllerID" title="ratingsVC" id="BYZ-38-t0r" userLabel="Rating View Controller" customClass="RatingViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
