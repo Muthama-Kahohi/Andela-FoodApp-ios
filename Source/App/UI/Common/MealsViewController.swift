@@ -1,4 +1,3 @@
-import UIKit
 import FirebaseDatabase
 import Firebase
 
@@ -37,6 +36,10 @@ class MealsViewController: UIViewController {
                 self.mealsTable.reloadData()
                 self.rateButton.isEnabled = true
             }
+            
+            vm.getMealType(completion: { (mealType) in
+                self.mealType = mealType
+            })
         }
 
         self.mealsTable.tableFooterView = UIView()
@@ -50,6 +53,7 @@ class MealsViewController: UIViewController {
                 let rvm: RatingViewModel = RatingViewModel()
                 nextVC.viewModel = rvm
                 nextVC.viewModel?.foodList = mvm?.foodList
+                nextVC.viewModel?.mealType = self.mealType
             }
         }
     }

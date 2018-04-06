@@ -45,12 +45,15 @@ class RatingViewController: UIViewController {
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
 
-        guard let vm = viewModel else { return }
+        guard
+            let vm = viewModel,
+            let mealType = vm.mealType
+            else { return }
 
         let rating = Ratings(chefId: 1,
                              comment: self.comment,
                              date: vm.getCurrentDate(),
-                             mealId: "Lunch",
+                             mealId: mealType,
                              values: ratingsDictionary)
 
         vm.writeRatings(rating)
