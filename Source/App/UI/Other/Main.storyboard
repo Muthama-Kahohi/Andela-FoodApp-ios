@@ -33,7 +33,7 @@
                                 <rect key="frame" x="12" y="130" width="351" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="351" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxV-qx-9fb" id="Ngl-Ay-ZyY">
@@ -139,7 +139,7 @@
                                 <rect key="frame" x="16" y="141" width="343" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pXg-Wd-hGa" id="c9G-o2-CB6">
@@ -291,21 +291,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-Q2-SIt">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-Q2-SIt">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRQ-6E-JVK" userLabel="Breakfast Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRQ-6E-JVK" userLabel="Breakfast Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
                                         <state key="normal" image="breakfast"/>
                                         <connections>
-                                            <segue destination="pBW-E4-1Cp" kind="show" id="uAo-qY-wCN"/>
+                                            <segue destination="pBW-E4-1Cp" kind="show" identifier="breakfastSegue" id="IgO-oZ-sBv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-8w-24Z" userLabel="Lunch Button">
-                                        <rect key="frame" x="0.0" y="345" width="375" height="345"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V1-8w-24Z" userLabel="Lunch Button">
+                                        <rect key="frame" x="0.0" y="362" width="375" height="362"/>
                                         <state key="normal" image="lunch"/>
                                         <connections>
-                                            <segue destination="pBW-E4-1Cp" kind="show" id="0xm-rf-hxf"/>
+                                            <segue destination="pBW-E4-1Cp" kind="show" identifier="lunchSegue" id="b29-GA-5uN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -314,7 +314,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kta-nH-ghc" firstAttribute="trailing" secondItem="eSQ-Q2-SIt" secondAttribute="trailing" id="HtI-S2-p7C"/>
-                            <constraint firstItem="kta-nH-ghc" firstAttribute="bottom" secondItem="eSQ-Q2-SIt" secondAttribute="bottom" id="Xx7-89-S90"/>
+                            <constraint firstAttribute="bottom" secondItem="eSQ-Q2-SIt" secondAttribute="bottom" id="Xx7-89-S90"/>
                             <constraint firstItem="eSQ-Q2-SIt" firstAttribute="leading" secondItem="kta-nH-ghc" secondAttribute="leading" id="hy5-8f-fre"/>
                             <constraint firstItem="eSQ-Q2-SIt" firstAttribute="top" secondItem="kta-nH-ghc" secondAttribute="top" id="nZ5-qr-ctd"/>
                         </constraints>
@@ -356,6 +356,6 @@
         <image name="lunch" width="375" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0xm-rf-hxf"/>
+        <segue reference="b29-GA-5uN"/>
     </inferredMetricsTieBreakers>
 </document>

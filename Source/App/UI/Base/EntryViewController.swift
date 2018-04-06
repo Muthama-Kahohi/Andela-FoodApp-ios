@@ -2,18 +2,25 @@ import UIKit
 
 class EntryViewController: UIViewController {
 
-    // MARK: Outlets and Actions
-    @IBOutlet weak var breakfastLabel: UILabel!
-    @IBOutlet weak var lunchLabel: UILabel!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "breakfastSegue" {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+            if let mealsVC = segue.destination as? MealsViewController {
 
-    }
+                let mvm = MealsViewModel()
+                mealsVC.mvm = mvm
+                mealsVC.mvm?.uniqueFetchId = 1
+            }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        } else if segue.identifier == "lunchSegue" {
 
+            if let mealsVC = segue.destination as? MealsViewController {
+
+                let mvm = MealsViewModel()
+                mealsVC.mvm = mvm
+                mealsVC.mvm?.uniqueFetchId = 2
+            }
+        }
     }
 
 }

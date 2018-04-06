@@ -6,6 +6,7 @@ import FirebaseDatabase
 class MealsViewModel {
 
     let cellIdentifier = "mealcell"
+    var uniqueFetchId: Int?
     var foodList = [MealItem]()
     var mealnumbers = [String]()
     var ref: DatabaseReference?
@@ -29,7 +30,9 @@ class MealsViewModel {
 
         ref = Database.database().reference()
 
-        let mealsRef = "meals/1/meal_items"
+        guard let id = uniqueFetchId else { return }
+
+        let mealsRef = "meals/\(String(id))/meal_items"
         var list = [Int]()
         ref?.child(mealsRef).observe(.value, with: { snapshot in
 
