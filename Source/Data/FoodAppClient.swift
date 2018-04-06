@@ -39,7 +39,7 @@ public class FoodAppClient {
     
     public func getChildrenCount(completion: @escaping (UInt) -> Void) {
         
-        FoodAppClient.databaseRef.child("ratings").observe(.value, with: { (snapshot) in
+        FoodAppClient.databaseRef.child("ratings").observeSingleEvent(of: .value, with: { (snapshot) in
             
             completion(snapshot.childrenCount)
         })

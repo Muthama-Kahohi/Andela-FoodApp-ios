@@ -22,6 +22,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
 
         guard let vm = viewModel else { return }
+        
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -43,7 +44,7 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let vm = viewModel else { return }
 
         let rating = Ratings(chefId: 1,
-                             comment: comment,
+                             comment: self.comment,
                              date: vm.getCurrentDate(),
                              mealId: "Lunch",
                              values: ratingsDictionary)
