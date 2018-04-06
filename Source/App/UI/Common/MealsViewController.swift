@@ -9,8 +9,7 @@ class MealsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var rateButton: CircleButton!
 
-    let mvm: MealsViewModel = MealsViewModel()
-
+    internal var mvm: MealsViewModel?
     var mealType: String?
     var ref: DatabaseReference?
     var handle: DatabaseHandle?
@@ -22,15 +21,17 @@ class MealsViewController: UIViewController {
 
         mealsTable.dataSource = self
 
-        dateLabel.text = mvm.displayCurrentDate()
+        guard let vm = mvm else { return }
+
+        dateLabel.text = vm.displayCurrentDate()
 
         loader.color = .black
         loader.startAnimating()
 
-        rateButton.isEnabled = false
+        self.rateButton.isEnabled = false
 
-        self.mvm.loadSampleMeal(){ mealsList in
-            self.mvm.populateFoodList(mealIds: mealsList) {
+        vm.loadSampleMeal(){ mealsList in
+            vm.populateFoodList(mealIds: mealsList) {
                 self.loader.color = .clear
                 self.loader.stopAnimating()
                 self.mealsTable.reloadData()
@@ -48,7 +49,7 @@ class MealsViewController: UIViewController {
             if let nextVC = segue.destination as? RatingViewController {
                 let rvm: RatingViewModel = RatingViewModel()
                 nextVC.viewModel = rvm
-                nextVC.viewModel?.foodList = mvm.foodList
+                nextVC.viewModel?.foodList = mvm?.foodList
             }
         }
     }
@@ -57,15 +58,22 @@ class MealsViewController: UIViewController {
 extension MealsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mvm.foodList.count
+
+        guard let vm = mvm else { return 0}
+
+        return vm.foodList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: mvm.cellIdentifier, for: indexPath) as? MealsTableViewCell
+        let emptyCell = UITableViewCell()
+
+        guard let vm = mvm else { return emptyCell}
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier, for: indexPath) as? MealsTableViewCell
             else { return UITableViewCell() }
 
-        let food = mvm.foodList[indexPath.row]
+        let food = vm.foodList[indexPath.row]
         let foodName = food.name
         let index = food.name.index(foodName.startIndex, offsetBy: 0)
         let foodLetter = String(describing: foodName[index])
