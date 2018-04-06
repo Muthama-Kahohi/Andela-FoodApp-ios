@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivv-jc-Gmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivv-jc-Gmy">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Noteworthy.ttc">
-            <string>Noteworthy-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Meals View Controller-->
         <scene sceneID="A9W-A7-02h">
@@ -93,12 +88,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toRatingsSegue" id="04L-3E-baf"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-we-eKI">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vqg-we-eKI">
                                 <rect key="frame" x="12" y="396" width="351" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="nFf-y0-PWI"/>
-                                    <constraint firstAttribute="height" constant="40" id="uRf-KT-gfU"/>
-                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,9 +100,11 @@
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="leading" secondItem="hh3-mF-209" secondAttribute="leading" constant="12" id="DdJ-ew-KaT"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="LgZ-sD-jV3"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="8U9-me-07L" secondAttribute="trailing" constant="41" id="X7Y-Y2-cx4"/>
+                            <constraint firstItem="vqg-we-eKI" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="bEC-Az-TOM"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="top" secondItem="ibB-m1-GOW" secondAttribute="bottom" constant="8" symbolic="YES" id="hZa-LY-LeS"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerX" secondItem="Lxg-u6-IHQ" secondAttribute="centerX" id="k5G-cB-J94"/>
                             <constraint firstItem="KH6-pb-PFY" firstAttribute="centerY" secondItem="Lxg-u6-IHQ" secondAttribute="centerY" id="kjU-9n-4sH"/>
+                            <constraint firstItem="vqg-we-eKI" firstAttribute="centerY" secondItem="Lxg-u6-IHQ" secondAttribute="centerY" id="lAJ-4v-KVh"/>
                             <constraint firstItem="hh3-mF-209" firstAttribute="trailing" secondItem="ibB-m1-GOW" secondAttribute="trailing" constant="150" id="qYj-sY-OzI"/>
                             <constraint firstItem="ibB-m1-GOW" firstAttribute="top" secondItem="hh3-mF-209" secondAttribute="top" constant="8" id="y9G-7a-eAR"/>
                         </constraints>
@@ -126,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBL-hl-WCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090.625" y="132.5"/>
+            <point key="canvasLocation" x="2090" y="123"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="tne-QT-ifu">
