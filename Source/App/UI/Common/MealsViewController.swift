@@ -9,8 +9,6 @@ class MealsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var rateButton: CircleButton!
 
-    let mvm: MealsViewModel = MealsViewModel()
-
     internal var mvm: MealsViewModel?
     var mealType: String?
     var ref: DatabaseReference?
@@ -29,6 +27,8 @@ class MealsViewController: UIViewController {
 
         loader.color = .black
         loader.startAnimating()
+
+        self.rateButton.isEnabled = false
 
         vm.loadSampleMeal(){ mealsList in
             vm.populateFoodList(mealIds: mealsList) {
@@ -49,7 +49,7 @@ class MealsViewController: UIViewController {
             if let nextVC = segue.destination as? RatingViewController {
                 let rvm: RatingViewModel = RatingViewModel()
                 nextVC.viewModel = rvm
-                nextVC.viewModel?.foodList = mvm.foodList
+                nextVC.viewModel?.foodList = mvm?.foodList
             }
         }
     }
