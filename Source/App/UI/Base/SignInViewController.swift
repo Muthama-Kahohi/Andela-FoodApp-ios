@@ -17,7 +17,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         instance.clientID = FirebaseApp.app()?.options.clientID
         instance.delegate = self
         instance.hostedDomain = viewModel.domain
-//        instance.signInSilently()
         instance.uiDelegate = self
 
         setupSigninButtton()
