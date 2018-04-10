@@ -81,8 +81,6 @@ class RatingViewController: UIViewController {
         guard let animationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval
             else { return }
 
-        print(animationDuration)
-
         let changeInHeight = keyboardSize.height * (showing ? 1 : -1)
 
 
