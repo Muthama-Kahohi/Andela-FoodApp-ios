@@ -20,7 +20,13 @@ class EntryViewController: UIViewController {
                 mealsVC.mvm = mvm
                 mealsVC.mvm?.uniqueFetchId = 2
             }
+        }  else if segue.identifier == "settingsSegue" {
+
+            if let settingsVC = segue.destination as? SettingsViewController {
+
+                let svm = SettingsViewModel()
+                settingsVC.svm = svm
+            }
         }
     }
-
 }
