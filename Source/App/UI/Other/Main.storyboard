@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivv-jc-Gmy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ivv-jc-Gmy">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Meals View Controller-->
         <scene sceneID="A9W-A7-02h">
@@ -33,7 +38,7 @@
                                 <rect key="frame" x="12" y="130" width="351" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealcell" rowHeight="63" id="UxV-qx-9fb" customClass="MealsTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="351" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxV-qx-9fb" id="Ngl-Ay-ZyY">
@@ -139,7 +144,7 @@
                                 <rect key="frame" x="16" y="141" width="343" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="96" id="pXg-Wd-hGa" customClass="RatingTableViewCell" customModule="FoodApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pXg-Wd-hGa" id="c9G-o2-CB6">
@@ -194,12 +199,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0Ve-Eb-pmp" firstAttribute="top" secondItem="hRL-aY-1vY" secondAttribute="bottom" constant="30" id="1kx-M8-mwH"/>
                             <constraint firstItem="hRL-aY-1vY" firstAttribute="top" secondItem="sEZ-Oj-Nwj" secondAttribute="bottom" constant="24" id="2o6-Qw-Q4e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Ve-Eb-pmp" secondAttribute="trailing" constant="169" id="DGy-m5-0H3"/>
                             <constraint firstItem="fG8-No-bv7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fqa-cR-w3e"/>
                             <constraint firstItem="sEZ-Oj-Nwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Fqy-12-Hng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sEZ-Oj-Nwj" secondAttribute="trailing" constant="161" id="Mu8-sl-Xd3"/>
+                            <constraint firstItem="0Ve-Eb-pmp" firstAttribute="top" secondItem="hRL-aY-1vY" secondAttribute="bottom" constant="30" id="PC7-rc-Czu"/>
                             <constraint firstItem="sEZ-Oj-Nwj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dyp-PR-iub"/>
                             <constraint firstItem="hRL-aY-1vY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hhA-tw-aX1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fG8-No-bv7" secondAttribute="trailing" constant="16" id="l1V-v1-zte"/>
@@ -219,10 +224,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomConstraint" destination="rKK-kh-qH9" id="aXJ-dX-qsd"/>
                         <outlet property="commentLabel" destination="0Ve-Eb-pmp" id="Tbm-QA-889"/>
                         <outlet property="commentTextField" destination="fG8-No-bv7" id="Vhm-jF-FEM"/>
+                        <outlet property="commentsTextfieldBottomConstraint" destination="rKK-kh-qH9" id="DSx-Yf-OUX"/>
                         <outlet property="dateLabel" destination="sEZ-Oj-Nwj" id="oNR-RK-ujc"/>
+                        <outlet property="doneButton" destination="eAF-ez-Cwd" id="Ado-Vx-6YY"/>
                         <outlet property="tableView" destination="hRL-aY-1vY" id="viS-pv-yN9"/>
                     </connections>
                 </viewController>
