@@ -1,10 +1,22 @@
 import UIKit
 
-class EntryViewController: UIViewController {
+public enum seguesFromLandingScreen: String {
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "breakfastSegue" {
+    case breakfastSegue
+    case lunchSegue
+    case settingsSegue
+}
 
+public class EntryViewController: UIViewController {
+
+    //MARK: Overriden Methods
+
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let segueID = segue.identifier
+        switch segueID {
+
+        case seguesFromLandingScreen.breakfastSegue.rawValue?:
             if let mealsVC = segue.destination as? MealsViewController {
 
                 let mvm = MealsViewModel()
@@ -12,7 +24,7 @@ class EntryViewController: UIViewController {
                 mealsVC.mvm?.uniqueFetchId = 1
             }
 
-        } else if segue.identifier == "lunchSegue" {
+        case seguesFromLandingScreen.lunchSegue.rawValue?:
 
             if let mealsVC = segue.destination as? MealsViewController {
 
@@ -20,13 +32,18 @@ class EntryViewController: UIViewController {
                 mealsVC.mvm = mvm
                 mealsVC.mvm?.uniqueFetchId = 2
             }
-        }  else if segue.identifier == "settingsSegue" {
 
+        case seguesFromLandingScreen.settingsSegue.rawValue?:
             if let settingsVC = segue.destination as? SettingsViewController {
 
                 let svm = SettingsViewModel()
                 settingsVC.svm = svm
             }
+        default:
+
+            print("Cannot segue")
         }
     }
 }
+
+

@@ -372,7 +372,7 @@
                         <viewLayoutGuide key="safeArea" id="kta-nH-ghc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Foodie" id="q29-kJ-UpF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="lWy-e9-9ea">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="dropDown" id="lWy-e9-9ea">
                             <connections>
                                 <action selector="toSettingButtonTapped:" destination="IVU-h5-7b5" id="JeU-XA-Yxa"/>
                                 <segue destination="I89-2n-nSI" kind="show" identifier="settingsSegue" id="nHi-zU-Ic2"/>
@@ -411,6 +411,7 @@
         <image name="StarIcon" width="22" height="20"/>
         <image name="breakfast" width="374" height="279"/>
         <image name="capuccino" width="414" height="552"/>
+        <image name="dropDown" width="24" height="24"/>
         <image name="lunch" width="375" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
