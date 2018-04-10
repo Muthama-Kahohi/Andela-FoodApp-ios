@@ -1,6 +1,6 @@
 import UIKit
 
-class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class RatingViewController: UIViewController {
 
     //MARK: IBOutlets
 
@@ -8,13 +8,17 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
+    @IBOutlet weak var commentsTextfieldBottomConstraint: NSLayoutConstraint!
 
     //MARK: Internal Properties
 
     internal var viewModel: RatingViewModel?
-    var ratingsDictionary = [String: Int]()
+
+    //MARK: Private properties
+
     private var comment: String = ""
+    private var ratingsDictionary = [String: Int]()
 
     //MARK: Overriden methods
 
@@ -53,61 +57,6 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
 
-    // MARK: UITableView Delegate/DataSource methods
-
-    internal func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        guard let vm = viewModel else { return 0}
-        guard let foodlist = vm.foodList else { return 0 }
-
-        return foodlist.count
-    }
-
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let emptyCell = UITableViewCell()
-
-        guard let vm = viewModel else { return emptyCell}
-
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellName, for: indexPath) as? RatingTableViewCell
-            else { return UITableViewCell() }
-
-
-
-        guard let foodlist = vm.foodList else { return emptyCell }
-        let food = foodlist[indexPath.row]
-
-        cell.foodNameLabel.text = food.name
-        cell.ratingControl.rating = 0
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! RatingTableViewCell
-        let rowString = String(indexPath.row)
-
-        ratingsDictionary[rowString] = cell.ratingControl.rating
-    }
-
-    // MARK: TextView Tracking Methods
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-
-        guard let comment = textField.text else { return }
-        
-        self.comment = comment
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-        textField.resignFirstResponder()
-
-        return true
-    }
 
     // MARK: Keyboard Handling Methods
 
@@ -132,23 +81,96 @@ class RatingViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let animationDuration = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? TimeInterval
             else { return }
 
+        print(animationDuration)
+
         let changeInHeight = keyboardSize.height * (showing ? 1 : -1)
+
 
         UIView.animate(withDuration: animationDuration,
                        delay: 0.0,
                        options: .curveEaseInOut,
                        animations: {
-                        self.bottomConstraint.constant += changeInHeight
+                        self.view.transform = CGAffineTransform(translationX: 0, y: changeInHeight)
+
         },
                        completion: nil)
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
-        adjustingHeight(showing: true, notification: notification)
+    @objc func keyboardWillShow(notification: NSNotification)  {
+
+        doneButton.isEnabled = false
+        adjustingHeight(showing: false, notification: notification)
     }
 
     @objc func keyboardWillHide(notification: NSNotification) {
-        adjustingHeight(showing: false, notification: notification)    }
+        doneButton.isEnabled = true
+        adjustingHeight(showing: false, notification: notification)
+    }
+}
+
+extension RatingViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        guard let vm = viewModel else { return 0}
+        guard let foodlist = vm.foodList else { return 0 }
+
+        return foodlist.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let emptyCell = UITableViewCell()
+
+        guard let vm = viewModel else { return emptyCell}
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellName, for: indexPath) as? RatingTableViewCell
+            else { return UITableViewCell() }
+
+        guard let foodlist = vm.foodList else { return emptyCell }
+        let food = foodlist[indexPath.row]
+
+        cell.foodNameLabel.text = food.name
+        cell.ratingControl.rating = 0
+
+        return cell
+    }
+}
+
+extension RatingViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let cell = tableView.cellForRow(at: indexPath) as! RatingTableViewCell
+        let rowString = String(indexPath.row)
+        ratingsDictionary[rowString] = cell.ratingControl.rating
+    }
+}
+
+extension RatingViewController: UITextFieldDelegate {
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        guard let comment = textField.text else { return }
+
+        self.comment = comment
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        textField.resignFirstResponder()
+        UIView.animate(withDuration: 0.25) {
+
+            self.view.transform = .identity
+        }
+
+        return true
+    }
 }
 
 extension UITextField {
@@ -166,5 +188,4 @@ extension UITextField {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
-
 }
