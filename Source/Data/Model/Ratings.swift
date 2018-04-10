@@ -11,5 +11,5 @@ public struct Ratings {
     let comment: String
     let date: String
     let mealId: String
-    let values: [String: Int]
+    let values: [Int: Int]
 }

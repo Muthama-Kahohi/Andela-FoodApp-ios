@@ -26,7 +26,7 @@ class RatingViewController: UIViewController {
         super.viewDidLoad()
 
         guard let vm = viewModel else { return }
-        
+
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -45,19 +45,28 @@ class RatingViewController: UIViewController {
 
     @IBAction private func doneButtonPressed(_ sender: Any) {
 
+
+
         guard
             let vm = viewModel,
-            let mealType = vm.mealType
+            let mealType = vm.mealType,
+            let ratings = self.ratingsDictionary
             else { return }
 
         let rating = Ratings(chefId: 1,
                              comment: self.comment,
                              date: vm.getCurrentDate(),
                              mealId: mealType,
-                             values: ratingsDictionary)
+                             values: ratings)
 
         vm.writeRatings(rating)
-        
+
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let evc = storyboard.instantiateViewController(withIdentifier: "entryViewControllerID")
+//
+//        self.pushViewController(evc, animated: true)
+
+
     }
 
 
@@ -128,9 +137,11 @@ extension RatingViewController: UITableViewDataSource {
 
         let emptyCell = UITableViewCell()
 
-        guard let vm = viewModel else { return emptyCell}
+        guard
+            let vm = viewModel else { return emptyCell }
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellName, for: indexPath) as? RatingTableViewCell
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellName, for: indexPath) as? RatingTableViewCell
             else { return UITableViewCell() }
 
         guard let foodlist = vm.foodList else { return emptyCell }
@@ -188,5 +199,11 @@ extension UITextField {
         self.borderStyle = .none
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
+    }
+}
+
+extension RatingViewController: RateMealItemDelegate {
+
+    func sendMealRating(rating: Int) {
     }
 }
