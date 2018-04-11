@@ -19,7 +19,7 @@ class RatingViewController: UIViewController {
     //MARK: Private properties
     
     private var comment: String = ""
-    private var index = 0
+    private var index = 1
     private var ratingsList = [Int]()
     private var ratingsDictionary = [String: Int]()
     

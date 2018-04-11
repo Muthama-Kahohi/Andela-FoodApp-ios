@@ -22,8 +22,6 @@
 		583827D41A7EF1EF80F25CBBA0A05251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
 		5B05D9BF206CD138000DBB08 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
 		5B05D9C0206CD139000DBB08 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAAAAC9F6F7A2DAC370AD82059B45FC /* SignInViewController.swift */; };
-		5BEB2FCF207D153A005E60AB /* RatingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB2FCE207D153A005E60AB /* RatingsStore.swift */; };
-		5BEB2FD0207D153A005E60AB /* RatingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB2FCE207D153A005E60AB /* RatingsStore.swift */; };
 		5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */; };
 		5BFFF62C206BBA19007B1E5B /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Ratings.swift */; };
 		5BFFF62E206BBAF0007B1E5B /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFFF62B206BBA19007B1E5B /* Ratings.swift */; };
@@ -100,7 +98,6 @@
 		457A135E60C3603F82BC9291D0489C12 /* RatingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModelTests.swift; sourceTree = "<group>"; };
 		530A43D0342CA5C7A3FD886F3BD8B866 /* Pods_FoodApp_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodApp_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD2E1D31F8BCF2804E4F40FB3EF5A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BEB2FCE207D153A005E60AB /* RatingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsStore.swift; sourceTree = "<group>"; };
 		5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppClient.swift; sourceTree = "<group>"; };
 		5BFFF62B206BBA19007B1E5B /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		5C5ED2CB1C5E0981501A42CDD6600EDE /* FoodApp-ios dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,14 +229,6 @@
 			path = "Bridging-headers";
 			sourceTree = "<group>";
 		};
-		5BEB2FCD207D150F005E60AB /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				5BEB2FCE207D153A005E60AB /* RatingsStore.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
 		650D70F80A06F1D291B4D6673B14618A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,7 +302,6 @@
 		AFBD573D867DB9AAD4C605FAFB83DEE8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5BEB2FCD207D150F005E60AB /* Store */,
 				6EF817BF143C9567C85E9F7AFF41D1A8 /* Model */,
 				B8D6F661327ED5DA67632D1F9DBC144D /* Utility */,
 				5BFFF629206BB9A3007B1E5B /* FoodAppClient.swift */,
@@ -830,7 +818,6 @@
 				D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */,
 				CD6E3B78207CDC85007020DE /* SettingsViewModel.swift in Sources */,
 				6044573B910B8703233C62B05FA117BF /* MealItem.swift in Sources */,
-				5BEB2FD0207D153A005E60AB /* RatingsStore.swift in Sources */,
 				5B05D9C0206CD139000DBB08 /* SignInViewController.swift in Sources */,
 				EA1F0BD89BC3AED5A9F70A716CE7874A /* MealsViewController.swift in Sources */,
 				CD6E3B2F20752C0D007020DE /* MealsTableViewCell.swift in Sources */,
@@ -874,7 +861,6 @@
 				03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */,
 				CD6E3B77207CDC85007020DE /* SettingsViewModel.swift in Sources */,
 				AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */,
-				5BEB2FCF207D153A005E60AB /* RatingsStore.swift in Sources */,
 				23EAA13D72D0010C9462B2CEF67C03F1 /* MealsTableViewCell.swift in Sources */,
 				5B05D9BF206CD138000DBB08 /* SignInViewController.swift in Sources */,
 				2B14A6AEF1AF6973023BB127EED7E27E /* MealsViewController.swift in Sources */,
