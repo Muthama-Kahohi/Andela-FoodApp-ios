@@ -5,7 +5,11 @@
 "want_to_log_out" = "Are you sure you want to log out?";
 "cancel_title" = "Cancel";
 "yes_title" = "Yes";
+
+// ReportViewController Strings
+
 "report_prompt" = "Briefly describe your problem";
 "report_prompt_explain" = "Kindly leave us feedback regarding our app and it's features";
-"report_scxreen_title" = "Report a Problem";
+"report_screen_title" = "Report a Problem";
+"report_screen_ID" = "reportViewControllerID";
 

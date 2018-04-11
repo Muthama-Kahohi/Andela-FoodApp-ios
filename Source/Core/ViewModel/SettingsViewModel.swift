@@ -9,6 +9,7 @@ public class SettingsViewModel {
     public var problemLabel: String
     public var settingsArray: [String]
     public var yesText: String
+    public var reportScreenID: String
 
     public init() {
 
@@ -18,6 +19,7 @@ public class SettingsViewModel {
         problemLabel = NSLocalizedString("report_problem", comment: "")
         logoutAlertLabel = NSLocalizedString("want_to_log_out", comment: "")
         yesText = NSLocalizedString("yes_title", comment: "")
+        reportScreenID = NSLocalizedString("reportViewControllerID", comment: "")
 
         settingsArray = [logoutLabel, feedbackLabel, problemLabel]
     }

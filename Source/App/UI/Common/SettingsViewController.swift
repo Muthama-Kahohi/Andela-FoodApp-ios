@@ -69,7 +69,18 @@ extension SettingsViewController: UITableViewDelegate {
 
         case 2 :
 
-            print(" Will segue to problem reporting ")
+            guard let vm = svm else { return }
+
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+
+            let rvm = ReportViewModel()
+            rvc.rvm = rvm
+
+            present(rvc,
+                    animated: true,
+                    completion: nil)
+
 
         default:
 
