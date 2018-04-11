@@ -44,6 +44,10 @@
 		CD6E3B3120752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		CD6E3B3220752D3C007020DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD967FBB0444A2F5CCF947FEFC0BD422 /* Assets.xcassets */; };
 		CD6E3B332075322E007020DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */; };
+		CD6E3B74207CDC65007020DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3B73207CDC65007020DE /* SettingsViewController.swift */; };
+		CD6E3B75207CDC65007020DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3B73207CDC65007020DE /* SettingsViewController.swift */; };
+		CD6E3B77207CDC85007020DE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */; };
+		CD6E3B78207CDC85007020DE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */; };
 		CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DB4E94E7B092593CF16CDD69F17A6 /* Meal.swift */; };
@@ -117,6 +121,8 @@
 		B6E367F4B9E73338146ABB62CA5C3B1D /* FoodApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C3EF0AA1DB0A84F0370D9BC8593702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4405AB186B19C26128BC6D3 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; sourceTree = "<group>"; };
+		CD6E3B73207CDC65007020DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp_iosTests.swift; sourceTree = "<group>"; };
 		D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 				06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */,
 				B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */,
 				D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */,
+				CD6E3B73207CDC65007020DE /* SettingsViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 				670B567E2E8D4DD3B76A84B54A62C1FB /* MealsViewModel.swift */,
 				FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */,
 				D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */,
+				CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -808,6 +816,7 @@
 				EAE32C54C2F791F1708D97D17E0B18C1 /* CircleLabel.swift in Sources */,
 				CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */,
 				D578D42F5E783E292ECE6ACC3AE009CB /* Meal.swift in Sources */,
+				CD6E3B78207CDC85007020DE /* SettingsViewModel.swift in Sources */,
 				6044573B910B8703233C62B05FA117BF /* MealItem.swift in Sources */,
 				5B05D9C0206CD139000DBB08 /* SignInViewController.swift in Sources */,
 				EA1F0BD89BC3AED5A9F70A716CE7874A /* MealsViewController.swift in Sources */,
@@ -820,6 +829,7 @@
 				5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */,
 				5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */,
 				5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */,
+				CD6E3B75207CDC65007020DE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +859,7 @@
 				F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */,
 				F2FCB67D9383DF7BF773CC859C3EFC60 /* EntryViewController.swift in Sources */,
 				03FE84E32A206BB4F15E6594F73EC306 /* Meal.swift in Sources */,
+				CD6E3B77207CDC85007020DE /* SettingsViewModel.swift in Sources */,
 				AEA50E3AC8B7058D877912AC9F994CEE /* MealItem.swift in Sources */,
 				23EAA13D72D0010C9462B2CEF67C03F1 /* MealsTableViewCell.swift in Sources */,
 				5B05D9BF206CD138000DBB08 /* SignInViewController.swift in Sources */,
@@ -861,6 +872,7 @@
 				5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */,
 				896C5027BE1B8E685D8F5EBD49A14BE6 /* SignInViewModel.swift in Sources */,
 				5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */,
+				CD6E3B74207CDC65007020DE /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,7 +1057,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9AZW6937TU;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/dev-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";
@@ -1120,7 +1132,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-dev";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9AZW6937TU;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/dev-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andela.FoodApp-ios";

@@ -1,1 +1,10 @@
 "Domain" = "andela.com";
+"log_out" = "Log Out";
+"report_problem" = "Report a problem";
+"feedback" = "Send feedback";
+"want_to_log_out" = "Are you sure you want to log out?";
+"cancel_title" = "Cancel";
+"yes_title" = "Yes";
+
+
+
