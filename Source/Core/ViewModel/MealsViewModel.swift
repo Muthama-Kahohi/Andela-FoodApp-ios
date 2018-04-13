@@ -1,4 +1,4 @@
-
+import UIKit
 import Foundation
 import FirebaseDatabase
 
@@ -9,10 +9,10 @@ class MealsViewModel {
     var uniqueFetchId: Int?
     var foodList = [MealItem]()
     var mealnumbers = [String]()
-    var ref: DatabaseReference?
     var refHandle: UInt = 0
     var reflist = [DatabaseReference]()
-
+    
+    let ref: DatabaseReference = FoodAppClient.databaseRef
 
     public func displayCurrentDate() -> String {
 
@@ -28,13 +28,15 @@ class MealsViewModel {
 
         // Gets the ref of the meal items of a specific day
 
-        ref = Database.database().reference()
-
-        guard let id = uniqueFetchId else { return }
-
+        guard
+            let id = uniqueFetchId else { return }
+        
         let mealsRef = "meals/\(String(id))/meal_items"
+        
+        
         var list = [Int]()
-        ref?.child(mealsRef).observe(.value, with: { snapshot in
+        
+        ref.child(mealsRef).observe(.value, with: { snapshot in
 
             if snapshot.childrenCount > 0 {
 
@@ -55,7 +57,7 @@ class MealsViewModel {
         for id in mealIds {
 
             let fullref = "\(mealItemsRef)\(id)"
-            ref?.child(fullref).observe(.value, with: { snapshot in
+            self.ref.child(fullref).observe(.value, with: { snapshot in
 
                 if let snapDict =  snapshot.value as? [String: Any],
                     let name = snapDict["name"] as? String {
@@ -66,6 +68,18 @@ class MealsViewModel {
                      completion()
                 }
             })
+        }
+    }
+    
+    public func getMealType(completion: @escaping(String) -> Void) {
+        
+        guard let id = uniqueFetchId else { return }
+        let mealTypeRef = "meals/\(String(id))/meal_type"
+        
+        self.ref.child(mealTypeRef).observeSingleEvent(of: .value) { (snapshot) in
+            if let mealType = snapshot.value as? String {
+                completion(mealType)
+            }
         }
     }
 }

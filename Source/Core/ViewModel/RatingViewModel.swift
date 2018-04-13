@@ -11,6 +11,7 @@ public class RatingViewModel {
     }
 
     var foodList: [MealItem]?
+    var mealType: String?
 
     //MARK: Public properties
 

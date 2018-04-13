@@ -1,7 +1,13 @@
-
 import UIKit
 
+protocol RateMealItemDelegate {
+    func sendMealRating(rating: Int)
+}
+
 @IBDesignable class RatingControl: UIStackView {
+    
+    
+    var delegate: RateMealItemDelegate?
 
     //MARK: Properties
     var rating = 0 {
@@ -41,7 +47,7 @@ import UIKit
     }
 
     // MARK: Private Methods
-    @objc func ratingButtonTapped(button: UIButton) {
+    @objc private func ratingButtonTapped(button: UIButton) {
 
         guard let index = ratingButtons.index(of: button) else { return }
 
@@ -54,6 +60,7 @@ import UIKit
         } else {
             // Otherwise set the rating to the selected star
             rating = selectedRating
+            delegate?.sendMealRating(rating: rating)
         }
     }
 
@@ -97,7 +104,7 @@ import UIKit
         updateButtonSelectionStates()
     }
 
-    private func  updateButtonSelectionStates (){
+    private func updateButtonSelectionStates (){
         for (index, button) in ratingButtons.enumerated() {
 
             button.isSelected = index < rating
