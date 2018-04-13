@@ -68,8 +68,13 @@ class RatingViewController: UIViewController {
         vm.writeRatings(rating)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let evc = storyboard.instantiateViewController(withIdentifier: "entryViewControllerID")
-        self.present(evc, animated: true)
+        
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+            navigationController.modalPresentationStyle = .overFullScreen
+            self.present(navigationController,
+                        animated: true)
+        }
+        
     }
     
     
@@ -119,6 +124,18 @@ class RatingViewController: UIViewController {
         doneButton.isEnabled = true
         adjustingHeight(showing: false, notification: notification)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let evc = storyboard.instantiateViewController(withIdentifier: "entryViewControllerID")
+//        
+//        if let nav = segue.destination as? UINavigationController {
+//            self.present(nav, animated: true) {
+//                nav.pushViewController(evc, animated: true)
+//            }
+//        }
+//    }
 }
 
 extension RatingViewController: UITableViewDataSource {
@@ -161,14 +178,22 @@ extension RatingViewController: UITableViewDelegate {
         
         return cell
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let cell = tableView.cellForRow(at: indexPath) as! RatingTableViewCell
-//        let rowString = String(indexPath.row)
-//        ratingsDictionary[rowString] = cell.ratingControl.rating
-//    }
 }
 
+extension RatingViewController {
+    
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
+    
+    private var topViewController: UIViewController {
+        guard
+            let tvc = appDelegate?.window?.rootViewController else { return UIViewController() }
+        return tvc
+    }
+}
 extension RatingViewController: RateMealItemDelegate {
     
     func sendMealRating(rating: Int) {
