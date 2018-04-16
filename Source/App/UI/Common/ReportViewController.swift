@@ -13,7 +13,6 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var screenTitleLabel: UILabel!
     @IBOutlet weak var tickButtonButton: UIButton!
 
-    @IBOutlet weak var helpTextLabel: UILabel!
     @IBOutlet weak var reportTextField: UITextField!
 
     @IBOutlet weak var extraCommentLabel: UILabel!
@@ -22,8 +21,57 @@ class ReportViewController: UIViewController {
         super.viewDidLoad()
 
         guard let vm = rvm else { return }
+
+        // Set up the textfield to be underlined
+
+        reportTextField.underlined()
+        reportTextField.placeholder = vm.reportHelpText
+
+        // Set up the labels
+
+        extraCommentLabel.text = vm.reportExplanationText
+        screenTitleLabel.text = vm.navBarTitle
+
+
     }
+    // MARK: Private Methods
+
+    @IBAction private func xbuttonTapped(_ sender: UIButton) {
+
+        goBackToSettings()
+    }
+
+    @IBAction func tickButtonTapped(_ sender: UIButton) {
+
+        goBackToSettings()
+    }
+
+    private func goBackToSettings () {
+
+        guard let vm = rvm else {
+            return
+        }
+
+        let sb = UIStoryboard(name: vm.mainStoryBoardId, bundle: nil)
+
+        guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else { return }
+        guard let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController else  { return }
+
+        let svm = SettingsViewModel()
+        svc.svm = svm
+
+        navCon.pushViewController(svc,
+                                  animated: true)
+
+        present(navCon, animated: true, completion: nil)
+
+
+    }
+
 }
+
+
+
 
 extension ReportViewController: UINavigationBarDelegate {
 

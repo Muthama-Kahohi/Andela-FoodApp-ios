@@ -22,13 +22,21 @@ class RatingViewController: UIViewController {
     private var index = 1
     private var ratingsList = [Int]()
     private var ratingsDictionary = [String: Int]()
+<<<<<<< HEAD
     
+=======
+    let today = Date()
+
+>>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
     //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         guard let vm = viewModel else { return }
+=======
+>>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,8 +45,13 @@ class RatingViewController: UIViewController {
         commentTextField.underlined()
         
         dateLabel.textColor = .gray
+<<<<<<< HEAD
         dateLabel.text = vm.getCurrentDate()
         
+=======
+        dateLabel.text = today.dateToString(date: today)
+
+>>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         tableView.tableFooterView = UIView()
         
         registerForKeyboardNotifications()
@@ -61,10 +74,17 @@ class RatingViewController: UIViewController {
         
         let rating = Ratings(chefId: 1,
                              comment: self.comment,
+<<<<<<< HEAD
                              date: vm.getCurrentDate(),
                              mealId: mealType,
                              values: self.ratingsDictionary)
         
+=======
+                             date: today.dateToString(date: today),
+                             mealId: "Lunch",
+                             values: ratingsDictionary)
+
+>>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         vm.writeRatings(rating)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -222,6 +242,7 @@ extension RatingViewController: UITextFieldDelegate {
     }
 }
 
+<<<<<<< HEAD
 extension UITextField {
     
     public func underlined() {
@@ -239,3 +260,5 @@ extension UITextField {
     }
 }
 
+=======
+>>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel

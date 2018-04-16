@@ -17,17 +17,7 @@ public class RatingViewModel {
 
     let cellName = "foodCell"
 
-    //MARK: Public Methods
-
-    public func getCurrentDate() -> String {
-
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-
-        return formatter.string(from: now)
-    }
+    //MARK: Public MethodS
     
     public func writeRatings(_ ratings: Ratings) {
         

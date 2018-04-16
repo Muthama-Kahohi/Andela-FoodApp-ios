@@ -1,9 +1,12 @@
 "Domain" = "andela.com";
+
+//MARK: Settings screen Strings
+"cancel_title" = "Cancel";
+"feedback" = "Send feedback";
 "log_out" = "Log Out";
 "report_problem" = "Report a problem";
-"feedback" = "Send feedback";
+"settings_screen_id" = "settingsViewControllerID";
 "want_to_log_out" = "Are you sure you want to log out?";
-"cancel_title" = "Cancel";
 "yes_title" = "Yes";
 
 // ReportViewController Strings
@@ -12,4 +15,25 @@
 "report_prompt_explain" = "Kindly leave us feedback regarding our app and it's features";
 "report_screen_title" = "Report a Problem";
 "report_screen_ID" = "reportViewControllerID";
+
+//FeedbackViewController Strings
+
+"feedback_prompt" = "What would you like us to improve?";
+"feedback_prompt_explain" = "Kindly leave us feedback about our app and it's features.";
+"feedback_screen_title" = "Send Feedback";
+"feedback_screen_id" = "FeedbackViewControllerID";
+
+//Storyboard Strings
+
+"main_storyboard_id" = "Main";
+
+// NavigationController1 Strings
+
+"navigation_controller_1_id" = "navigationControllerID";
+
+
+
+
+
+
 
