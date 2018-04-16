@@ -1,6 +1,7 @@
 import FirebaseDatabase
 import Firebase
 
+
 class MealsViewController: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -22,7 +23,9 @@ class MealsViewController: UIViewController {
 
         guard let vm = mvm else { return }
 
-        dateLabel.text = vm.displayCurrentDate()
+        let today = Date()
+
+        dateLabel.text = today.dateToString(date: today)
 
         loader.color = .black
         loader.startAnimating()

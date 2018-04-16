@@ -11,18 +11,8 @@ class MealsViewModel {
     var mealnumbers = [String]()
     var refHandle: UInt = 0
     var reflist = [DatabaseReference]()
-    
-    let ref: DatabaseReference = FoodAppClient.databaseRef
 
-    public func displayCurrentDate() -> String {
-
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-
-        return formatter.string(from: now)
-    }
+     let ref: DatabaseReference = FoodAppClient.databaseRef
 
     public func loadSampleMeal(completion: @escaping ([Int]) -> Void){
 

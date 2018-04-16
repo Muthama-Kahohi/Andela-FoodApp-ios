@@ -6,6 +6,12 @@ public class SettingsViewController: UIViewController {
     internal var svm: SettingsViewModel?
     @IBOutlet weak var settingsTableView: UITableView!
 
+
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
 }
 
 extension SettingsViewController: UITableViewDataSource {
@@ -65,11 +71,32 @@ extension SettingsViewController: UITableViewDelegate {
                     completion: nil)
         case 1 :
 
-            print(" Will segue to feedback ")
+            guard let vm = svm else { return }
+
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
+
+            let fvm = FeedbackViewModel()
+            fvc.fvm = fvm
+
+            present(fvc,
+                    animated: true,
+                    completion: nil)
+
 
         case 2 :
 
-            print(" Will segue to problem reporting ")
+            guard let vm = svm else { return }
+
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+
+            let rvm = ReportViewModel()
+            rvc.rvm = rvm
+
+            present(rvc,
+                    animated: true,
+                    completion: nil)
 
         default:
 
