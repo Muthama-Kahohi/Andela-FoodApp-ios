@@ -56,7 +56,23 @@ class FeedbackViewController: UIViewController {
 
     @IBAction private func tickButtonTapped(_ sender: UIButton) {
 
-        goBackToSettings()
+        guard let vm = fvm else { return }
+
+        let alert = UIAlertController(title: vm.thankYouTitle,
+                                      message: vm.thankYouMessage,
+                                      preferredStyle: .alert)
+
+        let alertAction = UIAlertAction(title: vm.dismissTitle,
+                                        style: .default,
+                                        handler: { _ in
+
+                                            self.goBackToSettings()
+        })
+
+        alert.addAction(alertAction)
+        present(alert,
+                animated: true,
+                completion: nil)
     }
 
 }

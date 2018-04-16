@@ -43,7 +43,23 @@ class ReportViewController: UIViewController {
 
     @IBAction func tickButtonTapped(_ sender: UIButton) {
 
-        goBackToSettings()
+        guard let vm = rvm else { return }
+
+        let alert = UIAlertController(title: vm.thankYouTitle,
+                                      message: vm.thankYouMessage,
+                                      preferredStyle: .alert)
+
+        let alertAction = UIAlertAction(title: vm.dismissTitle,
+                                        style: .default,
+                                        handler: { _ in
+
+                                            self.goBackToSettings()
+        })
+
+        alert.addAction(alertAction)
+        present(alert,
+                animated: true,
+                completion: nil)
     }
 
     private func goBackToSettings () {
@@ -67,13 +83,5 @@ class ReportViewController: UIViewController {
 
 
     }
-
 }
 
-
-
-
-extension ReportViewController: UINavigationBarDelegate {
-
-
-}

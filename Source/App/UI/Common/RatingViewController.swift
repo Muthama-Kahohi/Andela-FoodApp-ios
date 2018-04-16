@@ -22,21 +22,12 @@ class RatingViewController: UIViewController {
     private var index = 1
     private var ratingsList = [Int]()
     private var ratingsDictionary = [String: Int]()
-<<<<<<< HEAD
-    
-=======
-    let today = Date()
 
->>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
+    let today = Date()
     //MARK: Overriden methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        
-        guard let vm = viewModel else { return }
-=======
->>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,13 +36,8 @@ class RatingViewController: UIViewController {
         commentTextField.underlined()
         
         dateLabel.textColor = .gray
-<<<<<<< HEAD
-        dateLabel.text = vm.getCurrentDate()
-        
-=======
         dateLabel.text = today.dateToString(date: today)
 
->>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         tableView.tableFooterView = UIView()
         
         registerForKeyboardNotifications()
@@ -74,22 +60,15 @@ class RatingViewController: UIViewController {
         
         let rating = Ratings(chefId: 1,
                              comment: self.comment,
-<<<<<<< HEAD
-                             date: vm.getCurrentDate(),
-                             mealId: mealType,
-                             values: self.ratingsDictionary)
-        
-=======
                              date: today.dateToString(date: today),
                              mealId: "Lunch",
                              values: ratingsDictionary)
 
->>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel
         vm.writeRatings(rating)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController {
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationControllerID") as? UINavigationController {
             navigationController.modalPresentationStyle = .overFullScreen
             self.present(navigationController,
                         animated: true)
@@ -144,18 +123,6 @@ class RatingViewController: UIViewController {
         doneButton.isEnabled = true
         adjustingHeight(showing: false, notification: notification)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let evc = storyboard.instantiateViewController(withIdentifier: "entryViewControllerID")
-//        
-//        if let nav = segue.destination as? UINavigationController {
-//            self.present(nav, animated: true) {
-//                nav.pushViewController(evc, animated: true)
-//            }
-//        }
-//    }
 }
 
 extension RatingViewController: UITableViewDataSource {
@@ -241,24 +208,3 @@ extension RatingViewController: UITextFieldDelegate {
         return true
     }
 }
-
-<<<<<<< HEAD
-extension UITextField {
-    
-    public func underlined() {
-        
-        let border = CALayer()
-        let width = CGFloat(0.5)
-        
-        border.borderColor = UIColor.lightGray.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
-        border.borderWidth = width
-        
-        self.borderStyle = .none
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-}
-
-=======
->>>>>>> 1. Adds Feedback Screen, FeedbackViewController, FeedbackViewModel

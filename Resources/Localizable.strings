@@ -1,5 +1,11 @@
 "Domain" = "andela.com";
 
+//Common Strings
+
+"alert_action_cancel_title" = "Cancel";
+"alert_action_dismiss_title"  = "Dismiss";
+"alert_action_yes_title" = "Yes";
+
 //MARK: Settings screen Strings
 "cancel_title" = "Cancel";
 "feedback" = "Send feedback";
@@ -11,6 +17,8 @@
 
 // ReportViewController Strings
 
+"report_alert_message" = "Thank You for your report";
+"report_alert_title" = "Report Sent Successfully";
 "report_prompt" = "Briefly describe your problem";
 "report_prompt_explain" = "Kindly leave us feedback regarding our app and it's features";
 "report_screen_title" = "Report a Problem";
@@ -18,6 +26,8 @@
 
 //FeedbackViewController Strings
 
+"feedback_alert_message" = "Thank You for your feedback";
+"feedback_alert_title" = "Feedback Sent Successfully";
 "feedback_prompt" = "What would you like us to improve?";
 "feedback_prompt_explain" = "Kindly leave us feedback about our app and it's features.";
 "feedback_screen_title" = "Send Feedback";
