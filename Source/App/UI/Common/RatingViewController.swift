@@ -61,7 +61,7 @@ class RatingViewController: UIViewController {
         let rating = Ratings(chefId: 1,
                              comment: self.comment,
                              date: today.dateToString(date: today),
-                             mealId: "Lunch",
+                             mealId: mealType,
                              values: ratingsDictionary)
 
         vm.writeRatings(rating)
