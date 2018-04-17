@@ -7,9 +7,10 @@
 //
 
 public struct Ratings {
-    let chefId: Int
-    let comment: String
+    
     let date: String
-    let mealId: String
-    let values: [String: Int]
+    let email: String
+    let mealID: String
+    let rating: Int
+    let userID: String
 }
