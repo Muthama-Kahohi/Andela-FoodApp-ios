@@ -21,7 +21,7 @@ public class EntryViewController: UIViewController {
 
                 let mvm = MealsViewModel()
                 mealsVC.mvm = mvm
-                mealsVC.mvm?.uniqueFetchId = 1
+                mealsVC.mvm?.uniqueFetchID = "breakfast"
             }
 
         case seguesFromLandingScreen.lunchSegue.rawValue?:
@@ -30,7 +30,7 @@ public class EntryViewController: UIViewController {
 
                 let mvm = MealsViewModel()
                 mealsVC.mvm = mvm
-                mealsVC.mvm?.uniqueFetchId = 2
+                mealsVC.mvm?.uniqueFetchID = "lunch"
             }
 
         case seguesFromLandingScreen.settingsSegue.rawValue?:
