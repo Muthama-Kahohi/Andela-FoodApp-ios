@@ -11,6 +11,7 @@ class MealsViewController: UIViewController {
 
     internal var mvm: MealsViewModel?
     var mealType: String?
+    var mealID: String?
     var ref: DatabaseReference?
     var handle: DatabaseHandle?
 
@@ -38,9 +39,10 @@ class MealsViewController: UIViewController {
             self.loader.stopAnimating()
             self.mealsTable.reloadData()
             self.rateButton.isEnabled = true
+            self.mealID = vm.mealID
+            self.mealType = vm.mealType
         }
         
-        self.mealType = vm.mealType
         self.mealsTable.tableFooterView = UIView()
         self.mealsTable.separatorStyle = .none
     }
@@ -53,6 +55,7 @@ class MealsViewController: UIViewController {
                 nextVC.viewModel = rvm
                 nextVC.viewModel?.foodList = mvm?.foodList
                 nextVC.viewModel?.mealType = self.mealType
+                nextVC.viewModel?.mealID = self.mealID
             }
         }
     }
