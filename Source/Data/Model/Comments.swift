@@ -6,7 +6,7 @@
 //  Copyright © 2018 Paul Kahohi. All rights reserved.
 //
 
-struct Comments {
+public struct Comments {
     
     let comment: String
     let date: String
