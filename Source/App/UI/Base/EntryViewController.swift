@@ -8,6 +8,10 @@ public enum seguesFromLandingScreen: String {
 }
 
 public class EntryViewController: UIViewController {
+    
+    // MARK: Private Instance Methods
+    
+    private let viewModel = MealsViewModel()
 
     //MARK: Overriden Methods
 
@@ -19,25 +23,25 @@ public class EntryViewController: UIViewController {
         case seguesFromLandingScreen.breakfastSegue.rawValue?:
             if let mealsVC = segue.destination as? MealsViewController {
 
-                let mvm = MealsViewModel()
-                mealsVC.mvm = mvm
-                mealsVC.mvm?.uniqueFetchID = "breakfast"
+                
+                mealsVC.viewModel = viewModel
+                mealsVC.viewModel?.uniqueFetchID = "breakfast"
             }
 
         case seguesFromLandingScreen.lunchSegue.rawValue?:
 
             if let mealsVC = segue.destination as? MealsViewController {
 
-                let mvm = MealsViewModel()
-                mealsVC.mvm = mvm
-                mealsVC.mvm?.uniqueFetchID = "lunch"
+                let viewModel = MealsViewModel()
+                mealsVC.viewModel = viewModel
+                mealsVC.viewModel?.uniqueFetchID = "lunch"
             }
 
         case seguesFromLandingScreen.settingsSegue.rawValue?:
             if let settingsVC = segue.destination as? SettingsViewController {
 
-                let svm = SettingsViewModel()
-                settingsVC.svm = svm
+                let viewModel = SettingsViewModel()
+                settingsVC.viewModel = viewModel
             }
         default:
 
