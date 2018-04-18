@@ -18,12 +18,12 @@ class RatingViewController: UIViewController {
     
     //MARK: Private properties
     
+    private let today = Date()
     private var comment: String = ""
-    private var index = 1
-    private var ratingsList = [Int]()
-    private var ratingsDictionary = [String: Int]()
-
-    let today = Date()
+    private var mealID: String?
+    private var mealItemIDList: [String]?
+    private var ratingsList: [Int] = []
+    
     //MARK: Overriden methods
     
     override func viewDidLoad() {
@@ -49,33 +49,43 @@ class RatingViewController: UIViewController {
         
         guard
             let vm = viewModel,
-            let mealType = vm.mealType
+            let email = FoodAppClient.email,
+            let mealID = vm.mealID,
+            let mealItemIDList = vm.mealItemIDList,
+            let userID = FoodAppClient.currentUserID
             else { return }
         
-        for rating in ratingsList {
-            let rowString = String(index)
-            ratingsDictionary[rowString] = rating
-            index += 1
+        let date = today.dateToIsoFormat(date: today)
+        
+        DispatchQueue.main.async {
+            for index in 0..<self.ratingsList.count {
+                let rating = Ratings(date: date,
+                                     email: email,
+                                     mealItemID: mealItemIDList[index],
+                                     rating: self.ratingsList[index],
+                                     userID: userID)
+                
+                vm.writeRatings(rating)
+            }
         }
         
-        let rating = Ratings(chefId: 1,
-                             comment: self.comment,
-                             date: today.dateToString(date: today),
-                             mealId: mealType,
-                             values: ratingsDictionary)
-
-        vm.writeRatings(rating)
+        DispatchQueue.main.async {
+            let comment = Comments(comment: self.comment,
+                                   date: date,
+                                   email: email,
+                                   mealID: mealID,
+                                   userID: userID)
+            vm.writeComments(comment)
+        }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationControllerID") as? UINavigationController {
             navigationController.modalPresentationStyle = .overFullScreen
             self.present(navigationController,
-                        animated: true)
+                         animated: true)
         }
-        
     }
-    
     
     // MARK: Keyboard Handling Methods
     
@@ -134,7 +144,7 @@ extension RatingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        guard let vm = viewModel else { return 0}
+        guard let vm = viewModel else { return 0 }
         guard let foodlist = vm.foodList else { return 0 }
         
         return foodlist.count
@@ -160,6 +170,7 @@ extension RatingViewController: UITableViewDelegate {
         guard let foodlist = vm.foodList else { return emptyCell }
         let food = foodlist[indexPath.row]
         
+        cell.accessibilityIdentifier = food.id
         cell.foodNameLabel.text = food.name
         cell.ratingControl.rating = 0
         

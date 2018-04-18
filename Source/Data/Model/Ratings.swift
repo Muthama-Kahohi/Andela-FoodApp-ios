@@ -10,7 +10,7 @@ public struct Ratings {
     
     let date: String
     let email: String
-    let mealID: String
+    let mealItemID: String
     let rating: Int
     let userID: String
 }

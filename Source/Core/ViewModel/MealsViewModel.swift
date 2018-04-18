@@ -31,14 +31,14 @@ public class MealsViewModel {
                 let mealItems = mealTypeDict["meal_items"] as? [String: String] {
                     self.mealID = mealID
                 
-                let items = mealItems.compactMap({ (arg: (key: String, value: String)) -> MealItems? in
-                    let mealItem = MealItems(id: arg.key, name: arg.value)
-                    return mealItem
-                })
+                    let items = mealItems.compactMap({ (arg: (key: String, value: String)) -> MealItems? in
+                        let mealItem = MealItems(id: arg.key, name: arg.value)
+                        return mealItem
+                    })
                 
-                self.foodList = items
-                self.mealType = mealType
-                completion()
+                    self.foodList = items
+                    self.mealType = mealType
+                    completion()
             }
         }
     }
