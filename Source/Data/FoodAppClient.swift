@@ -3,7 +3,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 public class FoodAppClient {
-
+    
     //Private Instance Methods
     
     private var appDelegate: AppDelegate? {
@@ -33,16 +33,29 @@ public class FoodAppClient {
         })
     }
     
-    public func submitRatings(_ ratings: Ratings) {
-
-        getChildrenCount(completion: { (childrenCount) in
-
+    public func submitComment(_ comment: Comments) {
+        
+        getChildrenCount { (childrenCount) in
             let count = childrenCount + 1
-            FoodAppClient.databaseRef.child("ratings/\(count)").setValue(["chef_id": 1,
-                                                                          "comment": ratings.comment,
-                                                                          "date": ratings.date,
-                                                                          "meal_id": ratings.mealId,
-                                                                          "values": ratings.values])
-        })
+            FoodAppClient.databaseRef.child("comments/\(count)").setValue(["\(comment.date)": [
+                "\(comment.mealID)" : [
+                    "\(comment.userID)" : [
+                        "comment": "\(comment.comment)",
+                        "email": "\(comment.email)"
+                    ]]]])
+        }
+    }
+    
+    public func submitRatings(_ ratings: Ratings) {
+        
+        getChildrenCount { (childrenCount) in
+            let count = childrenCount + 1
+            FoodAppClient.databaseRef.child("ratings/\(count)").setValue(["\(ratings.date)": [
+                "\(ratings.mealID)": [
+                    "\(ratings.userID)": [
+                        "email": "\(ratings.email)",
+                        "rating": ratings.rating]
+                ]]])
+        }
     }
 }
