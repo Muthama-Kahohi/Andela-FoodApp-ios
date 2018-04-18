@@ -21,7 +21,8 @@ class MealsViewController: UIViewController {
 
         mealsTable.dataSource = self
 
-        guard let vm = mvm else { return }
+        guard
+            let vm = mvm else { return }
 
         let today = Date()
 
@@ -31,20 +32,15 @@ class MealsViewController: UIViewController {
         loader.startAnimating()
 
         self.rateButton.isEnabled = false
-
-        vm.loadSampleMeal(){ mealsList in
-            vm.populateFoodList(mealIds: mealsList) {
-                self.loader.color = .clear
-                self.loader.stopAnimating()
-                self.mealsTable.reloadData()
-                self.rateButton.isEnabled = true
-            }
-            
-            vm.getMealType(completion: { (mealType) in
-                self.mealType = mealType
-            })
+        
+        vm.populateFoodList {
+            self.loader.color = .clear
+            self.loader.stopAnimating()
+            self.mealsTable.reloadData()
+            self.rateButton.isEnabled = true
         }
-
+        
+        self.mealType = vm.mealType
         self.mealsTable.tableFooterView = UIView()
         self.mealsTable.separatorStyle = .none
     }
