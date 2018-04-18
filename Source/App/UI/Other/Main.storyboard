@@ -621,21 +621,21 @@
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xd-QX-bNr">
                                 <rect key="frame" x="0.0" y="268" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.62236278553299496" green="0.62236278553299496" blue="0.62236278553299496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5673381979695431" green="0.5673381979695431" blue="0.5673381979695431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Sfk-He-2pz"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-0w-sPI">
                                 <rect key="frame" x="0.0" y="320" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.58151570431472077" green="0.58151570431472077" blue="0.58151570431472077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5673381979695431" green="0.5673381979695431" blue="0.5673381979695431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="10Y-Bz-ZNn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sx6-2d-eQH">
                                 <rect key="frame" x="0.0" y="375.33333333333331" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.58151570431472077" green="0.58151570431472077" blue="0.58151570431472077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5673381979695431" green="0.5673381979695431" blue="0.5673381979695431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Cy3-rx-ZVX"/>
                                 </constraints>
@@ -743,6 +743,7 @@
                             <constraint firstItem="jJN-Ia-rLv" firstAttribute="trailing" secondItem="6cS-eK-vV9" secondAttribute="trailing" id="XUg-fW-Zqx"/>
                             <constraint firstItem="Sx6-2d-eQH" firstAttribute="leading" secondItem="QbO-kB-auJ" secondAttribute="leading" id="YpS-Yp-6AC"/>
                             <constraint firstItem="2fa-Uf-aop" firstAttribute="top" secondItem="2bf-0w-sPI" secondAttribute="bottom" constant="16" id="Z67-PW-JNd"/>
+                            <constraint firstItem="6cS-eK-vV9" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7tV-AF-687" secondAttribute="trailing" constant="95" id="bJa-Sm-117"/>
                             <constraint firstItem="0Xd-QX-bNr" firstAttribute="leading" secondItem="dkt-Ie-TPw" secondAttribute="trailing" constant="-301" id="c8r-8r-3dO"/>
                             <constraint firstItem="2bf-0w-sPI" firstAttribute="top" secondItem="dkt-Ie-TPw" secondAttribute="bottom" constant="13" id="cSr-MC-pn4"/>
                             <constraint firstItem="J0I-8s-uYh" firstAttribute="top" secondItem="jJN-Ia-rLv" secondAttribute="bottom" id="jda-w8-Ldt"/>
