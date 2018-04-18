@@ -1,9 +1,9 @@
 import UIKit
 
 class FeedbackViewController: UIViewController {
-    
-    //MARK: Internal Varoiables
-    
+
+    //MARK: Internal Variables
+
     internal var viewModel: FeedbackViewModel?
     
     @IBOutlet weak var doneButton: UIButton!

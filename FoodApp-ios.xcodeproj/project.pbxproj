@@ -65,6 +65,10 @@
 		CDCE4D4620847E6900A39EAA /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4420847E6900A39EAA /* FeedbackViewController.swift */; };
 		CDCE4D4820847E9500A39EAA /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4720847E9500A39EAA /* FeedbackViewModel.swift */; };
 		CDCE4D4920847E9500A39EAA /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4720847E9500A39EAA /* FeedbackViewModel.swift */; };
+		CDCE4D4B2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4A2084DB5B00A39EAA /* MealOptionsViewController.swift */; };
+		CDCE4D4C2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4A2084DB5B00A39EAA /* MealOptionsViewController.swift */; };
+		CDCE4D4E2084DB7800A39EAA /* MealOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4D2084DB7800A39EAA /* MealOptionsViewModel.swift */; };
+		CDCE4D4F2084DB7800A39EAA /* MealOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE4D4D2084DB7800A39EAA /* MealOptionsViewModel.swift */; };
 		CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
 		D71738F9DF6B6C1A2229D174972A2D64 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFF87534E5831D1670B160C3808A11 /* RatingControl.swift */; };
@@ -147,6 +151,8 @@
 		CD78FCD7207F601900A746A1 /* date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "date+extensions.swift"; sourceTree = "<group>"; };
 		CDCE4D4420847E6900A39EAA /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		CDCE4D4720847E9500A39EAA /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		CDCE4D4A2084DB5B00A39EAA /* MealOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOptionsViewController.swift; sourceTree = "<group>"; };
+		CDCE4D4D2084DB7800A39EAA /* MealOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOptionsViewModel.swift; sourceTree = "<group>"; };
 		D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp_iosTests.swift; sourceTree = "<group>"; };
 		D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +294,7 @@
 				CD6E3B73207CDC65007020DE /* SettingsViewController.swift */,
 				CD6E3B79207DF3ED007020DE /* ReportViewController.swift */,
 				CDCE4D4420847E6900A39EAA /* FeedbackViewController.swift */,
+				CDCE4D4A2084DB5B00A39EAA /* MealOptionsViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -316,6 +323,7 @@
 				CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */,
 				CD6E3B7C207DF432007020DE /* ReportViewModel.swift */,
 				CDCE4D4720847E9500A39EAA /* FeedbackViewModel.swift */,
+				CDCE4D4D2084DB7800A39EAA /* MealOptionsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -853,6 +861,7 @@
 			files = (
 				CD78FCD9207F601900A746A1 /* date+extensions.swift in Sources */,
 				5BFFF62E206BBAF0007B1E5B /* Ratings.swift in Sources */,
+				CDCE4D4F2084DB7800A39EAA /* MealOptionsViewModel.swift in Sources */,
 				E58642E30DAA6451C577AA0390BFB7CE /* CircleButton.swift in Sources */,
 				EAE32C54C2F791F1708D97D17E0B18C1 /* CircleLabel.swift in Sources */,
 				CD78FCD6207F5F5600A746A1 /* textfields+extensions.swift in Sources */,
@@ -875,6 +884,7 @@
 				5BC2D7112085EFD20096384B /* Meals.swift in Sources */,
 				5BC2D7102085EFCB0096384B /* MealItems.swift in Sources */,
 				5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */,
+				CDCE4D4C2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */,
 				5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */,
 				5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */,
 				CD6E3B75207CDC65007020DE /* SettingsViewController.swift in Sources */,
@@ -904,6 +914,7 @@
 			files = (
 				CD78FCD8207F601900A746A1 /* date+extensions.swift in Sources */,
 				808849889C88ACBB8CA7C8DABA87A990 /* CircleButton.swift in Sources */,
+				CDCE4D4E2084DB7800A39EAA /* MealOptionsViewModel.swift in Sources */,
 				5BFFF62C206BBA19007B1E5B /* Ratings.swift in Sources */,
 				F7A818E8299A28D15A4BC1684092FB86 /* CircleLabel.swift in Sources */,
 				CD78FCD5207F5F5600A746A1 /* textfields+extensions.swift in Sources */,
@@ -926,6 +937,7 @@
 				5BC2D70F2085EE3E0096384B /* Meals.swift in Sources */,
 				CDCE4D4520847E6900A39EAA /* FeedbackViewController.swift in Sources */,
 				5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */,
+				CDCE4D4B2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */,
 				896C5027BE1B8E685D8F5EBD49A14BE6 /* SignInViewModel.swift in Sources */,
 				5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */,
 				CD6E3B74207CDC65007020DE /* SettingsViewController.swift in Sources */,
