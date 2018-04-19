@@ -1,5 +1,14 @@
 import Foundation
 
+public enum settingsCells: String {
+
+    case logoutLabel = "Log Out"
+    case feedbackLabel = "Send feedback"
+    case mealPlanLabel = "Change Meal Plan"
+    case privacyText = "Privacy Policy"
+    case problemLabel = "Report a problem"
+}
+
 public class SettingsViewModel {
 
     public var cancelText: String
@@ -10,9 +19,11 @@ public class SettingsViewModel {
     public var mealPlanLabel: String
     public var privacyText: String
     public var problemLabel: String
-    public var settingsArray: [String]
-    public var yesText: String
     public var reportScreenID: String
+    public var settingsArray: [String]
+    public var settingsCellsArray = [SettingsCells]()
+    public var yesText: String
+
 
     public init() {
 
@@ -29,5 +40,19 @@ public class SettingsViewModel {
 
         settingsArray = [mealPlanLabel, feedbackLabel, problemLabel, privacyText, logoutLabel]
     }
+
+    public func setupSettingsCellsArray () {
+        for item in settingsArray {
+
+            let cellObject = SettingsCells(actionName: item)
+            settingsCellsArray.append(cellObject)
+        }
+    }
+
+    public func numOfRowsinSettingsTable() -> Int {
+
+        return settingsCellsArray.count
+    }
+
 
 }
