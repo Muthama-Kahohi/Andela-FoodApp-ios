@@ -5,7 +5,7 @@ import Firebase
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
     var signinButton = UIButton()
-    internal var viewModel: SignInViewModel = SignInViewModel()
+    private var viewModel: SignInViewModel = SignInViewModel()
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -125,8 +125,11 @@ extension SignInViewController: GIDSignInDelegate {
             
             Auth.auth().signIn(with: credential) { (user, error) in
                 if error == nil {
-                    self.appDelegate?.currentUser = user!
-                    self.appDelegate?.currentUserId = (user?.uid)!
+                    if let currentUser = user {
+                        self.appDelegate?.currentUser = currentUser
+                        self.appDelegate?.currentUserID = currentUser.uid
+                        self.appDelegate?.email = currentUser.email
+                    }
                 }
             }
             

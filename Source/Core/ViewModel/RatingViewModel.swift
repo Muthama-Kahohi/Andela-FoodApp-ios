@@ -10,17 +10,24 @@ public class RatingViewModel {
         return delegate
     }
 
-    var foodList: [MealItem]?
+    var foodList: [MealItems]?
+    var mealID: String?
+    var mealItemIDList: [String]?
     var mealType: String?
 
     //MARK: Public properties
 
-    let cellName = "foodCell"
+    public let cellName = "foodCell"
 
-    //MARK: Public MethodS
+    //MARK: Public Methods
     
     public func writeRatings(_ ratings: Ratings) {
         
         self.appDelegate?.foodAppClient.submitRatings(ratings)
+    }
+    
+    public func writeComments(_ comment: Comments) {
+        
+        self.appDelegate?.foodAppClient.submitComment(comment)
     }
 }

@@ -9,10 +9,11 @@ class MealsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var rateButton: CircleButton!
 
-    internal var mvm: MealsViewModel?
-    var mealType: String?
-    var ref: DatabaseReference?
-    var handle: DatabaseHandle?
+    internal var viewModel: MealsViewModel?
+    
+    private var mealID: String?
+    private var mealItemIDList: [String]?
+    private var mealType: String?
 
     //MARK: Overriden Methods
 
@@ -21,7 +22,8 @@ class MealsViewController: UIViewController {
 
         mealsTable.dataSource = self
 
-        guard let vm = mvm else { return }
+        guard
+            let vm = viewModel else { return }
 
         let today = Date()
 
@@ -31,20 +33,21 @@ class MealsViewController: UIViewController {
         loader.startAnimating()
 
         self.rateButton.isEnabled = false
-
-        vm.loadSampleMeal(){ mealsList in
-            vm.populateFoodList(mealIds: mealsList) {
-                self.loader.color = .clear
-                self.loader.stopAnimating()
-                self.mealsTable.reloadData()
-                self.rateButton.isEnabled = true
-            }
+        
+        vm.populateFoodList {
             
-            vm.getMealType(completion: { (mealType) in
-                self.mealType = mealType
+            self.loader.color = .clear
+            self.loader.stopAnimating()
+            self.mealsTable.reloadData()
+            self.rateButton.isEnabled = true
+            self.mealID = vm.mealID
+            self.mealItemIDList = vm.foodList.compactMap({ (mealitem) -> String in
+                let idList = mealitem.id
+                return idList
             })
+            self.mealType = vm.mealType
         }
-
+        
         self.mealsTable.tableFooterView = UIView()
         self.mealsTable.separatorStyle = .none
     }
@@ -55,7 +58,9 @@ class MealsViewController: UIViewController {
             if let nextVC = segue.destination as? RatingViewController {
                 let rvm: RatingViewModel = RatingViewModel()
                 nextVC.viewModel = rvm
-                nextVC.viewModel?.foodList = mvm?.foodList
+                nextVC.viewModel?.foodList = viewModel?.foodList
+                nextVC.viewModel?.mealID = self.mealID
+                nextVC.viewModel?.mealItemIDList = self.mealItemIDList
                 nextVC.viewModel?.mealType = self.mealType
             }
         }
@@ -66,7 +71,7 @@ extension MealsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        guard let vm = mvm else { return 0}
+        guard let vm = viewModel else { return 0 }
 
         return vm.foodList.count
     }
@@ -75,19 +80,18 @@ extension MealsViewController: UITableViewDataSource {
 
         let emptyCell = UITableViewCell()
 
-        guard let vm = mvm else { return emptyCell}
+        guard let vm = viewModel else { return emptyCell }
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier, for: indexPath) as? MealsTableViewCell
             else { return UITableViewCell() }
-
+        
         let food = vm.foodList[indexPath.row]
-        let foodName = food.name
-        let index = food.name.index(foodName.startIndex, offsetBy: 0)
-        let foodLetter = String(describing: foodName[index])
-
-        cell.letterLabel.text = foodLetter
-        cell.mealName.text = foodName
-
+        let name = food.name
+        let index = name.index(name.startIndex, offsetBy: 0)
+        
+        cell.letterLabel.text = String(describing: name[index])
+        cell.mealName.text = name
+        
         return cell
     }
 }

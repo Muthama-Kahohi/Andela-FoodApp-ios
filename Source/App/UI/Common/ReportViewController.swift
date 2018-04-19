@@ -73,13 +73,14 @@ class ReportViewController: UIViewController {
         guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else { return }
         guard let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController else  { return }
 
-        let svm = SettingsViewModel()
-        svc.svm = svm
+        let viewModel = SettingsViewModel()
+        svc.viewModel = viewModel
 
         navCon.pushViewController(svc,
                                   animated: true)
 
-        present(navCon, animated: true, completion: nil)
+        present(navCon,
+                animated: true)
 
 
     }

@@ -7,8 +7,9 @@ import FirebaseDatabase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var currentUserId: String = ""
-    var currentUser: User? = nil
+    var currentUserID: String?
+    var currentUser: User?
+    var email: String?
     let foodAppClient = FoodAppClient()
 
     func application(_ application: UIApplication,

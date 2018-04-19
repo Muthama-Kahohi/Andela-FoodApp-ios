@@ -4,7 +4,7 @@ class FeedbackViewController: UIViewController {
 
     //MARK: Internal Varoiables
 
-    internal var fvm: FeedbackViewModel?
+    internal var viewModel: FeedbackViewModel?
 
     @IBOutlet weak var feedbackTextField: UITextField!
     @IBOutlet weak var feedbackExplanationLabel: UILabel!
@@ -13,7 +13,7 @@ class FeedbackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let vm = fvm else {
+        guard let vm = viewModel else {
             return
         }
 
@@ -23,25 +23,24 @@ class FeedbackViewController: UIViewController {
         feedbackTextField.placeholder = vm.feedbackTextFieldPlaceHolder
 
         screenTitle.text = vm.navBarTitle
-
-
     }
 
     //MARK: Private Methods
 
     private func goBackToSettings() {
 
-        guard let vm = fvm else {
-            return
-        }
+        guard
+            let vm = self.viewModel else { return }
 
         let sb = UIStoryboard(name: vm.mainStoryBoardId, bundle: nil)
 
-        guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else { return }
-        guard let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController else  { return }
+        guard
+            let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController,
+            let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController
+        else  { return }
 
-        let svm = SettingsViewModel()
-        svc.svm = svm
+        let viewModel = SettingsViewModel()
+        svc.viewModel = viewModel
 
         navCon.pushViewController(svc,
                                   animated: true)
@@ -56,7 +55,8 @@ class FeedbackViewController: UIViewController {
 
     @IBAction private func tickButtonTapped(_ sender: UIButton) {
 
-        guard let vm = fvm else { return }
+        guard
+            let vm = viewModel else { return }
 
         let alert = UIAlertController(title: vm.thankYouTitle,
                                       message: vm.thankYouMessage,
@@ -71,8 +71,7 @@ class FeedbackViewController: UIViewController {
 
         alert.addAction(alertAction)
         present(alert,
-                animated: true,
-                completion: nil)
+                animated: true)
     }
 
 }

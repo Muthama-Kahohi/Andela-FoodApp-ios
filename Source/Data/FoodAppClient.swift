@@ -3,21 +3,25 @@ import FirebaseAuth
 import FirebaseDatabase
 
 public class FoodAppClient {
-
+    
     //Private Instance Methods
     
-    private var appDelegate: AppDelegate? {
+    static var appDelegate: AppDelegate? {
         guard
             let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
         return delegate
     }
     
-    private var currentUser: User? {
+    static var currentUser: User? {
         return appDelegate?.currentUser
     }
     
-    private var currentUserID: String? {
-        return appDelegate?.currentUserId
+    static var currentUserID: String? {
+        return appDelegate?.currentUserID
+    }
+    
+    static var email: String? {
+        return appDelegate?.email
     }
     
     // Database Instance
@@ -25,24 +29,22 @@ public class FoodAppClient {
     
     //MARK: Public Instance Methods
     
-    public func getChildrenCount(completion: @escaping (UInt) -> Void) {
+    public func submitComment(_ comment: Comments) {
         
-        FoodAppClient.databaseRef.child("ratings").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            completion(snapshot.childrenCount)
-        })
+        FoodAppClient.databaseRef.child("comments").updateChildValues(["\(comment.date)": [
+            "\(comment.mealID)" : [
+                "\(comment.userID)" : [
+                    "comment": "\(comment.comment)",
+                    "email": "\(comment.email)"
+                ]]]])
     }
     
     public func submitRatings(_ ratings: Ratings) {
-
-        getChildrenCount(completion: { (childrenCount) in
-
-            let count = childrenCount + 1
-            FoodAppClient.databaseRef.child("ratings/\(count)").setValue(["chef_id": 1,
-                                                                          "comment": ratings.comment,
-                                                                          "date": ratings.date,
-                                                                          "meal_id": ratings.mealId,
-                                                                          "values": ratings.values])
-        })
+        
+        FoodAppClient.databaseRef.child("ratings/\(ratings.date)").updateChildValues(["\(ratings.mealItemID)" : [
+            "\(ratings.userID)": [
+                "email": "\(ratings.email)",
+                "rating": ratings.rating]]])
+        
     }
 }

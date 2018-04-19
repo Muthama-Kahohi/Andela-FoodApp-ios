@@ -3,9 +3,9 @@ import Foundation
 
 public class SettingsViewController: UIViewController {
 
-    internal var svm: SettingsViewModel?
+    internal var viewModel: SettingsViewModel?
+    
     @IBOutlet weak var settingsTableView: UITableView!
-
 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -18,14 +18,16 @@ extension SettingsViewController: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        guard let vm = svm else { return 0 }
+        guard
+            let vm = viewModel else { return 0 }
         return vm.settingsArray.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let emptyCell = UITableViewCell()
-        guard let vm = svm else { return emptyCell }
+        guard
+            let vm = viewModel else { return emptyCell }
 
         let settingsCell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
 
@@ -45,7 +47,8 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vm = svm else { return }
+        guard
+            let vm = viewModel else { return }
         let row = indexPath.row
 
         switch row {
@@ -71,13 +74,14 @@ extension SettingsViewController: UITableViewDelegate {
                     completion: nil)
         case 1 :
 
-            guard let vm = svm else { return }
+            guard
+                let vm = viewModel else { return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
             guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
 
             let fvm = FeedbackViewModel()
-            fvc.fvm = fvm
+            fvc.viewModel = fvm
 
             present(fvc,
                     animated: true,
@@ -86,7 +90,8 @@ extension SettingsViewController: UITableViewDelegate {
 
         case 2 :
 
-            guard let vm = svm else { return }
+            guard
+                let vm = viewModel else { return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
             guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }

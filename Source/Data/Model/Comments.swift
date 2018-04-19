@@ -1,16 +1,16 @@
 //
-//  Ratings.swift
+//  Comments.swift
 //  FoodApp-ios
 //
-//  Created by Martin Mungai on 28/03/2018.
+//  Created by Martin Mungai on 17/04/2018.
 //  Copyright © 2018 Paul Kahohi. All rights reserved.
 //
 
-public struct Ratings {
+public struct Comments {
     
+    let comment: String
     let date: String
     let email: String
-    let mealItemID: String
-    let rating: Int
+    let mealID: String
     let userID: String
 }
