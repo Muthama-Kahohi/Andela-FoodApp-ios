@@ -7,6 +7,8 @@ public class SettingsViewModel {
     public var logoutLabel: String
     public var feedbackLabel: String
     public var feedbackScreenId: String
+    public var mealPlanLabel: String
+    public var privacyText: String
     public var problemLabel: String
     public var settingsArray: [String]
     public var yesText: String
@@ -14,16 +16,18 @@ public class SettingsViewModel {
 
     public init() {
 
-        cancelText = NSLocalizedString("cancel_title", comment: "")
-        logoutLabel = NSLocalizedString("log_out", comment: "")
-        feedbackLabel = NSLocalizedString("feedback", comment: "")
-        feedbackScreenId = NSLocalizedString("feedback_screen_id", comment: "")
-        problemLabel = NSLocalizedString("report_problem", comment: "")
-        logoutAlertLabel = NSLocalizedString("want_to_log_out", comment: "")
-        yesText = NSLocalizedString("yes_title", comment: "")
-        reportScreenID = NSLocalizedString("report_screen_ID", comment: "")
+        cancelText = "cancel_title".localized
+        logoutLabel = "log_out".localized
+        feedbackLabel = "feedback".localized
+        feedbackScreenId = "feedback_screen_id".localized
+        mealPlanLabel = "meal_plan_label_text".localized
+        privacyText = "privacy_policy_text".localized
+        problemLabel = "report_problem".localized
+        logoutAlertLabel = "want_to_log_out".localized
+        yesText = "yes_title".localized
+        reportScreenID = "report_screen_ID".localized
 
-        settingsArray = [logoutLabel, feedbackLabel, problemLabel]
+        settingsArray = [mealPlanLabel, feedbackLabel, problemLabel, privacyText, logoutLabel]
     }
 
 }

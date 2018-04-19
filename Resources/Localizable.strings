@@ -10,10 +10,13 @@
 "cancel_title" = "Cancel";
 "feedback" = "Send feedback";
 "log_out" = "Log Out";
+"meal_plan_label_text" = "Change Meal Plan";
+"privacy_policy_text" = "Privacy Policy";
 "report_problem" = "Report a problem";
 "settings_screen_id" = "settingsViewControllerID";
 "want_to_log_out" = "Are you sure you want to log out?";
 "yes_title" = "Yes";
+
 
 // ReportViewController Strings
 

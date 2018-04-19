@@ -44,6 +44,8 @@
 		9CAA6DE924AA4859555A40C70AF680DB /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */; };
 		B17BAE2CA7B5A5400DB3D127 /* Pods_FoodApp_ios_FoodApp_ios_dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7750E006420C0390367427129FA28D /* Pods_FoodApp_ios_FoodApp_ios_dev.framework */; };
 		C6252C0147F473E09C3B6971E3EE2884 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		CD2D8C6720892A75006A9441 /* string+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C6620892A75006A9441 /* string+extensions.swift */; };
+		CD2D8C6820892A75006A9441 /* string+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C6620892A75006A9441 /* string+extensions.swift */; };
 		CD6E3B2F20752C0D007020DE /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23998E8B1152CE536C05278DA504261C /* MealsTableViewCell.swift */; };
 		CD6E3B3020752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		CD6E3B3120752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
@@ -143,6 +145,7 @@
 		B6E367F4B9E73338146ABB62CA5C3B1D /* FoodApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C3EF0AA1DB0A84F0370D9BC8593702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4405AB186B19C26128BC6D3 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; sourceTree = "<group>"; };
+		CD2D8C6620892A75006A9441 /* string+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "string+extensions.swift"; sourceTree = "<group>"; };
 		CD6E3B73207CDC65007020DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		CD6E3B79207DF3ED007020DE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
@@ -411,6 +414,7 @@
 			children = (
 				CD78FCD4207F5F5600A746A1 /* textfields+extensions.swift */,
 				CD78FCD7207F601900A746A1 /* date+extensions.swift */,
+				CD2D8C6620892A75006A9441 /* string+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -885,6 +889,7 @@
 				5BC2D7102085EFCB0096384B /* MealItems.swift in Sources */,
 				5BFFF636206C9F46007B1E5B /* AppDelegate.swift in Sources */,
 				CDCE4D4C2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */,
+				CD2D8C6820892A75006A9441 /* string+extensions.swift in Sources */,
 				5BFFF628206BA28E007B1E5B /* SignInViewModel.swift in Sources */,
 				5BFFF63C206C9F73007B1E5B /* FoodAppClient.swift in Sources */,
 				CD6E3B75207CDC65007020DE /* SettingsViewController.swift in Sources */,
@@ -938,6 +943,7 @@
 				CDCE4D4520847E6900A39EAA /* FeedbackViewController.swift in Sources */,
 				5BFFF637206C9F49007B1E5B /* AppDelegate.swift in Sources */,
 				CDCE4D4B2084DB5B00A39EAA /* MealOptionsViewController.swift in Sources */,
+				CD2D8C6720892A75006A9441 /* string+extensions.swift in Sources */,
 				896C5027BE1B8E685D8F5EBD49A14BE6 /* SignInViewModel.swift in Sources */,
 				5BFFF63D206C9F74007B1E5B /* FoodAppClient.swift in Sources */,
 				CD6E3B74207CDC65007020DE /* SettingsViewController.swift in Sources */,
