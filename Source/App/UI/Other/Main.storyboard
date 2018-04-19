@@ -9,6 +9,7 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -550,7 +551,7 @@
         <!--Meal Options View Controller-->
         <scene sceneID="xhv-gN-gof">
             <objects>
-                <viewController id="q1f-8E-jdi" customClass="MealOptionsViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MealOptionsViewControllerID" id="q1f-8E-jdi" customClass="MealOptionsViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QbO-kB-auJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,7 +592,7 @@
                                 <rect key="frame" x="20" y="130" width="299" height="114"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Hi Paul Kahohi," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dz-cc-kNr">
-                                        <rect key="frame" x="0.0" y="0.0" width="155.33333333333334" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ihF-Nz-s4A"/>
                                         </constraints>
@@ -600,7 +601,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your current meal plan?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyO-b8-TBz">
-                                        <rect key="frame" x="0.0" y="42" width="252.33333333333334" height="30"/>
+                                        <rect key="frame" x="0.0" y="42" width="299" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="pR7-Fp-lPN"/>
                                         </constraints>
@@ -611,13 +612,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick 2 in accordance to your working hours." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmU-0P-QEA">
                                         <rect key="frame" x="0.0" y="84" width="299" height="30"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="299" id="F3W-Y4-a3T"/>
                                             <constraint firstAttribute="height" constant="30" id="Oop-tb-NZ9"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="lTn-OF-1Xp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Dz-cc-kNr" secondAttribute="trailing" id="GTW-tn-MPu"/>
+                                    <constraint firstAttribute="trailing" secondItem="HyO-b8-TBz" secondAttribute="trailing" id="zJD-Ie-vEt"/>
+                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xd-QX-bNr">
                                 <rect key="frame" x="0.0" y="268" width="414" height="1"/>
@@ -651,6 +658,9 @@
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
+                                        <connections>
+                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="w5B-5e-ZdI"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m84-bM-AQy">
                                         <rect key="frame" x="64" y="0.0" width="200" height="30"/>
@@ -674,6 +684,9 @@
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
+                                        <connections>
+                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="0vc-ag-s3s"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbz-8w-YEx">
                                         <rect key="frame" x="64" y="0.0" width="200" height="30"/>
@@ -697,6 +710,9 @@
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
+                                        <connections>
+                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="pfN-hS-K74"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-oW-hfn">
                                         <rect key="frame" x="64" y="0.0" width="200" height="30"/>
@@ -720,6 +736,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="oak-jc-jLs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -759,14 +778,22 @@
                         <viewLayoutGuide key="safeArea" id="6cS-eK-vV9"/>
                     </view>
                     <connections>
+                        <outlet property="breakfastLabel" destination="m84-bM-AQy" id="hBE-jj-Yzr"/>
+                        <outlet property="dinnerLabel" destination="yHW-oW-hfn" id="rUq-k9-efb"/>
+                        <outlet property="hiLabel" destination="1Dz-cc-kNr" id="1SZ-OA-yq4"/>
+                        <outlet property="instructionLabel" destination="xmU-0P-QEA" id="J26-T6-otC"/>
+                        <outlet property="lunchLabel" destination="Kbz-8w-YEx" id="lVJ-Nh-B7V"/>
                         <outlet property="navBar" destination="jJN-Ia-rLv" id="tRt-LP-pug"/>
+                        <outlet property="navTitle" destination="vRR-pv-Clo" id="gKh-J0-36U"/>
+                        <outlet property="questionLabel" destination="HyO-b8-TBz" id="RGF-YD-2Vr"/>
+                        <outlet property="submitButton" destination="CYe-J2-wI3" id="UaW-mB-26s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1u-dX-nyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-881.15942028985512" y="-342.39130434782612"/>
         </scene>
-        <!--Foodie-->
+        <!--Entry View Controller-->
         <scene sceneID="LDP-5a-oeg">
             <objects>
                 <viewController storyboardIdentifier="entryViewControllerID" id="IVU-h5-7b5" customClass="EntryViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -803,14 +830,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kta-nH-ghc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Foodie" id="q29-kJ-UpF">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="dropDown" id="lWy-e9-9ea">
-                            <connections>
-                                <action selector="toSettingButtonTapped:" destination="IVU-h5-7b5" id="JeU-XA-Yxa"/>
-                                <segue destination="I89-2n-nSI" kind="show" identifier="settingsSegue" id="nHi-zU-Ic2"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="q29-kJ-UpF">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="dropDown" id="lWy-e9-9ea">
+                                <connections>
+                                    <action selector="extraButtonItem:" destination="IVU-h5-7b5" id="iwx-hg-ncS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="oFO-gy-enD">
+                                <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sM4-c5-qko">
+                                    <rect key="frame" x="259" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.97804965101522845" green="0.97804965101522845" blue="0.97804965101522845" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" title="Settings">
+                                        <color key="titleColor" red="0.023992703045685237" green="0.023992703045685237" blue="0.023992703045685237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="settingsButtonTapped:" destination="IVU-h5-7b5" eventType="touchUpInside" id="0Vg-Xi-n7g"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <segue destination="I89-2n-nSI" kind="show" identifier="settingsSegue" id="yg0-lE-kAr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="q29-kJ-UpF" id="bl3-Wn-RwD"/>
+                        <outlet property="toSettingsButton" destination="sM4-c5-qko" id="AfU-j8-K1S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQC-iP-r8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -92,9 +92,8 @@ extension SettingsViewController: UITableViewDelegate {
             guard let vm = viewModel else {
                 return }
 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard
-                let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
 
             fvc.viewModel = FeedbackViewModel()
 
@@ -108,9 +107,8 @@ extension SettingsViewController: UITableViewDelegate {
             guard let vm = viewModel else {
                 return }
 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard
-                let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
 
             rvc.viewModel = ReportViewModel()
 
@@ -120,7 +118,18 @@ extension SettingsViewController: UITableViewDelegate {
 
         case .mealPlan:
 
-            print ("Will Segue to meals Plan View Controller")
+            guard let vm = viewModel else {
+                return }
+
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let movc = sb.instantiateViewController(withIdentifier: vm.mealOptionScreenID ) as? MealOptionsViewController else { return }
+
+            let movm = MealOptionsViewModel()
+            movc.movm = movm
+
+            present(movc,
+                    animated: true,
+                    completion: nil)
 
         case .privacy:
 

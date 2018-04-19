@@ -48,6 +48,8 @@
 		CD2D8C6820892A75006A9441 /* string+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C6620892A75006A9441 /* string+extensions.swift */; };
 		CD2D8C6A2089334D006A9441 /* SettingsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C692089334D006A9441 /* SettingsCells.swift */; };
 		CD2D8C6B2089334D006A9441 /* SettingsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C692089334D006A9441 /* SettingsCells.swift */; };
+		CD2D8C6D2089533E006A9441 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C6C2089533E006A9441 /* EntryViewModel.swift */; };
+		CD2D8C6E2089533E006A9441 /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D8C6C2089533E006A9441 /* EntryViewModel.swift */; };
 		CD6E3B2F20752C0D007020DE /* MealsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23998E8B1152CE536C05278DA504261C /* MealsTableViewCell.swift */; };
 		CD6E3B3020752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
 		CD6E3B3120752C39007020DE /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB0AC89FE79099498073D2A73F609DC /* RatingViewModel.swift */; };
@@ -149,6 +151,7 @@
 		C4405AB186B19C26128BC6D3 /* Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodApp-ios-FoodApp-ios dev/Pods-FoodApp-ios-FoodApp-ios dev.release.xcconfig"; sourceTree = "<group>"; };
 		CD2D8C6620892A75006A9441 /* string+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "string+extensions.swift"; sourceTree = "<group>"; };
 		CD2D8C692089334D006A9441 /* SettingsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCells.swift; sourceTree = "<group>"; };
+		CD2D8C6C2089533E006A9441 /* EntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 		CD6E3B73207CDC65007020DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CD6E3B76207CDC85007020DE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		CD6E3B79207DF3ED007020DE /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +334,7 @@
 				CD6E3B7C207DF432007020DE /* ReportViewModel.swift */,
 				CDCE4D4720847E9500A39EAA /* FeedbackViewModel.swift */,
 				CDCE4D4D2084DB7800A39EAA /* MealOptionsViewModel.swift */,
+				CD2D8C6C2089533E006A9441 /* EntryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -880,6 +884,7 @@
 				CD6E3B7B207DF3ED007020DE /* ReportViewController.swift in Sources */,
 				CD2D8C6B2089334D006A9441 /* SettingsCells.swift in Sources */,
 				EA1F0BD89BC3AED5A9F70A716CE7874A /* MealsViewController.swift in Sources */,
+				CD2D8C6E2089533E006A9441 /* EntryViewModel.swift in Sources */,
 				5BC2D7172085F53A0096384B /* Feedback.swift in Sources */,
 				CD6E3B2F20752C0D007020DE /* MealsTableViewCell.swift in Sources */,
 				31B8B51A71817F57DC6AA2EB41B03AA9 /* MealsViewModel.swift in Sources */,
@@ -935,6 +940,7 @@
 				CD6E3B7A207DF3ED007020DE /* ReportViewController.swift in Sources */,
 				CD2D8C6A2089334D006A9441 /* SettingsCells.swift in Sources */,
 				5B05D9BF206CD138000DBB08 /* SignInViewController.swift in Sources */,
+				CD2D8C6D2089533E006A9441 /* EntryViewModel.swift in Sources */,
 				5BC2D7162085F53A0096384B /* Feedback.swift in Sources */,
 				2B14A6AEF1AF6973023BB127EED7E27E /* MealsViewController.swift in Sources */,
 				68D1428A1F50B9C99DE6B7E7ECFA15D5 /* MealsViewModel.swift in Sources */,
