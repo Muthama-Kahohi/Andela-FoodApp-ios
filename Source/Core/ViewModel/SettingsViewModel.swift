@@ -1,12 +1,12 @@
 import Foundation
 
-public enum settingsCells: String {
+public enum settingsCellsOptions: String {
 
-    case logoutLabel = "Log Out"
-    case feedbackLabel = "Send feedback"
-    case mealPlanLabel = "Change Meal Plan"
-    case privacyText = "Privacy Policy"
-    case problemLabel = "Report a problem"
+    case logout
+    case feedback
+    case mealPlan
+    case privacy
+    case bug
 }
 
 public class SettingsViewModel {
@@ -20,7 +20,6 @@ public class SettingsViewModel {
     public var privacyText: String
     public var problemLabel: String
     public var reportScreenID: String
-    public var settingsArray: [String]
     public var settingsCellsArray = [SettingsCells]()
     public var yesText: String
 
@@ -37,16 +36,26 @@ public class SettingsViewModel {
         logoutAlertLabel = "want_to_log_out".localized
         yesText = "yes_title".localized
         reportScreenID = "report_screen_ID".localized
-
-        settingsArray = [mealPlanLabel, feedbackLabel, problemLabel, privacyText, logoutLabel]
     }
 
-    public func setupSettingsCellsArray () {
-        for item in settingsArray {
+    public func setupSettingsCells() {
 
-            let cellObject = SettingsCells(actionName: item)
-            settingsCellsArray.append(cellObject)
-        }
+        settingsCellsArray = [
+            SettingsCells( .mealPlan,
+                           mealPlanLabel),
+            SettingsCells(.feedback,
+                          feedbackLabel),
+
+            SettingsCells(.bug,
+                          problemLabel),
+
+            SettingsCells(.privacy,
+                          privacyText),
+
+            SettingsCells(.logout,
+                          logoutLabel)
+
+        ]
     }
 
     public func numOfRowsinSettingsTable() -> Int {

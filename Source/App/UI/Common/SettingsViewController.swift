@@ -10,10 +10,10 @@ public class SettingsViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-         guard let svm = viewModel else {
+        guard let svm = viewModel else {
             return }
 
-        svm.setupSettingsCellsArray()
+        svm.setupSettingsCells()
 
     }
 
@@ -59,13 +59,15 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard
-            let vm = viewModel else { return }
-        let rowLabel = vm.settingsCellsArray[indexPath.row].settingCellLabel
+
+        guard let vm = viewModel else {
+            return }
+
+        let rowLabel = vm.settingsCellsArray[indexPath.row].settingsOption
 
         switch rowLabel {
 
-        case  settingsCells.logoutLabel.rawValue:
+        case  .logout:
 
             let alert = UIAlertController(title: vm.logoutLabel ,
                                           message: vm.logoutAlertLabel,
@@ -84,10 +86,11 @@ extension SettingsViewController: UITableViewDelegate {
             present(alert,
                     animated: true,
                     completion: nil)
-        case settingsCells.feedbackLabel.rawValue :
 
-            guard
-                let vm = viewModel else { return }
+        case .feedback :
+
+            guard let vm = viewModel else {
+                return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
             guard
@@ -100,10 +103,10 @@ extension SettingsViewController: UITableViewDelegate {
                     completion: nil)
 
 
-        case settingsCells.problemLabel.rawValue :
+         case .bug :
 
-            guard
-                let vm = viewModel else { return }
+            guard let vm = viewModel else {
+                return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
             guard
@@ -115,11 +118,11 @@ extension SettingsViewController: UITableViewDelegate {
                     animated: true,
                     completion: nil)
 
-        case settingsCells.mealPlanLabel.rawValue:
+        case .mealPlan:
 
             print ("Will Segue to meals Plan View Controller")
 
-        case settingsCells.privacyText.rawValue:
+        case .privacy:
 
             print ("Will Segue privacy viewController")
 
