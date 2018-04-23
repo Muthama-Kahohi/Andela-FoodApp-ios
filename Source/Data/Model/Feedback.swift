@@ -6,10 +6,10 @@
 //  Copyright © 2018 Paul Kahohi. All rights reserved.
 //
 
-struct Feedback {
+public struct Feedback {
 
     let date: String
-    let userID: String
     let email: String
     let message: String
+    let userID: String
 }
