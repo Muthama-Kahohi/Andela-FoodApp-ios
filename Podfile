@@ -10,12 +10,14 @@ target 'FoodApp-ios' do
     pod 'Firebase/Auth'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'RxSwift'
 
     target 'FoodApp-ios dev' do
         pod 'GoogleSignIn'
         pod 'Firebase/Auth'
         pod 'Firebase/Core'
         pod 'Firebase/Database'
+        pod 'RxSwift'
     end
 
     target 'FoodApp-iosTests' do

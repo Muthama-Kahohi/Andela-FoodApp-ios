@@ -7,12 +7,19 @@ class MealOptionsViewController: UIViewController {
 
     internal var movm: MealOptionsViewModel?
 
+    //MARK: Public Properties
+
+    var buttonTaps: Int = 0
+
     //MARK: IBOutlets
 
+    @IBOutlet weak var breakfastButton: UIButton!
     @IBOutlet weak var breakfastLabel: UILabel!
+    @IBOutlet weak var dinnerButton: UIButton!
     @IBOutlet weak var dinnerLabel: UILabel!
     @IBOutlet weak var hiLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var lunchButton: UIButton!
     @IBOutlet weak var lunchLabel: UILabel!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var navTitle: UILabel!
@@ -39,19 +46,36 @@ class MealOptionsViewController: UIViewController {
 
     //Private Methods
 
-    @IBAction func submitButtonTapped(_ sender: UIButton) {
+    @IBAction private func submitButtonTapped(_ sender: UIButton) {
     }
 
-    @IBAction private func checkBoxButtonTapped(_ sender: UIButton) {
-
-
+    @IBAction func breakfastButtonTapped(_ sender: UIButton) {
+        calculateTaps(sender)
     }
 
+    @IBAction func lunchButtonTapped(_ sender: UIButton) {
+        calculateTaps(sender)
+    }
+
+    @IBAction func dinnerButtonTapped(_ sender: UIButton) {
+        calculateTaps(sender)
+    }
+
+    private func calculateTaps(_ sender: UIButton) {
+
+        if sender.isSelected {
+            buttonTaps -= 1
+        } else {
+
+            buttonTaps += 1
+        }
+    }
     private func setupView() {
 
         guard let vm = movm else {
             return
         }
+        // Setup the label
 
         breakfastLabel.text = vm.breakfastButtonLabel
         dinnerLabel.text = vm.dinnerButtonLabel
@@ -61,5 +85,11 @@ class MealOptionsViewController: UIViewController {
         navTitle.text = vm.navigationTitle
         submitButton.titleLabel?.text = vm.submitButtonLabel
         questionLabel.text = vm.questionLabelText
+
+        //Set up the buttons
+
+//        breakfastButton.isEnabled = false
+//        lunchButton.isEnabled = false
+//        dinnerButton.isEnabled = false
     }
 }

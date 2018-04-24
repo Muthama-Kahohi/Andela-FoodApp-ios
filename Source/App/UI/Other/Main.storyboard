@@ -650,7 +650,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="dkt-Ie-TPw">
                                 <rect key="frame" x="37" y="277" width="264" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-TA-95w">
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-TA-95w">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="p4T-gl-opS"/>
@@ -659,7 +659,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
                                         <connections>
-                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="w5B-5e-ZdI"/>
+                                            <action selector="breakfastButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="4Kh-9R-evC"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m84-bM-AQy">
@@ -685,7 +685,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
                                         <connections>
-                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="0vc-ag-s3s"/>
+                                            <action selector="lunchButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="Zjq-T7-HSK"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbz-8w-YEx">
@@ -711,7 +711,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="Tick"/>
                                         <connections>
-                                            <action selector="checkBoxButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="pfN-hS-K74"/>
+                                            <action selector="dinnerButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="mVQ-x2-LKk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-oW-hfn">
@@ -778,10 +778,13 @@
                         <viewLayoutGuide key="safeArea" id="6cS-eK-vV9"/>
                     </view>
                     <connections>
+                        <outlet property="breakfastButton" destination="Jie-TA-95w" id="RZ5-8Y-c8R"/>
                         <outlet property="breakfastLabel" destination="m84-bM-AQy" id="hBE-jj-Yzr"/>
+                        <outlet property="dinnerButton" destination="Fbm-mF-OOe" id="QIM-de-N3B"/>
                         <outlet property="dinnerLabel" destination="yHW-oW-hfn" id="rUq-k9-efb"/>
                         <outlet property="hiLabel" destination="1Dz-cc-kNr" id="1SZ-OA-yq4"/>
                         <outlet property="instructionLabel" destination="xmU-0P-QEA" id="J26-T6-otC"/>
+                        <outlet property="lunchButton" destination="srn-ej-WVC" id="N6N-wh-ohF"/>
                         <outlet property="lunchLabel" destination="Kbz-8w-YEx" id="lVJ-Nh-B7V"/>
                         <outlet property="navBar" destination="jJN-Ia-rLv" id="tRt-LP-pug"/>
                         <outlet property="navTitle" destination="vRR-pv-Clo" id="gKh-J0-36U"/>

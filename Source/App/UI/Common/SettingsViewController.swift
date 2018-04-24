@@ -134,10 +134,6 @@ extension SettingsViewController: UITableViewDelegate {
         case .privacy:
 
             print ("Will Segue privacy viewController")
-
-        default:
-
-            print(" Will not segue ")
         }
     }
 }
