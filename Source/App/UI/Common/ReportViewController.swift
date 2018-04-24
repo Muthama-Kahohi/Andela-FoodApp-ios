@@ -14,11 +14,12 @@ class ReportViewController: UIViewController {
 
     //MARK: IBOutlets
 
-    @IBOutlet weak var Xbutton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var extraCommentLabel: UILabel!
+    @IBOutlet weak var reportTextField: UITextField!
     @IBOutlet weak var screenTitleLabel: UILabel!
     @IBOutlet weak var tickButtonButton: UIButton!
-    @IBOutlet weak var reportTextField: UITextField!
-    @IBOutlet weak var extraCommentLabel: UILabel!
+    @IBOutlet weak var Xbutton: UIButton!
     
     //MARK: Overriden methods
 
@@ -29,6 +30,7 @@ class ReportViewController: UIViewController {
 
         // Set up the textfield to be underlined
 
+        doneButton.isEnabled = false
         reportTextField.delegate = self
         reportTextField.placeholder = vm.reportHelpText
         reportTextField.underlined()
@@ -114,6 +116,7 @@ extension ReportViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
+        doneButton.isEnabled = true
         return true
     }
 }

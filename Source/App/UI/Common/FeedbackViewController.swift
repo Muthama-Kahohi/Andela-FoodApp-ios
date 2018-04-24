@@ -25,6 +25,7 @@ class FeedbackViewController: UIViewController {
             return
         }
         
+        doneButton.isEnabled = false
         feedbackExplanationLabel.text = vm.feedbackExtraLabelText
         
         feedbackTextField.delegate = self
@@ -99,6 +100,7 @@ extension FeedbackViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField,
                                 reason: UITextFieldDidEndEditingReason) {
+
         guard
             let comment = textField.text
             else { return }
@@ -109,6 +111,7 @@ extension FeedbackViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
+        doneButton.isEnabled = true
         return true
     }
 }
