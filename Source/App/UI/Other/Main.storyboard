@@ -657,7 +657,7 @@
                                             <constraint firstAttribute="height" constant="30" id="vmV-kk-r91"/>
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
-                                        <state key="selected" image="Tick"/>
+                                        <state key="selected" image="CheckedBox"/>
                                         <connections>
                                             <action selector="breakfastButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="4Kh-9R-evC"/>
                                         </connections>
@@ -683,7 +683,7 @@
                                             <constraint firstAttribute="width" constant="30" id="U5F-7G-pic"/>
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
-                                        <state key="selected" image="Tick"/>
+                                        <state key="selected" image="CheckedBox"/>
                                         <connections>
                                             <action selector="lunchButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="Zjq-T7-HSK"/>
                                         </connections>
@@ -709,7 +709,7 @@
                                             <constraint firstAttribute="width" constant="30" id="d0u-oQ-Sq1"/>
                                         </constraints>
                                         <state key="normal" image="unchekedBox"/>
-                                        <state key="selected" image="Tick"/>
+                                        <state key="selected" image="CheckedBox"/>
                                         <connections>
                                             <action selector="dinnerButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="mVQ-x2-LKk"/>
                                         </connections>
@@ -892,6 +892,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CheckedBox" width="16" height="16"/>
         <image name="Multiply" width="16" height="16"/>
         <image name="StarIcon" width="22" height="20"/>
         <image name="Tick" width="16" height="16"/>

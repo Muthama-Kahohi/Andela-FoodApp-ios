@@ -50,24 +50,27 @@ class MealOptionsViewController: UIViewController {
     }
 
     @IBAction func breakfastButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         calculateTaps(sender)
     }
 
     @IBAction func lunchButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         calculateTaps(sender)
     }
 
     @IBAction func dinnerButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
         calculateTaps(sender)
     }
 
     private func calculateTaps(_ sender: UIButton) {
 
         if sender.isSelected {
-            buttonTaps -= 1
+            buttonTaps += 1
         } else {
 
-            buttonTaps += 1
+            buttonTaps -= 1
         }
     }
     private func setupView() {
