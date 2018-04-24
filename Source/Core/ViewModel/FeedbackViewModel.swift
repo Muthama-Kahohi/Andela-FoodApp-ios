@@ -1,6 +1,14 @@
-import Foundation
+import UIKit
 
 public class FeedbackViewModel {
+    
+    //MARK: Private Properties
+    
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
 
     //MARK: Public properties
 
@@ -28,5 +36,10 @@ public class FeedbackViewModel {
         settingsViewControllerID = NSLocalizedString("settings_screen_id", comment: "")
         thankYouMessage = NSLocalizedString("feedback_alert_message", comment: "")
         thankYouTitle = NSLocalizedString("feedback_alert_title", comment: "")
+    }
+    
+    public func writeFeedback(_ feedback: Feedback) {
+        
+        self.appDelegate?.foodAppClient.submitFeedback(feedback)
     }
 }

@@ -1,6 +1,14 @@
-import Foundation
+import UIKit
 
 public class ReportViewModel {
+    
+    //MARK: Private Properties
+    
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
+    }
 
     //MARK: Public properties
 
@@ -28,5 +36,9 @@ public class ReportViewModel {
         thankYouMessage = NSLocalizedString("report_alert_message", comment: "")
         thankYouTitle = NSLocalizedString("report_alert_title", comment: "")
     }
-
+    
+    public func writeReport(_ report: Feedback) {
+        
+        self.appDelegate?.foodAppClient.submitReport(report)
+    }
 }

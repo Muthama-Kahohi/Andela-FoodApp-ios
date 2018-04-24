@@ -45,6 +45,21 @@ public class FoodAppClient {
             "\(ratings.userID)": [
                 "email": "\(ratings.email)",
                 "rating": ratings.rating]]])
+    }
+    
+    public func submitFeedback(_ feedback: Feedback) {
         
+        FoodAppClient.databaseRef.child("feedback/feature/iPhone").updateChildValues(["\(feedback.date)" : [
+            "\(feedback.userID)" : [
+                "email": "\(feedback.email)",
+                "message": "\(feedback.message)"]]])
+    }
+    
+    public func submitReport(_ report: Feedback) {
+        
+        FoodAppClient.databaseRef.child("feedback/bug/iPhone").updateChildValues(["\(report.date)" : [
+            "\(report.userID)" : [
+                "email": "\(report.email)",
+                "message": "\(report.message)"]]])
     }
 }

@@ -257,6 +257,7 @@
                     <navigationItem key="navigationItem" id="YW5-0f-IJP"/>
                     <connections>
                         <outlet property="Xbutton" destination="Szy-Ec-8B0" id="6RE-Fp-q0e"/>
+                        <outlet property="doneButton" destination="D2x-af-CGa" id="ze3-0O-rSJ"/>
                         <outlet property="extraCommentLabel" destination="OXa-RJ-Dnl" id="OS0-ht-HpV"/>
                         <outlet property="reportTextField" destination="Rgw-8v-SkO" id="rVD-Xh-Shh"/>
                         <outlet property="screenTitleLabel" destination="2tE-pr-aCr" id="mDG-bD-pxr"/>
@@ -372,6 +373,7 @@
                         <viewLayoutGuide key="safeArea" id="Gmr-Gn-NfG"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="c9F-df-ioB" id="uEI-cJ-okR"/>
                         <outlet property="feedbackExplanationLabel" destination="BXb-Xz-7W4" id="bL4-Ry-Fpv"/>
                         <outlet property="feedbackTextField" destination="hqh-30-Gaw" id="7Hm-TX-Vdb"/>
                         <outlet property="screenTitle" destination="b8h-Gb-Hhz" id="n8m-1i-ESA"/>

@@ -5,27 +5,35 @@ class ReportViewController: UIViewController {
 
     //MARK: Internal Properties
 
-    internal var rvm: ReportViewModel?
+    internal var viewModel: ReportViewModel?
+    
+    //MARK: Private instance properties
+    
+    private let today = Date()
+    private var comment: String?
 
     //MARK: IBOutlets
 
-    @IBOutlet weak var Xbutton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var extraCommentLabel: UILabel!
+    @IBOutlet weak var reportTextField: UITextField!
     @IBOutlet weak var screenTitleLabel: UILabel!
     @IBOutlet weak var tickButtonButton: UIButton!
-
-    @IBOutlet weak var reportTextField: UITextField!
-
-    @IBOutlet weak var extraCommentLabel: UILabel!
+    @IBOutlet weak var Xbutton: UIButton!
+    
+    //MARK: Overriden methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let vm = rvm else { return }
+        guard let vm = viewModel else { return }
 
         // Set up the textfield to be underlined
 
-        reportTextField.underlined()
+        doneButton.isEnabled = false
+        reportTextField.delegate = self
         reportTextField.placeholder = vm.reportHelpText
+        reportTextField.underlined()
 
         // Set up the labels
 
@@ -43,7 +51,19 @@ class ReportViewController: UIViewController {
 
     @IBAction func tickButtonTapped(_ sender: UIButton) {
 
-        guard let vm = rvm else { return }
+        guard
+            let vm = viewModel,
+            let email = FoodAppClient.email,
+            let userID = FoodAppClient.currentUserID,
+            let comment = self.comment
+        else { return }
+        
+        let report = Feedback(date: today.dateToIsoFormat(date: today),
+                                email: email,
+                                message: comment,
+                                userID: userID)
+        
+        vm.writeReport(report)
 
         let alert = UIAlertController(title: vm.thankYouTitle,
                                       message: vm.thankYouMessage,
@@ -64,25 +84,40 @@ class ReportViewController: UIViewController {
 
     private func goBackToSettings () {
 
-        guard let vm = rvm else {
-            return
-        }
+        guard let vm = viewModel else { return }
 
         let sb = UIStoryboard(name: vm.mainStoryBoardId, bundle: nil)
 
         guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else { return }
         guard let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController else  { return }
 
-        let viewModel = SettingsViewModel()
-        svc.viewModel = viewModel
+        
+        svc.viewModel = SettingsViewModel()
 
         navCon.pushViewController(svc,
                                   animated: true)
 
         present(navCon,
                 animated: true)
+    }
+}
 
-
+extension ReportViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField,
+                                reason: UITextFieldDidEndEditingReason) {
+        guard
+            let comment = textField.text
+            else { return }
+        
+        self.comment = comment
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        doneButton.isEnabled = true
+        return true
     }
 }
 
