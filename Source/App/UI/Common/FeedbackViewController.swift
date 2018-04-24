@@ -16,6 +16,8 @@ class FeedbackViewController: UIViewController {
     private let today = Date()
     private var comment: String?
     
+    // MARK: Overriden methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

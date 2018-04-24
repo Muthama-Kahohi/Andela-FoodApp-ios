@@ -78,10 +78,10 @@ extension SettingsViewController: UITableViewDelegate {
                 let vm = viewModel else { return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
+            guard
+                let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
 
-            let fvm = FeedbackViewModel()
-            fvc.viewModel = fvm
+            fvc.viewModel = FeedbackViewModel()
 
             present(fvc,
                     animated: true,
@@ -94,10 +94,10 @@ extension SettingsViewController: UITableViewDelegate {
                 let vm = viewModel else { return }
 
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+            guard
+                let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
 
-            let rvm = ReportViewModel()
-            rvc.rvm = rvm
+            rvc.viewModel = ReportViewModel()
 
             present(rvc,
                     animated: true,
