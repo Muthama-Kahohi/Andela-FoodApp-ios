@@ -1,5 +1,6 @@
 
 import UIKit
+import RxSwift
 
 class MealOptionsViewController: UIViewController {
 
@@ -9,7 +10,8 @@ class MealOptionsViewController: UIViewController {
 
     //MARK: Public Properties
 
-    var buttonTaps: Int = 0
+    var buttonTaps = 0
+    let disposeBag = DisposeBag()
 
     //MARK: IBOutlets
 
@@ -50,22 +52,23 @@ class MealOptionsViewController: UIViewController {
     }
 
     @IBAction func breakfastButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+
         calculateTaps(sender)
     }
 
     @IBAction func lunchButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+
         calculateTaps(sender)
     }
 
     @IBAction func dinnerButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+
         calculateTaps(sender)
     }
 
     private func calculateTaps(_ sender: UIButton) {
 
+        sender.isSelected = !sender.isSelected
         if sender.isSelected {
             buttonTaps += 1
         } else {
@@ -82,7 +85,7 @@ class MealOptionsViewController: UIViewController {
 
         breakfastLabel.text = vm.breakfastButtonLabel
         dinnerLabel.text = vm.dinnerButtonLabel
-        hiLabel.text = vm.welcomeLabelText
+        hiLabel.text = vm.getwelcomeText()
         instructionLabel.text = vm.instructionLabelText
         lunchLabel.text = vm.lunchButtonLabel
         navTitle.text = vm.navigationTitle

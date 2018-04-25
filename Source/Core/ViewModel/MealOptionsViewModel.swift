@@ -14,6 +14,7 @@ public class MealOptionsViewModel {
     public var questionLabelText: String
     public var welcomeLabelText: String
 
+
     // MARK: Public Initializer
 
     public init() {
@@ -28,4 +29,15 @@ public class MealOptionsViewModel {
         welcomeLabelText = "welcome_text".localized
     }
 
+    private func getUserName() -> String? {
+
+        guard let email = FoodAppClient.email else { return nil }
+        return email.userNameFromEmail
+    }
+
+    public func getwelcomeText () -> String {
+
+        guard let userName = getUserName() else { return "" }
+        return "\(welcomeLabelText) \(userName)"
+    }
 }
