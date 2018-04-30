@@ -659,7 +659,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="CheckedBox"/>
                                         <connections>
-                                            <action selector="breakfastButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="4Kh-9R-evC"/>
+                                            <action selector="checkButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="d5I-mM-6rM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m84-bM-AQy">
@@ -685,7 +685,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="CheckedBox"/>
                                         <connections>
-                                            <action selector="lunchButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="Zjq-T7-HSK"/>
+                                            <action selector="checkButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="sxV-Yr-HWW"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbz-8w-YEx">
@@ -711,7 +711,7 @@
                                         <state key="normal" image="unchekedBox"/>
                                         <state key="selected" image="CheckedBox"/>
                                         <connections>
-                                            <action selector="dinnerButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="mVQ-x2-LKk"/>
+                                            <action selector="checkButtonTapped:" destination="q1f-8E-jdi" eventType="touchUpInside" id="NAB-Fv-05i"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHW-oW-hfn">
@@ -790,6 +790,9 @@
                         <outlet property="navTitle" destination="vRR-pv-Clo" id="gKh-J0-36U"/>
                         <outlet property="questionLabel" destination="HyO-b8-TBz" id="RGF-YD-2Vr"/>
                         <outlet property="submitButton" destination="CYe-J2-wI3" id="UaW-mB-26s"/>
+                        <outletCollection property="rateButtons" destination="srn-ej-WVC" collectionClass="NSMutableArray" id="dA7-gt-uUx"/>
+                        <outletCollection property="rateButtons" destination="Fbm-mF-OOe" collectionClass="NSMutableArray" id="Kmv-hJ-CZ6"/>
+                        <outletCollection property="rateButtons" destination="Jie-TA-95w" collectionClass="NSMutableArray" id="hyb-17-5gX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1u-dX-nyc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,4 +1,3 @@
-
 import UIKit
 import RxSwift
 
@@ -8,10 +7,9 @@ class MealOptionsViewController: UIViewController {
 
     internal var movm: MealOptionsViewModel?
 
-    //MARK: Public Properties
+    //MARK: Private Properties
 
-    var buttonTaps = 0
-    let disposeBag = DisposeBag()
+    private let buttonTaps = Variable<Int>(0)
 
     //MARK: IBOutlets
 
@@ -27,6 +25,10 @@ class MealOptionsViewController: UIViewController {
     @IBOutlet weak var navTitle: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
+
+    //MARK: IBoutlet collection
+
+    @IBOutlet var rateButtons: [UIButton]!
 
     //MARK: Overriden Methods
 
@@ -51,37 +53,55 @@ class MealOptionsViewController: UIViewController {
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
     }
 
-    @IBAction func breakfastButtonTapped(_ sender: UIButton) {
-
-        calculateTaps(sender)
-    }
-
-    @IBAction func lunchButtonTapped(_ sender: UIButton) {
-
-        calculateTaps(sender)
-    }
-
-    @IBAction func dinnerButtonTapped(_ sender: UIButton) {
+    @IBAction private func checkButtonTapped(_ sender: UIButton) {
 
         calculateTaps(sender)
     }
 
     private func calculateTaps(_ sender: UIButton) {
+        let bag = DisposeBag()
 
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
-            buttonTaps += 1
+
+            buttonTaps.value += 1
+
         } else {
 
-            buttonTaps -= 1
+            buttonTaps.value -= 1
+
         }
+
+        buttonTaps.asObservable()
+            .subscribe{ event in
+
+                if event.element == 2 {
+
+                    _ = self.rateButtons.map{
+
+                        if !$0.isSelected{
+
+                            $0.isEnabled = false
+                        }
+                    }
+                } else {
+                    _ = self.rateButtons.map {
+                        if !$0.isEnabled  {
+
+                            $0.isEnabled = true
+                        }
+                    }
+                }
+            }.disposed(by: bag)
     }
+
+
     private func setupView() {
 
         guard let vm = movm else {
             return
         }
-        // Setup the label
+        // Setup the labels
 
         breakfastLabel.text = vm.breakfastButtonLabel
         dinnerLabel.text = vm.dinnerButtonLabel
@@ -92,10 +112,5 @@ class MealOptionsViewController: UIViewController {
         submitButton.titleLabel?.text = vm.submitButtonLabel
         questionLabel.text = vm.questionLabelText
 
-        //Set up the buttons
-
-//        breakfastButton.isEnabled = false
-//        lunchButton.isEnabled = false
-//        dinnerButton.isEnabled = false
     }
 }
