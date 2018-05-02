@@ -126,6 +126,7 @@ extension SettingsViewController: UITableViewDelegate {
 
             let movm = MealOptionsViewModel()
             movc.movm = movm
+            movc.sourceViewController = .settingsViewControllerID
 
             present(movc,
                     animated: true,

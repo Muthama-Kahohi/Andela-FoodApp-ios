@@ -4,7 +4,7 @@ import FirebaseDatabase
 
 public class FoodAppClient {
     
-    //Private Instance Methods
+    //MARK: Private Instance Methods
     
     static var appDelegate: AppDelegate? {
         guard
@@ -24,7 +24,8 @@ public class FoodAppClient {
         return appDelegate?.email
     }
     
-    // Database Instance
+    //MARK: Database Instance
+    
     static let databaseRef = Database.database().reference()
     
     //MARK: Public Instance Methods

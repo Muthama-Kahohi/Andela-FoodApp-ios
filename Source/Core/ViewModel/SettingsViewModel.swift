@@ -19,6 +19,7 @@ public class SettingsViewModel {
     public var mainStoryboardID: String
     public var mealPlanLabel: String
     public var mealOptionScreenID: String
+    public var settingsViewControllerId: String
     public var privacyText: String
     public var problemLabel: String
     public var reportScreenID: String
@@ -35,6 +36,7 @@ public class SettingsViewModel {
         mainStoryboardID = "main_storyboard_id".localized
         mealPlanLabel = "meal_plan_label_text".localized
         mealOptionScreenID = "meal_option_screen_id".localized
+        settingsViewControllerId = "settings_screen_id".localized
         privacyText = "privacy_policy_text".localized
         problemLabel = "report_problem".localized
         logoutAlertLabel = "want_to_log_out".localized

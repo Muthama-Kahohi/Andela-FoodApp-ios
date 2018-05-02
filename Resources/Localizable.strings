@@ -1,12 +1,12 @@
 "domain" = "andela.com";
 
-//Common Strings
+//MARK: Common Strings
 
 "alert_action_cancel_title" = "Cancel";
 "alert_action_dismiss_title"  = "Dismiss";
 "alert_action_yes_title" = "Yes";
 
-//EntryViewController Strings
+//MARK: EntryViewController Strings
 
 "breakfast_unique_id" = "breakfast";
 "default_case_text" = "cannot_segue";
@@ -14,7 +14,7 @@
 "lunch_unique_id" = "lunch";
 "settings_title" = "Settings";
 
-//FeedbackViewController Strings
+//MARK: FeedbackViewController Strings
 
 "feedback_alert_message" = "Thank You for your feedback";
 "feedback_alert_title" = "Feedback Sent Successfully";
@@ -23,9 +23,11 @@
 "feedback_screen_title" = "Send Feedback";
 "feedback_screen_id" = "FeedbackViewControllerID";
 
-//MealOptionsViewController Strings
+//MARK: MealOptionsViewController Strings
 
 "breakfast_title" = "Breakfast";
+"confirm_message" = "Are you sure you want to save the selected meals";
+"confirm_title" = "Save";
 "dinner_title" = "Dinner";
 "instruction_text" = "Pick 2 in accordance to your working hours.";
 "lunch_title" = "Lunch";
@@ -35,11 +37,11 @@
 "questionText" = "What is your current meal plan";
 "welcome_text" = "Hi,";
 
-// NavigationController1 Strings
+//MARK: NavigationController1 Strings
 
 "navigation_controller_1_id" = "navigationControllerID";
 
-// ReportViewController Strings
+//MARK: ReportViewController Strings
 
 "report_alert_message" = "Thank You for your report";
 "report_alert_title" = "Report Sent Successfully";
@@ -49,6 +51,7 @@
 "report_screen_ID" = "reportViewControllerID";
 
 //MARK: Settings screen Strings
+
 "cancel_title" = "Cancel";
 "feedback" = "Send feedback";
 "log_out" = "Log Out";
@@ -56,12 +59,16 @@
 "meal_option_screen_id" = "MealOptionsViewControllerID";
 "privacy_policy_text" = "Privacy Policy";
 "report_problem" = "Report a problem";
-"settings_screen_id" = "settingsViewControllerID";
 "want_to_log_out" = "Are you sure you want to log out?";
-"yes_title" = "Yes";
 
 
-//Storyboard Strings
+//MARK: Screen IDs
+
+"sign_in_screen_id" = "SignInViewControllerID";
+"settings_screen_id" = "settingsViewControllerID";
+
+
+//MARK: Storyboard Strings
 
 "main_storyboard_id" = "Main";
 

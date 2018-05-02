@@ -28,6 +28,24 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     func segueToNextScreen() {
+
+        let selectedMeal = UserDefaults.standard.getMeal1()
+        if selectedMeal == "nil" {
+
+            let sb = UIStoryboard(name: viewModel.mainStoryboardID, bundle: nil)
+            guard let movc = sb.instantiateViewController(withIdentifier: viewModel.mealOptionScreenID ) as? MealOptionsViewController else { return }
+
+            let movm = MealOptionsViewModel()
+            movc.movm = movm
+            movc.sourceViewController = .signInViewControllerID
+
+            present(movc,
+                    animated: true,
+                    completion: nil)
+
+
+        }
+
         let storyboard = UIStoryboard(name: "Main",
                                       bundle: nil)
         
@@ -37,7 +55,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                                            animated: true)
         }
     }
- 
+
     func setupSigninButtton() {
 
         let buttonColor =  UIColor(red: 242/255, green: 57/255, blue: 62/255, alpha: 1)

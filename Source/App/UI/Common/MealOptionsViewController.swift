@@ -6,6 +6,7 @@ class MealOptionsViewController: UIViewController {
     //MARK: Internal Methods
 
     internal var movm: MealOptionsViewModel?
+    internal var sourceViewController: mealOptionSourceScreens?
 
     //MARK: Private Properties
 
@@ -52,18 +53,53 @@ class MealOptionsViewController: UIViewController {
 
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
 
-        let  buttons = rateButtons.filter{
+        guard let vm = movm else {
 
-            $0.isSelected
+            return
         }
 
-        let sortedButtons = buttons.sorted{
-            $0.tag < $1.tag
+        let alert = UIAlertController(title: vm.confirmTitle,
+                                      message: vm.confirmMessage,
+                                      preferredStyle: .alert)
 
-        }
+        let alertAction1 = UIAlertAction(title: vm.cancelTitle,
+                                         style: .cancel,
+                                         handler: nil)
 
-        UserDefaults.standard.setMeal1(value: sortedButtons[0].id)
-        UserDefaults.standard.setMeal2(value: sortedButtons[1].id)
+        let alertAction2 = UIAlertAction(title: vm.yesTitle,
+                                         style: .destructive,
+                                         handler: { [weak self] _ in
+
+                                            self?.saveSelectedMealPlan()
+
+                                            switch self?.sourceViewController {
+
+                                            case .settingsViewControllerID?:
+                                                self?.goBackToSettings(.settingsViewControllerID)
+                                                
+
+                                            case .signInViewControllerID?:
+
+                                                let storyboard = UIStoryboard(name: vm.mainStoryboardID,
+                                                                              bundle: nil)
+
+                                                if let navigationController = storyboard.instantiateViewController(withIdentifier: vm.navigationScreenID) as? UINavigationController {
+                                                    navigationController.modalPresentationStyle = .overFullScreen
+                                                    self?.present(navigationController,
+                                                                  animated: true)
+                                                }
+
+                                            default:
+                                                break
+                                            }
+        })
+        alert.addAction(alertAction1)
+        alert.addAction(alertAction2)
+
+        present(alert,
+                animated: true,
+                completion: nil)
+
     }
 
     @IBAction private func checkButtonTapped(_ sender: UIButton) {
@@ -123,5 +159,44 @@ class MealOptionsViewController: UIViewController {
         navTitle.text = vm.navigationTitle
         submitButton.titleLabel?.text = vm.submitButtonLabel
         questionLabel.text = vm.questionLabelText
+    }
+
+    private func saveSelectedMealPlan() {
+
+        let  buttons = rateButtons.filter{
+
+
+            $0.isSelected
+        }
+
+        let sortedButtons = buttons.sorted{
+            $0.tag < $1.tag
+
+        }
+
+        UserDefaults.standard.setMeal1(value: sortedButtons[0].id)
+        UserDefaults.standard.setMeal2(value: sortedButtons[1].id)
+    }
+
+    private func goBackToSettings(_ id: mealOptionSourceScreens) {
+
+        guard
+            let vm = movm else { return }
+
+        let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+
+        guard
+            let navCon = sb.instantiateViewController(withIdentifier: vm.navigationScreenID) as? UINavigationController,
+            let svc = sb.instantiateViewController(withIdentifier: id.rawValue) as? SettingsViewController
+            else  { return }
+
+        let viewModel = SettingsViewModel()
+        svc.viewModel = viewModel
+
+        navCon.pushViewController(svc,
+                                  animated: true)
+
+        present(navCon, animated: true, completion: nil)
+
     }
 }

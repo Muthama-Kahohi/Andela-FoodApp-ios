@@ -498,7 +498,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="Zmr-o9-EdR">
             <objects>
-                <viewController id="Ivv-jc-Gmy" customClass="SignInViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewControllerID" id="Ivv-jc-Gmy" customClass="SignInViewController" customModule="FoodApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Siu-ka-VV8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
