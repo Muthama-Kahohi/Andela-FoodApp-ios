@@ -51,6 +51,19 @@ class MealOptionsViewController: UIViewController {
     //Private Methods
 
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
+
+        let  buttons = rateButtons.filter{
+
+            $0.isSelected
+        }
+
+        let sortedButtons = buttons.sorted{
+            $0.tag < $1.tag
+
+        }
+
+        UserDefaults.standard.setMeal1(value: sortedButtons[0].id)
+        UserDefaults.standard.setMeal2(value: sortedButtons[1].id)
     }
 
     @IBAction private func checkButtonTapped(_ sender: UIButton) {
@@ -95,7 +108,6 @@ class MealOptionsViewController: UIViewController {
             }.disposed(by: bag)
     }
 
-
     private func setupView() {
 
         guard let vm = movm else {
@@ -111,6 +123,5 @@ class MealOptionsViewController: UIViewController {
         navTitle.text = vm.navigationTitle
         submitButton.titleLabel?.text = vm.submitButtonLabel
         questionLabel.text = vm.questionLabelText
-
     }
 }
