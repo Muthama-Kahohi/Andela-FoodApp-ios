@@ -65,6 +65,10 @@
 		CD707A4B2097B05100137EB1 /* userdefaults+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A492097B05100137EB1 /* userdefaults+extensions.swift */; };
 		CD707A4D2099A2F200137EB1 /* button+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A4C2099A2F200137EB1 /* button+extension.swift */; };
 		CD707A4E2099A2F200137EB1 /* button+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A4C2099A2F200137EB1 /* button+extension.swift */; };
+		CD707A502099DB1700137EB1 /* uiviewcontroller+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A4F2099DB1700137EB1 /* uiviewcontroller+extensions.swift */; };
+		CD707A512099DB1700137EB1 /* uiviewcontroller+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A4F2099DB1700137EB1 /* uiviewcontroller+extensions.swift */; };
+		CD707A532099DBEF00137EB1 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A522099DBEF00137EB1 /* StoryboardName.swift */; };
+		CD707A542099DBEF00137EB1 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD707A522099DBEF00137EB1 /* StoryboardName.swift */; };
 		CDDF2DE83F4C6DAE01FE65E0588B4919 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D41E23087A7EA315C9F1D88FC744A7D /* Comments.swift */; };
 		CE4E3D22D035A046989CCD98562D2DCB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489AC996C29FB92C2B5DAC2526A374F /* EntryViewController.swift */; };
 		CEAAC638EA775E394AA88BCED8281ACE /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A4C4738DBAC0C58642D068A0BE3E08 /* RatingTableViewCell.swift */; };
@@ -163,6 +167,8 @@
 		CCD5D99752F9346EA8DBB6B6797D4CDC /* Meals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		CD707A492097B05100137EB1 /* userdefaults+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "userdefaults+extensions.swift"; sourceTree = "<group>"; };
 		CD707A4C2099A2F200137EB1 /* button+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "button+extension.swift"; sourceTree = "<group>"; };
+		CD707A4F2099DB1700137EB1 /* uiviewcontroller+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uiviewcontroller+extensions.swift"; sourceTree = "<group>"; };
+		CD707A522099DBEF00137EB1 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
 		D0FCDA086A714F51522FE71BD70F42C5 /* FoodApp_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApp_iosTests.swift; sourceTree = "<group>"; };
 		D77FA46AAED4B0426656A3A2FCF2324B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		D81871BF3B8068C40B0AA9B92602012C /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				9C79218593A2F25A16943B87FEE57CB9 /* Main.storyboard */,
+				CD707A522099DBEF00137EB1 /* StoryboardName.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				3FEEE3A2885ECBAA05EEE916280C3AFA /* textfields+extensions.swift */,
 				CD707A492097B05100137EB1 /* userdefaults+extensions.swift */,
 				CD707A4C2099A2F200137EB1 /* button+extension.swift */,
+				CD707A4F2099DB1700137EB1 /* uiviewcontroller+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -852,11 +860,13 @@
 				CFB32F26554FCB43A11CBF79B82652E7 /* ReportViewModel.swift in Sources */,
 				BEA35980FD7E3A524C80214A0007C131 /* SettingsCells.swift in Sources */,
 				F440FA1751284DB352D4912D041E00CF /* SettingsViewController.swift in Sources */,
+				CD707A512099DB1700137EB1 /* uiviewcontroller+extensions.swift in Sources */,
 				B0E4339F22F53F635B18ED37B850F759 /* SettingsViewModel.swift in Sources */,
 				EC78985E993F80D13FC708162A8F1F28 /* SignInViewController.swift in Sources */,
 				C1AF3FA0CDD15A39E418B424F4BC209D /* SignInViewModel.swift in Sources */,
 				0F5DA71B9B665C8C08D191F63F1CC54A /* date+extensions.swift in Sources */,
 				B92BAE4F92FE7A6384CDF31430B0EAA9 /* string+extensions.swift in Sources */,
+				CD707A542099DBEF00137EB1 /* StoryboardName.swift in Sources */,
 				43FE09FB2383629E73DD36A92D6B3CA2 /* textfields+extensions.swift in Sources */,
 				CD707A4B2097B05100137EB1 /* userdefaults+extensions.swift in Sources */,
 			);
@@ -910,11 +920,13 @@
 				8F7EEDCF18F00117BF95B897655E4595 /* ReportViewModel.swift in Sources */,
 				3F15F34B84E332893CC1D13B3401911A /* SettingsCells.swift in Sources */,
 				EBED803EA0BC0D2B571B3606DF6D100D /* SettingsViewController.swift in Sources */,
+				CD707A502099DB1700137EB1 /* uiviewcontroller+extensions.swift in Sources */,
 				59E78E7384922073BE1D5F388233C48B /* SettingsViewModel.swift in Sources */,
 				47B63E7788F10ABD044AF063BE584B49 /* SignInViewController.swift in Sources */,
 				896C5027BE1B8E685D8F5EBD49A14BE6 /* SignInViewModel.swift in Sources */,
 				036AC97D27E89CE2B127C291D31EEBC5 /* date+extensions.swift in Sources */,
 				FE6BCA0F01E60B9EBEA88BD2962B37CC /* string+extensions.swift in Sources */,
+				CD707A532099DBEF00137EB1 /* StoryboardName.swift in Sources */,
 				4D0D171AF294400D88A4C9756EC33401 /* textfields+extensions.swift in Sources */,
 				CD707A4A2097B05100137EB1 /* userdefaults+extensions.swift in Sources */,
 			);

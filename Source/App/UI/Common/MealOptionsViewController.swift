@@ -197,6 +197,5 @@ class MealOptionsViewController: UIViewController {
                                   animated: true)
 
         present(navCon, animated: true, completion: nil)
-
     }
 }
