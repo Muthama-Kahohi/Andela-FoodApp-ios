@@ -1,4 +1,5 @@
 "domain" = "andela.com";
+"empty_text" = "";
 
 //MARK: Common Strings
 
@@ -30,6 +31,7 @@
 "confirm_title" = "Save";
 "dinner_title" = "Dinner";
 "instruction_text" = "Pick 2 in accordance to your working hours.";
+"instruction_text_2" = "Kindly select 2 meals";
 "lunch_title" = "Lunch";
 "meal_screen_id" = "MealOptionsViewControllerID";
 "nav_title" = "Meal Option";

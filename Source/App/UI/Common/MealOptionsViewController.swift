@@ -64,6 +64,12 @@ class MealOptionsViewController: UIViewController {
 
     @IBAction private func submitButtonTapped(_ sender: UIButton) {
 
+        guard let vm = movm else {
+
+            return
+        }
+
+
         let buttons = rateButtons.filter{
 
             $0.isSelected
@@ -71,8 +77,8 @@ class MealOptionsViewController: UIViewController {
 
         if buttons.count < 2 {
 
-            let alert = UIAlertController(title: "",
-                                          message: "Kindly select 2 meals",
+            let alert = UIAlertController(title: vm.emptyTitle,
+                                          message: vm.alertInstructionMessage,
                                           preferredStyle: .alert)
 
             self.present(alert,
@@ -80,16 +86,12 @@ class MealOptionsViewController: UIViewController {
                          completion: nil)
 
             let when = DispatchTime.now() + 1
+
             DispatchQueue.main.asyncAfter(deadline: when){
 
                 alert.dismiss(animated: true,
                               completion: nil)
             }
-        }
-
-        guard let vm = movm else {
-
-            return
         }
 
         let alert = UIAlertController(title: vm.confirmTitle,

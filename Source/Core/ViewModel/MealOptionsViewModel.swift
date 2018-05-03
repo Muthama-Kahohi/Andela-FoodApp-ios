@@ -14,7 +14,9 @@ public class MealOptionsViewModel {
     public let confirmMessage: String
     public let confirmTitle: String
     public let dinnerButtonLabel: String
+    public let emptyTitle: String
     public let instructionLabelText: String
+    public let alertInstructionMessage: String
     public let lunchButtonLabel: String
     public let mainStoryboardID: String
     public let navigationScreenID: String
@@ -29,11 +31,13 @@ public class MealOptionsViewModel {
 
     public init() {
 
+        alertInstructionMessage = "instruction_text_2".localized
         breakfastButtonLabel = "breakfast_title".localized
         cancelTitle = "alert_action_cancel_title".localized
         confirmMessage = "confirm_message".localized
         confirmTitle = "confirm_title".localized
         dinnerButtonLabel = "dinner_title".localized
+        emptyTitle = "empty_text".localized
         instructionLabelText = "instruction_text".localized
         lunchButtonLabel = "lunch_title".localized
         mainStoryboardID = "main_storyboard_id".localized
@@ -47,7 +51,7 @@ public class MealOptionsViewModel {
 
     public func getUserName(_ email: String) -> String {
 
-       // guard let email = email else { return nil }
+        // guard let email = email else { return nil }
         return email.userNameFromEmail
     }
 
