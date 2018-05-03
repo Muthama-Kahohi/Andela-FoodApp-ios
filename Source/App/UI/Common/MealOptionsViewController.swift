@@ -3,6 +3,7 @@ import RxSwift
 
 class MealOptionsViewController: UIViewController {
 
+
     //MARK: Internal Methods
 
     internal var movm: MealOptionsViewModel?
@@ -11,6 +12,7 @@ class MealOptionsViewController: UIViewController {
     //MARK: Private Properties
 
     private let buttonTaps = Variable<Int>(0)
+    private let bag =  DisposeBag()
 
     //MARK: IBOutlets
 
@@ -39,6 +41,15 @@ class MealOptionsViewController: UIViewController {
         // Do any additional setup after loading the view.
 
         setupView()
+
+        self.appDelegate?.userEmail
+            .asObservable()
+            .subscribe { [weak self] event in
+
+                guard let vm = self?.movm else { return }
+
+                self?.hiLabel.text = vm.getwelcomeText(email: event.element ?? nil)
+            }.disposed(by: bag)
     }
 
     override func viewDidLayoutSubviews() {
@@ -153,8 +164,8 @@ class MealOptionsViewController: UIViewController {
 
         breakfastLabel.text = vm.breakfastButtonLabel
         dinnerLabel.text = vm.dinnerButtonLabel
-        hiLabel.text = vm.getwelcomeText()
         instructionLabel.text = vm.instructionLabelText
+        hiLabel.text = vm.getwelcomeText(email: self.appDelegate?.userEmail.value)
         lunchLabel.text = vm.lunchButtonLabel
         navTitle.text = vm.navigationTitle
         submitButton.titleLabel?.text = vm.submitButtonLabel
@@ -197,5 +208,13 @@ class MealOptionsViewController: UIViewController {
                                   animated: true)
 
         present(navCon, animated: true, completion: nil)
+    }
+
+    //MARK: Private Properties
+
+    private var appDelegate: AppDelegate? {
+        guard
+            let delegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        return delegate
     }
 }

@@ -45,15 +45,16 @@ public class MealOptionsViewModel {
         yesTitle = "alert_action_yes_title".localized
     }
 
-    private func getUserName() -> String? {
+    public func getUserName(_ email: String) -> String {
 
-        guard let email = FoodAppClient.email else { return nil }
+       // guard let email = email else { return nil }
         return email.userNameFromEmail
     }
 
-    public func getwelcomeText () -> String {
+    public func getwelcomeText (email: String?) -> String {
 
-        guard let userName = getUserName() else { return "" }
+        guard let email = email else { return " " }
+        let userName = getUserName(email)
         return "\(welcomeLabelText) \(userName)"
     }
 }

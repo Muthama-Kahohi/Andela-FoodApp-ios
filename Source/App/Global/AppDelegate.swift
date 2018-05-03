@@ -2,6 +2,7 @@ import UIKit
 import GoogleSignIn
 import Firebase
 import FirebaseDatabase
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var currentUserID: String?
     var currentUser: User?
-    var email: String?
+    let userEmail = Variable<String?>(nil)
     let foodAppClient = FoodAppClient()
 
 

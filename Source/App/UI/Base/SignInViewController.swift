@@ -42,8 +42,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
             present(movc,
                     animated: true,
                     completion: nil)
-
-
         }
 
         let storyboard = UIStoryboard(name: "Main",
@@ -146,12 +144,11 @@ extension SignInViewController: GIDSignInDelegate {
                     if let currentUser = user {
                         self.appDelegate?.currentUser = currentUser
                         self.appDelegate?.currentUserID = currentUser.uid
-                        self.appDelegate?.email = currentUser.email
+                        self.appDelegate?.userEmail.value = currentUser.email
                     }
                 }
             }
-            
-            self.segueToNextScreen()
         }
+        self.segueToNextScreen()
     }
 }
