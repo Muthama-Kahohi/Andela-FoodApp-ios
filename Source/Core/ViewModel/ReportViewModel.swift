@@ -26,15 +26,15 @@ public class ReportViewModel {
 
     public init () {
 
-        dismissTitle = NSLocalizedString("alert_action_dismiss_title", comment: "")
-        mainStoryBoardId = NSLocalizedString("main_storyboard_id", comment: "")
-        navBarTitle = NSLocalizedString("report_screen_title", comment: "")
-        navControllerID = NSLocalizedString("navigation_controller_1_id", comment: "")
-        reportExplanationText = NSLocalizedString("report_prompt_explain", comment: "")
-        reportHelpText = NSLocalizedString("report_prompt", comment: "")
-        settingsViewControllerID = NSLocalizedString("settings_screen_id", comment: "")
-        thankYouMessage = NSLocalizedString("report_alert_message", comment: "")
-        thankYouTitle = NSLocalizedString("report_alert_title", comment: "")
+        dismissTitle = "alert_action_dismiss_title".localized
+        mainStoryBoardId = "main_storyboard_id".localized
+        navBarTitle = "report_screen_title".localized
+        navControllerID = "navigation_controller_1_id".localized
+        reportExplanationText = "report_prompt_explain".localized
+        reportHelpText = "report_prompt".localized
+        settingsViewControllerID = "settings_screen_id".localized
+        thankYouMessage = "report_alert_message".localized
+        thankYouTitle = "report_alert_title".localized
     }
     
     public func writeReport(_ report: Feedback) {

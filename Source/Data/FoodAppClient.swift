@@ -1,10 +1,19 @@
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import RxSwift
 
 public class FoodAppClient {
+
+    //MARK: Private Constants
+
+    private static  var disposeBag: DisposeBag{
+
+        let bag = DisposeBag()
+        return bag
+    }
     
-    //Private Instance Methods
+    //MARK: Private Instance Methods
     
     static var appDelegate: AppDelegate? {
         guard
@@ -21,10 +30,12 @@ public class FoodAppClient {
     }
     
     static var email: String? {
-        return appDelegate?.email
+
+        return self.appDelegate?.userEmail.value
     }
     
-    // Database Instance
+    //MARK: Database Instance
+    
     static let databaseRef = Database.database().reference()
     
     //MARK: Public Instance Methods

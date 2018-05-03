@@ -27,15 +27,15 @@ public class FeedbackViewModel {
 
     public init () {
 
-        dismissTitle = NSLocalizedString("alert_action_dismiss_title", comment: "")
-        feedbackExtraLabelText = NSLocalizedString("feedback_prompt_explain", comment: "")
-        feedbackTextFieldPlaceHolder = NSLocalizedString("feedback_prompt", comment: "")
-        mainStoryBoardId = NSLocalizedString("main_storyboard_id", comment: "")
-        navBarTitle = NSLocalizedString("feedback_screen_title", comment: "")
-        navControllerID = NSLocalizedString("navigation_controller_1_id", comment: "")
-        settingsViewControllerID = NSLocalizedString("settings_screen_id", comment: "")
-        thankYouMessage = NSLocalizedString("feedback_alert_message", comment: "")
-        thankYouTitle = NSLocalizedString("feedback_alert_title", comment: "")
+        dismissTitle = "alert_action_dismiss_title".localized
+        feedbackExtraLabelText = "feedback_prompt_explain".localized
+        feedbackTextFieldPlaceHolder = "feedback_prompt".localized
+        mainStoryBoardId = "main_storyboard_id".localized
+        navBarTitle = "feedback_screen_title".localized
+        navControllerID = "navigation_controller_1_id".localized
+        settingsViewControllerID = "settings_screen_id".localized
+        thankYouMessage = "feedback_alert_message".localized
+        thankYouTitle = "feedback_alert_title".localized
     }
     
     public func writeFeedback(_ feedback: Feedback) {

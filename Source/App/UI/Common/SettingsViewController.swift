@@ -7,6 +7,16 @@ public class SettingsViewController: UIViewController {
     
     @IBOutlet weak var settingsTableView: UITableView!
 
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+
+        guard let svm = viewModel else {
+            return }
+
+        svm.setupSettingsCells()
+
+    }
+
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -18,9 +28,10 @@ extension SettingsViewController: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        guard
-            let vm = viewModel else { return 0 }
-        return vm.settingsArray.count
+        guard let vm = viewModel else {
+            return 0 }
+
+        return vm.numOfRowsinSettingsTable()
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,7 +42,8 @@ extension SettingsViewController: UITableViewDataSource {
 
         let settingsCell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
 
-        settingsCell.textLabel?.text = vm.settingsArray[indexPath.row]
+
+        settingsCell.textLabel?.text = vm.settingsCellsArray[indexPath.row].settingCellLabel
 
         tableView.tableFooterView = emptyCell
 
@@ -47,13 +59,15 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard
-            let vm = viewModel else { return }
-        let row = indexPath.row
 
-        switch row {
+        guard let vm = viewModel else {
+            return }
 
-        case 0 :
+        let rowLabel = vm.settingsCellsArray[indexPath.row].settingsOption
+
+        switch rowLabel {
+
+        case  .logout:
 
             let alert = UIAlertController(title: vm.logoutLabel ,
                                           message: vm.logoutAlertLabel,
@@ -72,14 +86,14 @@ extension SettingsViewController: UITableViewDelegate {
             present(alert,
                     animated: true,
                     completion: nil)
-        case 1 :
 
-            guard
-                let vm = viewModel else { return }
+        case .feedback :
 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard
-                let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
+            guard let vm = viewModel else {
+                return }
+
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
 
             fvc.viewModel = FeedbackViewModel()
 
@@ -88,14 +102,13 @@ extension SettingsViewController: UITableViewDelegate {
                     completion: nil)
 
 
-        case 2 :
+         case .bug :
 
-            guard
-                let vm = viewModel else { return }
+            guard let vm = viewModel else {
+                return }
 
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            guard
-                let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
 
             rvc.viewModel = ReportViewModel()
 
@@ -103,9 +116,25 @@ extension SettingsViewController: UITableViewDelegate {
                     animated: true,
                     completion: nil)
 
-        default:
+        case .mealPlan:
 
-            print(" Will not segue ")
+            guard let vm = viewModel else {
+                return }
+
+            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
+            guard let movc = sb.instantiateViewController(withIdentifier: vm.mealOptionScreenID ) as? MealOptionsViewController else { return }
+
+            let movm = MealOptionsViewModel()
+            movc.movm = movm
+            movc.sourceViewController = .settingsViewControllerID
+
+            present(movc,
+                    animated: true,
+                    completion: nil)
+
+        case .privacy:
+
+            print ("Will Segue privacy viewController")
         }
     }
 }

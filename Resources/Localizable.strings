@@ -1,30 +1,21 @@
-"Domain" = "andela.com";
+"domain" = "andela.com";
+"empty_text" = "";
 
-//Common Strings
+//MARK: Common Strings
 
 "alert_action_cancel_title" = "Cancel";
 "alert_action_dismiss_title"  = "Dismiss";
 "alert_action_yes_title" = "Yes";
 
-//MARK: Settings screen Strings
-"cancel_title" = "Cancel";
-"feedback" = "Send feedback";
-"log_out" = "Log Out";
-"report_problem" = "Report a problem";
-"settings_screen_id" = "settingsViewControllerID";
-"want_to_log_out" = "Are you sure you want to log out?";
-"yes_title" = "Yes";
+//MARK: EntryViewController Strings
 
-// ReportViewController Strings
+"breakfast_unique_id" = "breakfast";
+"default_case_text" = "cannot_segue";
+"entry_navigation_bar_title" = "Foodie";
+"lunch_unique_id" = "lunch";
+"settings_title" = "Settings";
 
-"report_alert_message" = "Thank You for your report";
-"report_alert_title" = "Report Sent Successfully";
-"report_prompt" = "Briefly describe your problem";
-"report_prompt_explain" = "Kindly leave us feedback regarding our app and it's features";
-"report_screen_title" = "Report a Problem";
-"report_screen_ID" = "reportViewControllerID";
-
-//FeedbackViewController Strings
+//MARK: FeedbackViewController Strings
 
 "feedback_alert_message" = "Thank You for your feedback";
 "feedback_alert_title" = "Feedback Sent Successfully";
@@ -33,17 +24,53 @@
 "feedback_screen_title" = "Send Feedback";
 "feedback_screen_id" = "FeedbackViewControllerID";
 
-//Storyboard Strings
+//MARK: MealOptionsViewController Strings
 
-"main_storyboard_id" = "Main";
+"breakfast_title" = "Breakfast";
+"confirm_message" = "Are you sure you want to save the selected meals";
+"confirm_title" = "Save";
+"dinner_title" = "Dinner";
+"instruction_text" = "Pick 2 in accordance to your working hours.";
+"instruction_text_2" = "Kindly select 2 meals";
+"lunch_title" = "Lunch";
+"meal_screen_id" = "MealOptionsViewControllerID";
+"nav_title" = "Meal Option";
+"submit_label" = "Submit";
+"questionText" = "What is your current meal plan";
+"welcome_text" = "Hi,";
 
-// NavigationController1 Strings
+//MARK: NavigationController1 Strings
 
 "navigation_controller_1_id" = "navigationControllerID";
 
+//MARK: ReportViewController Strings
+
+"report_alert_message" = "Thank You for your report";
+"report_alert_title" = "Report Sent Successfully";
+"report_prompt" = "Briefly describe your problem";
+"report_prompt_explain" = "Kindly leave us feedback regarding our app and it's features";
+"report_screen_title" = "Report a Problem";
+"report_screen_ID" = "reportViewControllerID";
+
+//MARK: Settings screen Strings
+
+"cancel_title" = "Cancel";
+"feedback" = "Send feedback";
+"log_out" = "Log Out";
+"meal_plan_label_text" = "Change Meal Plan";
+"meal_option_screen_id" = "MealOptionsViewControllerID";
+"privacy_policy_text" = "Privacy Policy";
+"report_problem" = "Report a problem";
+"want_to_log_out" = "Are you sure you want to log out?";
 
 
+//MARK: Screen IDs
+
+"sign_in_screen_id" = "SignInViewControllerID";
+"settings_screen_id" = "settingsViewControllerID";
 
 
+//MARK: Storyboard Strings
 
+"main_storyboard_id" = "Main";
 

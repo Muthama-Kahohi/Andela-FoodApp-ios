@@ -8,12 +8,31 @@ public enum seguesFromLandingScreen: String {
 }
 
 public class EntryViewController: UIViewController {
-    
+
+    // IBoutlets
+
+    @IBOutlet weak var meal1Button: UIButton!
+    @IBOutlet weak var meal2Button: UIButton!
+    @IBOutlet weak var toSettingsButton: UIButton!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+
     // MARK: Private Instance Methods
-    
-    private let viewModel = MealsViewModel()
+
+    private let evm = EntryViewModel()
+    private let meal1 = UserDefaults.standard.getMeal1()
+    private let meal2 = UserDefaults.standard.getMeal2()
+    private let mvm = MealsViewModel()
 
     //MARK: Overriden Methods
+
+    override public func viewDidLoad() {
+
+        navigationBar.title = evm.navigationBarTitle
+        toSettingsButton.titleLabel?.text = evm.settingsButtonText
+
+        meal1Button.setImage(UIImage(named: meal1), for: .normal)
+        meal2Button.setImage(UIImage(named: meal2), for: .normal)
+    }
 
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -24,17 +43,16 @@ public class EntryViewController: UIViewController {
             if let mealsVC = segue.destination as? MealsViewController {
 
                 
-                mealsVC.viewModel = viewModel
-                mealsVC.viewModel?.uniqueFetchID = "breakfast"
+                mealsVC.viewModel = mvm
+                mealsVC.viewModel?.uniqueFetchID = evm.breakfastID
             }
 
         case seguesFromLandingScreen.lunchSegue.rawValue?:
 
             if let mealsVC = segue.destination as? MealsViewController {
 
-                let viewModel = MealsViewModel()
-                mealsVC.viewModel = viewModel
-                mealsVC.viewModel?.uniqueFetchID = "lunch"
+                mealsVC.viewModel = mvm
+                mealsVC.viewModel?.uniqueFetchID = evm.lunchID
             }
 
         case seguesFromLandingScreen.settingsSegue.rawValue?:
@@ -45,8 +63,19 @@ public class EntryViewController: UIViewController {
             }
         default:
 
-            print("Cannot segue")
+            print(evm.defaultText)
         }
+    }
+    @IBAction func extraButtonItem(_ sender: Any) {
+
+        toSettingsButton.isHidden = !toSettingsButton.isHidden
+    }
+
+    @IBAction func settingsButtonTapped(_ sender: UIButton) {
+
+        toSettingsButton.isHidden = !toSettingsButton.isHidden
+
+       performSegue(withIdentifier: seguesFromLandingScreen.settingsSegue.rawValue, sender: toSettingsButton)
     }
 }
 
