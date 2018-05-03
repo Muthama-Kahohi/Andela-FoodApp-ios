@@ -863,6 +863,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="meal1Button" destination="aRQ-6E-JVK" id="qLl-QK-Kel"/>
+                        <outlet property="meal2Button" destination="1V1-8w-24Z" id="ENR-Zc-b0P"/>
                         <outlet property="navigationBar" destination="q29-kJ-UpF" id="bl3-Wn-RwD"/>
                         <outlet property="toSettingsButton" destination="sM4-c5-qko" id="AfU-j8-K1S"/>
                     </connections>
@@ -899,10 +901,10 @@
         <image name="Multiply" width="16" height="16"/>
         <image name="StarIcon" width="22" height="20"/>
         <image name="Tick" width="16" height="16"/>
-        <image name="breakfast" width="374" height="279"/>
+        <image name="breakfast" width="370" height="270"/>
         <image name="capuccino" width="414" height="552"/>
         <image name="dropDown" width="24" height="24"/>
-        <image name="lunch" width="375" height="308"/>
+        <image name="lunch" width="370" height="270"/>
         <image name="unchekedBox" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
