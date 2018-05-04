@@ -6,6 +6,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
     var signinButton = UIButton()
     private var viewModel: SignInViewModel = SignInViewModel()
+
     override func viewDidLoad() {
 
         super.viewDidLoad()
@@ -30,9 +31,10 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     func segueToNextScreen() {
 
         let selectedMeal = UserDefaults.standard.getMeal1()
-        if selectedMeal == "nil" {
+        if selectedMeal == viewModel.nilText {
 
-            let sb = UIStoryboard(name: viewModel.mainStoryboardID, bundle: nil)
+            let sb = UIStoryboard(name: viewModel.mainStoryboardID,
+                                  bundle: nil)
             guard let movc = sb.instantiateViewController(withIdentifier: viewModel.mealOptionScreenID ) as? MealOptionsViewController else { return }
 
             let movm = MealOptionsViewModel()
@@ -44,10 +46,10 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                     completion: nil)
         }
 
-        let storyboard = UIStoryboard(name: "Main",
+        let storyboard = UIStoryboard(name: viewModel.mainStoryboardID,
                                       bundle: nil)
         
-        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationControllerID") as? UINavigationController {
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: viewModel.navigationViewControllerID) as? UINavigationController {
             navigationController.modalPresentationStyle = .overFullScreen
             self.topViewController.present(navigationController,
                                            animated: true)
@@ -63,7 +65,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         signinButton.layer.cornerRadius = 10
         signinButton.layer.borderWidth = 1
 
-        signinButton.setTitle("Sign In with Google", for: .normal)
+        signinButton.setTitle(viewModel.signInButtonTitle, for: .normal)
         signinButton.setTitleColor(.white, for: .normal)
 
         signinButton.backgroundColor = buttonColor

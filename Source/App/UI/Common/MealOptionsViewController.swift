@@ -201,13 +201,12 @@ class MealOptionsViewController: UIViewController {
 
         let  buttons = rateButtons.filter{
 
-
             $0.isSelected
         }
 
         let sortedButtons = buttons.sorted{
-            $0.tag < $1.tag
 
+            $0.tag < $1.tag
         }
 
         UserDefaults.standard.setMeal1(value: sortedButtons[0].id)

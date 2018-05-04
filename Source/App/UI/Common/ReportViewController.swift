@@ -86,10 +86,16 @@ class ReportViewController: UIViewController {
 
         guard let vm = viewModel else { return }
 
-        let sb = UIStoryboard(name: vm.mainStoryBoardId, bundle: nil)
+        let sb = UIStoryboard(name: vm.mainStoryBoardId,
+                              bundle: nil)
 
-        guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else { return }
-        guard let svc = sb.instantiateViewController(withIdentifier: vm.settingsViewControllerID) as? SettingsViewController else  { return }
+        guard let navCon = sb.instantiateViewController(withIdentifier: vm.navControllerID) as? UINavigationController else {
+
+            return }
+
+        guard let svc = SettingsViewController.instantiate(from: .main) else  {
+
+            return }
 
         
         svc.viewModel = SettingsViewModel()
@@ -101,6 +107,8 @@ class ReportViewController: UIViewController {
                 animated: true)
     }
 }
+
+//MARK: ReportViewController extensions
 
 extension ReportViewController: UITextFieldDelegate {
     

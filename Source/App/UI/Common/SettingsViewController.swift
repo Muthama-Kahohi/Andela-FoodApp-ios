@@ -3,9 +3,15 @@ import Foundation
 
 public class SettingsViewController: UIViewController {
 
+    //MARK: Internal Variables
+
     internal var viewModel: SettingsViewModel?
-    
+
+    //MARK: IBoutlets
+
     @IBOutlet weak var settingsTableView: UITableView!
+
+    //MARK: Overriden Methods
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -14,15 +20,14 @@ public class SettingsViewController: UIViewController {
             return }
 
         svm.setupSettingsCells()
-
     }
 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
 }
+//MARK: SettingsViewController Extensions
 
 extension SettingsViewController: UITableViewDataSource {
 
@@ -40,7 +45,7 @@ extension SettingsViewController: UITableViewDataSource {
         guard
             let vm = viewModel else { return emptyCell }
 
-        let settingsCell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
+        let settingsCell = tableView.dequeueReusableCell(withIdentifier: vm.settingsCellIdentifier, for: indexPath)
 
 
         settingsCell.textLabel?.text = vm.settingsCellsArray[indexPath.row].settingCellLabel
@@ -89,11 +94,7 @@ extension SettingsViewController: UITableViewDelegate {
 
         case .feedback :
 
-            guard let vm = viewModel else {
-                return }
-
-            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
-            guard let fvc = sb.instantiateViewController(withIdentifier: vm.feedbackScreenId ) as? FeedbackViewController else { return }
+            guard let fvc = FeedbackViewController.instantiate(from: .main) else { return }
 
             fvc.viewModel = FeedbackViewModel()
 
@@ -101,14 +102,9 @@ extension SettingsViewController: UITableViewDelegate {
                     animated: true,
                     completion: nil)
 
+        case .bug :
 
-         case .bug :
-
-            guard let vm = viewModel else {
-                return }
-
-            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
-            guard let rvc = sb.instantiateViewController(withIdentifier: vm.reportScreenID ) as? ReportViewController else { return }
+            guard let rvc = ReportViewController.instantiate(from: .main) else { return }
 
             rvc.viewModel = ReportViewModel()
 
@@ -118,11 +114,8 @@ extension SettingsViewController: UITableViewDelegate {
 
         case .mealPlan:
 
-            guard let vm = viewModel else {
-                return }
 
-            let sb = UIStoryboard(name: vm.mainStoryboardID, bundle: nil)
-            guard let movc = sb.instantiateViewController(withIdentifier: vm.mealOptionScreenID ) as? MealOptionsViewController else { return }
+            guard let movc = MealOptionsViewController.instantiate(from: .main) else { return }
 
             let movm = MealOptionsViewModel()
             movc.movm = movm
@@ -133,6 +126,8 @@ extension SettingsViewController: UITableViewDelegate {
                     completion: nil)
 
         case .privacy:
+
+            // Temporary
 
             print ("Will Segue privacy viewController")
         }

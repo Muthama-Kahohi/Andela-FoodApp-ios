@@ -9,8 +9,12 @@ class MealsViewController: UIViewController {
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var rateButton: CircleButton!
 
+    //MARK: Internal Properties
+
     internal var viewModel: MealsViewModel?
-    
+
+    //MARK: Private properties
+
     private var mealID: String?
     private var mealItemIDList: [String]?
     private var mealType: String?
@@ -22,8 +26,7 @@ class MealsViewController: UIViewController {
 
         mealsTable.dataSource = self
 
-        guard
-            let vm = viewModel else { return }
+        guard let vm = viewModel else { return }
 
         let today = Date()
 
@@ -53,7 +56,10 @@ class MealsViewController: UIViewController {
     }
 
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toRatingsSegue" {
+
+        guard let vm = viewModel else { return }
+
+        if segue.identifier == vm.ratingsSegueID {
 
             if let nextVC = segue.destination as? RatingViewController {
                 let rvm: RatingViewModel = RatingViewModel()
@@ -66,6 +72,8 @@ class MealsViewController: UIViewController {
         }
     }
 }
+
+//MARK: MealsViewController extensions
 
 extension MealsViewController: UITableViewDataSource {
 
@@ -80,10 +88,13 @@ extension MealsViewController: UITableViewDataSource {
 
         let emptyCell = UITableViewCell()
 
-        guard let vm = viewModel else { return emptyCell }
+        guard let vm = viewModel else {
+            return emptyCell }
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier, for: indexPath) as? MealsTableViewCell
-            else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier,
+                                                       for: indexPath) as? MealsTableViewCell
+            else {
+                return UITableViewCell() }
         
         let food = vm.foodList[indexPath.row]
         let name = food.name

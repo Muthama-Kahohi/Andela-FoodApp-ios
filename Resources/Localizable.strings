@@ -1,6 +1,6 @@
 "domain" = "andela.com";
 "empty_text" = "";
-
+"nil_text" = "nil";
 //MARK: Common Strings
 
 "alert_action_cancel_title" = "Cancel";
@@ -62,6 +62,10 @@
 "privacy_policy_text" = "Privacy Policy";
 "report_problem" = "Report a problem";
 "want_to_log_out" = "Are you sure you want to log out?";
+
+//MARK: SignIn Screen Settings
+
+"signin_button_title" = "Sign In with Google";
 
 
 //MARK: Screen IDs

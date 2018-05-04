@@ -78,10 +78,13 @@ class RatingViewController: UIViewController {
             vm.writeComments(comment)
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: vm.mainStoryboardID,
+                                      bundle: nil)
         
-        if let navigationController = storyboard.instantiateViewController(withIdentifier: "navigationControllerID") as? UINavigationController {
+        if let navigationController = storyboard.instantiateViewController(withIdentifier: vm.navigationControllerID) as? UINavigationController {
+
             navigationController.modalPresentationStyle = .overFullScreen
+
             self.present(navigationController,
                          animated: true)
         }
@@ -134,6 +137,8 @@ class RatingViewController: UIViewController {
         adjustingHeight(showing: false, notification: notification)
     }
 }
+
+//MARK: RatingViewController extensions
 
 extension RatingViewController: UITableViewDataSource {
     
