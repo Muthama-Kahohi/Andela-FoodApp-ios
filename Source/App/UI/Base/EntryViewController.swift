@@ -40,9 +40,9 @@ public class EntryViewController: UIViewController {
         switch segueID {
 
         case seguesFromLandingScreen.breakfastSegue.rawValue?:
+
             if let mealsVC = segue.destination as? MealsViewController {
 
-                
                 mealsVC.viewModel = mvm
                 mealsVC.viewModel?.uniqueFetchID = evm.breakfastID
             }
@@ -56,6 +56,7 @@ public class EntryViewController: UIViewController {
             }
 
         case seguesFromLandingScreen.settingsSegue.rawValue?:
+
             if let settingsVC = segue.destination as? SettingsViewController {
 
                 let viewModel = SettingsViewModel()
@@ -75,7 +76,8 @@ public class EntryViewController: UIViewController {
 
         toSettingsButton.isHidden = !toSettingsButton.isHidden
 
-       performSegue(withIdentifier: seguesFromLandingScreen.settingsSegue.rawValue, sender: toSettingsButton)
+       performSegue(withIdentifier: seguesFromLandingScreen.settingsSegue.rawValue,
+                    sender: toSettingsButton)
     }
 }
 

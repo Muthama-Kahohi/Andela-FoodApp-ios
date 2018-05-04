@@ -10,14 +10,15 @@ public class RatingViewModel {
         return delegate
     }
 
-    var foodList: [MealItems]?
-    var mealID: String?
-    var mealItemIDList: [String]?
-    var mealType: String?
-
     //MARK: Public properties
 
     public let cellName = "foodCell"
+    public var foodList: [MealItems]?
+    public let mainStoryboardID = "Main"
+    public var mealID: String?
+    public var mealItemIDList: [String]?
+    public var mealType: String?
+    public let navigationControllerID = "navigationControllerID".localized
 
     //MARK: Public Methods
     

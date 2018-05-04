@@ -24,6 +24,7 @@ public class SettingsViewModel {
     public var problemLabel: String
     public var reportScreenID: String
     public var settingsCellsArray = [SettingsCells]()
+    public let settingsCellIdentifier: String
     public var yesText: String
 
 
@@ -39,6 +40,7 @@ public class SettingsViewModel {
         settingsViewControllerId = "settings_screen_id".localized
         privacyText = "privacy_policy_text".localized
         problemLabel = "report_problem".localized
+        settingsCellIdentifier = "settingsCell"
         logoutAlertLabel = "want_to_log_out".localized
         yesText = "yes_title".localized
         reportScreenID = "report_screen_ID".localized

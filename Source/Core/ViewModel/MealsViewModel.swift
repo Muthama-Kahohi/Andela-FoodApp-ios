@@ -10,6 +10,7 @@ public class MealsViewModel {
     var mealID: String?
     var mealType: String?
     var uniqueFetchID: String?
+    public let ratingsSegueID = "toRatingsSegue"
     
     let ref: DatabaseReference = FoodAppClient.databaseRef
     
