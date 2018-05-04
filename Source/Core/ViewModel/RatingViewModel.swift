@@ -14,7 +14,7 @@ public class RatingViewModel {
 
     public let cellName = "foodCell"
     public var foodList: [MealItems]?
-    public let mainStoryboardID = "Main"
+    public let mainStoryboardID = "main_storyboard_id".localized
     public var mealID: String?
     public var mealItemIDList: [String]?
     public var mealType: String?
